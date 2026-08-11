@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Local decision ledgers (do not commit personal ledgers by default;
+# the examples/sample-ledger.json is committed explicitly as a demo).
+.decision-debt/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

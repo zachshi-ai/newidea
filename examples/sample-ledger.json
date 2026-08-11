@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "decisions": [
+    {
+      "id": "ci-provider",
+      "title": "CI provider",
+      "context": "",
+      "options": [
+        "GitHub Actions",
+        "CircleCI",
+        "Jenkins"
+      ],
+      "weight": 4,
+      "opened": "2026-07-20",
+      "last_reviewed": "2026-07-20",
+      "reopens": 0,
+      "status": "committed",
+      "outcome": "GitHub Actions",
+      "closed": "2026-08-05"
+    },
+    {
+      "id": "pricing-model",
+      "title": "Pricing model",
+      "context": "Per-seat vs usage vs flat tier",
+      "options": [
+        "Per-seat",
+        "Usage",
+        "Flat tier"
+      ],
+      "weight": 5,
+      "opened": "2026-07-15",
+      "last_reviewed": "2026-08-10",
+      "reopens": 0,
+      "status": "open",
+      "outcome": null,
+      "closed": null
+    },
+    {
+      "id": "primary-database",
+      "title": "Primary database",
+      "context": "",
+      "options": [
+        "Postgres",
+        "MySQL",
+        "DynamoDB"
+      ],
+      "weight": 4,
+      "opened": "2026-08-01",
+      "last_reviewed": "2026-08-09",
+      "reopens": 1,
+      "status": "open",
+      "outcome": null,
+      "closed": null
+    },
+    {
+      "id": "hire-engineer-2",
+      "title": "Hire engineer #2",
+      "context": "Backend vs frontend first",
+      "options": [],
+      "weight": 3,
+      "opened": "2026-07-28",
+      "last_reviewed": "2026-07-28",
+      "reopens": 0,
+      "status": "open",
+      "outcome": null,
+      "closed": null
+    },
+    {
+      "id": "logo-color",
+      "title": "Logo color",
+      "context": "",
+      "options": [],
+      "weight": 1,
+      "opened": "2026-07-25",
+      "last_reviewed": "2026-07-25",
+      "reopens": 0,
+      "status": "abandoned",
+      "outcome": "Designer will pick; not my call",
+      "closed": "2026-08-02"
+    },
+    {
+      "id": "launch-date",
+      "title": "Launch date",
+      "context": "Soft launch timing before the demo day",
+      "options": [],
+      "weight": 5,
+      "opened": "2026-07-30",
+      "last_reviewed": "2026-08-11",
+      "reopens": 0,
+      "status": "open",
+      "outcome": null,
+      "closed": null
+    },
+    {
+      "id": "feature-flag-tool",
+      "title": "Feature-flag tool",
+      "context": "",
+      "options": [
+        "LaunchDarkly",
+        "Unleash",
+        "DIY"
+      ],
+      "weight": 2,
+      "opened": "2026-08-10",
+      "last_reviewed": "2026-08-10",
+      "reopens": 0,
+      "status": "open",
+      "outcome": null,
+      "closed": null
+    }
+  ]
+}
