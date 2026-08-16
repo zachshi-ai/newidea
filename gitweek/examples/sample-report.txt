@@ -1,0 +1,64 @@
+gitweek — 不可见工作考古报告
+Period : 2026-08-08 .. 2026-08-14 (7 days)
+Repos  : 3 scanned · 2 active · 1 idle
+
+── Overview ─────────────────────────────
+  commits         10
+  files touched   8
+  insertions      +295
+  deletions       -31
+  active days     7/7
+  invisible share 60% of classified commits (test/docs/refactor/chore/...)
+  [idle] infra
+
+── Work shape ───────────────────────────
+  feat      ██████████   2  20%
+  fix       ██████████   2  20%
+  refactor  █████   1  10%  ← invisible
+  test      ██████████   2  20%  ← invisible
+  docs      █████   1  10%  ← invisible
+  chore     █████   1  10%  ← invisible
+  style     █████   1  10%  ← invisible
+
+── Invisible work — 别忘了写进周报 ────────
+  refactor ×1
+    • 08-12  api        209f9c8  refactor: extract tax calc
+  test ×2
+    • 08-10  api        0be5d47  test: cover discount edge cases
+    • 08-12  web        93da6e8  test: rounding cases
+  docs ×1
+    • 08-13  api        ad4432a  docs: update deploy runbook
+  chore ×1
+    • 08-11  api        2635bbd  chore: bump flask to 3.1
+  style ×1
+    • 08-14  web        f89be1e  style: lint fixes
+  → 6/10 classified commits (60%) were maintenance work.
+
+── Daily activity ───────────────────────
+  Sat 08-08  ██ 1
+  Sun 08-09  ██ 1
+  Mon 08-10  ████ 2
+  Tue 08-11  ██ 1
+  Wed 08-12  ██████ 3
+  Thu 08-13  ██ 1
+  Fri 08-14  ██ 1
+
+── Hottest files (top 3) ─────────────
+  1. src/pricing.py  (3 touches, +72/-22)
+  2. src/utils.ts  (3 touches, +22/-5)
+  3. src/Pricing.tsx  (2 touches, +82/-2)
+
+── Work in progress (uncommitted) ──────
+  api: 1 file (+9/-1), 1 untracked
+
+── All commits ───────────────────────────
+  08-08  api        1f07177  [feat] feat: pricing endpoint
+  08-09  web        f1dd67b  [feat] feat: pricing table component
+  08-10  api        688ff9e  [fix ] fix: null discount crash
+  08-10  api        0be5d47  [test] test: cover discount edge cases
+  08-11  api        2635bbd  [chore] chore: bump flask to 3.1
+  08-12  api        209f9c8  [refactor] refactor: extract tax calc
+  08-12  web        7ec1ac5  [fix ] fix: currency rounding
+  08-12  web        93da6e8  [test] test: rounding cases
+  08-13  api        ad4432a  [docs] docs: update deploy runbook
+  08-14  web        f89be1e  [style] style: lint fixes

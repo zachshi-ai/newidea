@@ -70,7 +70,7 @@ decision-debt report
 
 - **多账本**：每个项目/角色一个目录，各自 `init`；或用 `--ledger` / `DECISION_LEDGER` 切换。
 - **决策日志做复盘**：定期 `export`，按月回看「这个月我拍板了哪些、放弃了哪些、平均挂了几天」，能看出自己**在哪类决策上拖延最久**。
-- **版本化**：把 `.decision-debt/ledger.json` 提交进 git，决策历史就和代码一样可 diff、可追溯。
+- **版本化**：把 `.decision-debt/ledger.json` 提交进 git，决策历史就和代码一样可 diff、可追溯。<!-- dd:ignore: 本地账本路径，按需创建 -->
 - **接入 AI 工作流**：决策日志是结构化的 markdown，可直接喂给 Agent 做「本月决策复盘」「找出我反复重开的决策」等分析。
 
 ## 6. FAQ
