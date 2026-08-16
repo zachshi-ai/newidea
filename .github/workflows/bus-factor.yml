@@ -1,0 +1,20 @@
+# bus-factor · 知识单点风险报告
+# 每次推送：跑验收测试（含 dogfood 扫描本仓库），并输出当前知识分布快照。
+# The scan step never fails the build (no --fail-on): the report is a
+# monitoring artifact, the tests are the gate.
+name: bus-factor
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history: knowledge metrics need it
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood)
+        run: python3 -m unittest discover -s bus-factor/tests -v
+      - name: knowledge snapshot (advisory)
+        run: python3 bus-factor/bus_factor.py scan --min-lines 30

@@ -9,6 +9,10 @@ venv/
 # the examples/sample-ledger.json is committed explicitly as a demo).
 .decision-debt/
 
+# bus-factor demo repo is rebuilt on demand by examples/build_examples.py
+# (it carries git history that does not belong in the parent repo).
+bus-factor/examples/demo-repo/
+
 # OS / editor
 .DS_Store
 .idea/

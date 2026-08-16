@@ -1,0 +1,11 @@
+bus-factor blast radius — if Chen Wu leaves tomorrow
+
+  critical (share >= 50%): 1 files, 200 lines
+  guarded  (share >= 80%): 1 files, 200 lines
+  handoff  (guarded, zero other authors): 1 files, 200 lines
+
+  Handoff checklist — nobody else ever touched these:
+    payments/webhook.py
+
+  Critical files (their knowledge covers >= 50%):
+    payments/webhook.py

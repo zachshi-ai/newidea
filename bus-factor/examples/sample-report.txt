@@ -1,0 +1,27 @@
+bus-factor v1.0.0 — knowledge concentration report
+Repo    : <demo-repo> (branch main)
+Window  : all history · 12 commits · as of 2026-08-16
+Files   : 8 tracked · 6 measured (>= 20 lines)
+Authors : 3 (1 bot commits ignored)
+
+-- Risk --------------------------------------------------
+  RED    #####     550 lines    5 single-owner knowledge
+  AMBER  #         100 lines    1 two authors
+  GREEN              0 lines    0 healthy spread
+  --> 85% of measured lines are RED (knowledge in exactly one head)
+
+-- Sole guardians (>= 80% share) -------------------------
+  Alice Chen            2 files      200 lines
+      auth.py, core.py
+  Chen Wu               1 files      200 lines
+      payments/webhook.py
+
+-- RED files (fix these first) ---------------------------
+  PATH                                           LINES  TF  LEAD
+  payments/webhook.py                              200   1  Chen Wu 100%
+  auth.py                                          120   1  Alice Chen 100%
+  billing/charge.py                                100   1  Alice Chen 60%, Bob Lin 40%
+  core.py                                           80   1  Alice Chen 100%
+  util.py                                           50   1  Alice Chen 50%, Bob Lin 50%
+
+Rule of thumb: TF 1 = RED, TF 2 = AMBER, TF >= 3 = GREEN. Grow a second author via pairing or review, not rewrites.
