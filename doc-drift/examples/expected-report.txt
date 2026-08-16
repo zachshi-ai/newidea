@@ -1,0 +1,20 @@
+Doc Drift Report  (as of 2026-08-16)
+================================================
+root    : <root>
+files   : 2 markdown scanned
+refs    : 14 checked
+issues  : 6 errors, 1 warnings
+
+README.md
+     6  WARN   stale           '2026-01-05'  ttl 90d expired 133d ago
+    15  ERROR  missing-file    'src/gone.py'  referenced in code span
+    16  ERROR  missing-file    'old_notes.txt'  referenced in code span
+    17  ERROR  missing-file    'docs/missing.md'  referenced in link
+    18  ERROR  missing-symbol  'src/live.py::gone_fn'  symbol not found (from code span)
+    20  ERROR  future-stamp    '2026-12-01'  verified date is in the future
+
+docs/guide.md
+     9  ERROR  missing-file    '../docs/config-guide.md'  referenced in link
+
+------------------------------------------------
+verdict : DRIFT DETECTED — 6 errors, 1 warnings

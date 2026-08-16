@@ -6,7 +6,8 @@
 | # | 点子 | 一句话 | 形态 | 状态 |
 |---|---|---|---|---|
 | 1 | [决策债务 · Decision Debt](decision-debt/) | 把「悬而未决的决策」当成一笔**会自动计息的债务**来管理 | 方法论 + 零依赖 CLI | ✅ 23 tests |
-| 2 | [gitweek · 不可见工作考古](gitweek/) | 从 git 历史确定性重建一周工作全貌，浮出**被周报遗忘的维护性工作** | 方法论 + 零依赖 CLI | ✅ 25 tests |
+| 2 | [gitweek · 不可见工作考古](gitweek/) | 从 git 历史确定性重建一周工作全貌，浮出**被周报遗忘的维护性工作** | 方法论 + 零依赖 CLI | ✅ 26 tests |
+| 3 | [文档漂移 · Doc Drift](doc-drift/) | 给文档装上「编译器」：引用失效自动红灯，过期声明自动催审 | 方法论 + 零依赖 CLI | ✅ 46 tests |
 
 ## 仓库约定
 
@@ -18,6 +19,10 @@
 # 验证全部点子
 python3 -m unittest discover -s decision-debt/tests
 python3 -m unittest discover -s gitweek/tests
+python3 -m unittest discover -s doc-drift/tests
+
+# 文档漂移扫描（CI 中亦会运行，见 .github/workflows/docs.yml）
+python3 doc-drift/doc_drift.py scan . --exclude demo-repo --exclude gitweek
 ```
 
 ## License

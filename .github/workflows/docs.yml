@@ -1,0 +1,16 @@
+name: verify
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: decision-debt tests
+        run: python3 -m unittest discover -s decision-debt/tests
+      - name: doc-drift tests
+        run: python3 -m unittest discover -s doc-drift/tests
+      - name: doc drift scan
+        # gitweek is excluded while under construction (its README references
+        # files its own acceptance suite will deliver); demo-repo is a
+        # deliberately-broken fixture.
+        run: python3 doc-drift/doc_drift.py scan . --exclude demo-repo --exclude gitweek
