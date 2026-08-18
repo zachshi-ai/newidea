@@ -1,0 +1,27 @@
+todo-rot ledger — promises outstanding as of 2026-08-18
+
+-- Promise book -----------------------------------------
+  FRESH    #                                          1 promises
+  ANCIENT  ###                                        3 promises
+  ZOMBIE     1 promises older than 2x half-life — will never be paid
+  total rust on the books: 13.2
+
+-- Oldest unpaid (top 15 by rust) -----------------------
+    10.4 rot  FIXME     951d ZOMBIE  src/billing.py
+           # FIXME: race condition on refund
+           promised by Alice Chen at 2024-01-10 (a2c49f07d1)
+     1.5 rot  TODO      535d  src/billing.py
+           # TODO(alice): add metrics #42
+           promised by Alice Chen at 2025-03-01 (8a0a8083de)
+     1.2 rot  TODO      443d  src/billing.py
+           # TODO: migrate off sqlite
+           promised by Bob Lin at 2025-06-01 (5d439cfab9)
+     0.1 rot  XXX        17d  flags.py
+           # XXX: temp feature flag, remove after launch
+           promised by Chen Wu at 2026-08-01 (ef6d440c6b)
+
+-- Promise economics -----------------------------------
+  half-life of a paid promise : 274.5 days
+  paid so far                 : 2   died with their file: 1
+  re-sited (kept their age)   : 0   orphan removals: 0
+  uncommitted promises        : 0   uncommitted removals: 0

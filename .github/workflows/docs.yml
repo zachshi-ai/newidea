@@ -7,6 +7,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: decision-debt tests
         run: python3 -m unittest discover -s decision-debt/tests
+      - name: todo-rot tests
+        run: python3 -m unittest discover -s todo-rot/tests
       - name: doc-drift tests
         run: python3 -m unittest discover -s doc-drift/tests
       - name: doc drift scan

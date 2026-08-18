@@ -1,0 +1,14 @@
+todo-rot halflife — the survival economics of promises
+
+  paid promises    : 2
+  median lifetime  : 274.5 days (the project half-life)
+  mean / max       : 274.5 / 498 days
+  zombie threshold : older than 549 days
+  zombies on book  : 1
+
+-- Per-author ledger (issued vs paid) --------------------
+  author                issued    paid outstanding unpaid%
+  Alice Chen                 4       2           2     50%
+  Bob Lin                    1       0           1    100%
+  Chen Wu                    1       0           1    100%
+
