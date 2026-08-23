@@ -43,6 +43,12 @@ class RepoCase(unittest.TestCase):
         self.repo = os.path.join(self.tmp, "r")
         os.makedirs(self.repo)
         subprocess.run(["git", "init", "-q", self.repo], check=True)
+        # Repo-local identity so merges/commits work on CI runners without
+        # a global git config.
+        subprocess.run(["git", "-C", self.repo, "config", "user.name",
+                        "Tester"], check=True)
+        subprocess.run(["git", "-C", self.repo, "config", "user.email",
+                        "tester@x.io"], check=True)
         self.main_branch = subprocess.run(
             ["git", "-C", self.repo, "symbolic-ref", "--short", "HEAD"],
             stdout=subprocess.PIPE, check=True).stdout.decode().strip()
