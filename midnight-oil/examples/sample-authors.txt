@@ -1,0 +1,24 @@
+-- Who is burning the midnight oil ----------------------
+
+  Bob Wu  [ALERT]
+    commits 97     active days 86    span 2026-03-02 -> 2026-08-21
+    late-night  50.5%   weekend  23.7%   streak 17d   weekend-late 8d
+    am  00:# 01:#### 02: 03: 04: 05: 06: 07: 08: 09: 10:### 11:########
+    pm  12: 13: 14: 15: 16: 17: 18: 19: 20: 21: 22: 23:#######
+    flags: LATE_NIGHT, WEEKENDS, NO_BREAK, WEEKEND_LATE
+
+  Alice Chen  [OK]
+    commits 74     active days 74    span 2026-03-02 -> 2026-08-19
+    late-night   0.0%   weekend   0.0%   streak 1d   weekend-late 0d
+    am  00: 01: 02: 03: 04: 05: 06: 07: 08: 09: 10:######## 11:
+    pm  12: 13: 14: 15: 16: 17: 18: 19: 20: 21: 22: 23:
+    flags: none
+
+  Carol Diaz  [WATCH]
+    commits 50     active days 50    span 2026-03-03 -> 2026-08-20
+    late-night 100.0%   weekend   0.0%   streak 1d   weekend-late 0d
+    am  00:######## 01:######## 02: 03: 04: 05: 06: 07: 08: 09: 10: 11:
+    pm  12: 13: 14: 15: 16: 17: 18: 19: 20: 21: 22: 23:
+    flags: LATE_NIGHT
+
+  levels: 1 ok / 1 watch / 1 alert

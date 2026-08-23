@@ -11,6 +11,8 @@ jobs:
         run: python3 -m unittest discover -s todo-rot/tests
       - name: doc-drift tests
         run: python3 -m unittest discover -s doc-drift/tests
+      - name: midnight-oil tests
+        run: python3 -m unittest discover -s midnight-oil/tests
       - name: doc drift scan
         # gitweek is excluded while under construction (its README references
         # files its own acceptance suite will deliver); demo-repo is a

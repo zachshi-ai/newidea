@@ -1,0 +1,8 @@
+-- Midnight oil -----------------------------------------
+  as of           : 2026-08-24
+  commits         : 221
+  authors         : 3
+  late-night 22-05:  44.8%  ####
+  weekend         :  10.4%  #
+  longest streak  : 17 commit-days without a break
+  weekend late-night: 8 distinct days

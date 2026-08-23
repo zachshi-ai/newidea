@@ -1,0 +1,12 @@
+-- Recent vs baseline (the night-owl defense) -----------
+  as of 2026-08-24 ; recent window = 91 days
+
+  segment         commits late/weekend
+  recent               61 80.3% / 37.7%
+  baseline             36  0.0% / 0.0%
+
+  late-night : WORSENING (>= +5pp = WORSENING)
+  weekend    : WORSENING
+
+  overall    : WORSENING
+  signals start conversations, not verdicts — talk before you judge.
