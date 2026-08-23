@@ -1,0 +1,14 @@
+-- Hotspot trends (halves: 2026-02-25..2026-05-26 | 2026-05-26..2026-08-24)
+
+!! PERSISTENT (1) — compounding debt — schedule a dedicated refactor
+     checkout/flow.py  churn 7 (old 3 + recent 4)  lines 318  score 2226  RED
+
+>> EMERGING (1) — act now while it is still cheap (tests, then split)
+     pay/api.py  churn 5 (old 1 + recent 4)  lines 228  score 1140  GREEN
+
+<< COOLING (1) — healing — do NOT spend refactor budget here
+     search/legacy_index.py  churn 5 (old 4 + recent 1)  lines 258  score 1290  AMBER
+
+~~ STABLE (2) — warm, not burning — keep an eye on it
+     pay/refund.py  churn 4 (old 2 + recent 2)  lines 110  score 440  GREEN
+     util.py  churn 3 (old 2 + recent 1)  lines 84  score 252  GREEN

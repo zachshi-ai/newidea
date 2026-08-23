@@ -17,3 +17,6 @@ bus-factor/examples/demo-repo/
 .DS_Store
 .idea/
 .vscode/
+
+# churn-hotspot demo repo is rebuilt on demand by examples/build_examples.py
+churn-hotspot/examples/demo-repo/

@@ -1,0 +1,20 @@
+-- Hotspots --------------------------------------------------
+   window: 180d (2026-02-25 .. 2026-08-24)   measured: 7 files   excluded: 1
+
+  1  RED    checkout/flow.py  churn   7  lines   318  score    2226  [persistent]
+    ############################
+  2  AMBER  search/legacy_index.py  churn   5  lines   258  score    1290  [cooling]
+    ################
+  3  GREEN  pay/api.py  churn   5  lines   228  score    1140  [emerging]
+    ##############
+  4  GREEN  pay/refund.py  churn   4  lines   110  score     440  [stable]
+    ######
+  5  GREEN  migrations/001_init.sql  churn   1  lines   400  score     400  [-]
+    #####
+  6  GREEN  util.py  churn   3  lines    84  score     252  [stable]
+    ###
+  7  GREEN  README.md  churn   1  lines     5  score       5  [-]
+    #
+
+Summary: 1 RED / 1 AMBER / 5 GREEN
+Refactor first: checkout/flow.py
