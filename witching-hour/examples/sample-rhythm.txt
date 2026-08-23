@@ -1,0 +1,36 @@
+-- Coding clock by wall-clock hour (commits) ---------------
+  00 │                                    0
+  01 │                                    0
+  02 │###############                     2  <- witching zone
+  03 │#######                             1  <- witching zone
+  04 │                                    0
+  05 │                                    0
+  06 │                                    0
+  07 │                                    0
+  08 │                                    0
+  09 │#######                             1
+  10 │##############################      4
+  11 │###############                     2
+  12 │                                    0
+  13 │                                    0
+  14 │#######                             1
+  15 │###############                     2
+  16 │#######                             1
+  17 │                                    0
+  18 │                                    0
+  19 │                                    0
+  20 │                                    0
+  21 │                                    0
+  22 │                                    0
+  23 │#######                             1  <- witching zone
+
+-- By weekday ------------------------------------------------
+  Mon  commits    5   changed lines     65
+  Tue  commits    3   changed lines     69
+  Wed  commits    3   changed lines     52
+  Thu  commits    2   changed lines     13
+  Fri  commits    2   changed lines      9
+  Sat  commits    0   changed lines      0
+  Sun  commits    0   changed lines      0
+
+  weekend commits: 0 of 15 (0.0%)

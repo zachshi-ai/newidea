@@ -12,6 +12,7 @@
 | 5 | [承诺锈蚀 · TODO Rot](todo-rot/) | TODO 是写给未来的支票：用已偿还承诺的寿命算出项目的**承诺半衰期**，超过 2× 半衰期还没还的就是**僵尸承诺**——统计意义上永远不会被偿还 | 方法论 + 零依赖 CLI | ✅ 65 tests |
 | 6 | [变更热点 · Churn Hotspot](churn-hotspot/) | 前五件都在「发现问题」，这件回答**先修哪个**：hotspot score = churn × size 找出每季度真实流血最多的文件，趋势轴再告诉你谁在恶化、谁在自愈（**自愈的别投预算**） | 方法论 + 零依赖 CLI | ✅ 40 tests |
 | 7 | [深夜灯火 · Midnight Oil](midnight-oil/) | 过劳不在问卷里，在 git 时间戳里：按**作者本地挂钟**测出深夜/周末/无休 streak，趋势对比回答「这是常态还是正在燃烧」——在人提离职之前看见信号 | 方法论 + 零依赖 CLI | ✅ 59 tests |
+| 8 | [危险时刻 · Witching Hour](witching-hour/) | 每个 bug 都有两个时间戳：**写下它的那一刻**，和**发现它的那一刻**——工具只给你第二个。本件用 blame 把 fix 删掉的行归因回**出生时刻**，风险比 RR 回答「几点写下的代码单位返工率最高」 | 方法论 + 零依赖 CLI | ✅ 38 tests |
 
 ## 仓库约定
 
@@ -26,6 +27,7 @@ python3 -m unittest discover -s gitweek/tests
 python3 -m unittest discover -s doc-drift/tests
 python3 -m unittest discover -s bus-factor/tests
 python3 -m unittest discover -s todo-rot/tests
+python3 -m unittest discover -s witching-hour/tests
 python3 -m unittest discover -s midnight-oil/tests
 python3 -m unittest discover -s churn-hotspot/tests
 

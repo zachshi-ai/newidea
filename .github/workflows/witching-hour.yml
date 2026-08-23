@@ -1,0 +1,20 @@
+# witching-hour · 危险时刻风险报告
+# 每次推送：跑验收测试（含 dogfood 扫本仓库 + 样例可复现校验），并输出当前编码生物钟快照。
+# The rhythm snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: witching-hour
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history: birth-commit attribution needs it
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s witching-hour/tests -v
+      - name: rhythm snapshot (advisory)
+        run: python3 witching-hour/witching_hour.py rhythm .

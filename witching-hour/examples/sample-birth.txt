@@ -1,0 +1,29 @@
+-- Birth certificate: src/billing.py @ HEAD ------------------------------
+  L   1  2026-03-03 02:47  Bob Li             <- witching hour
+  L   2  2026-03-03 02:47  Bob Li             <- witching hour
+  L   3  2026-03-03 02:47  Bob Li             <- witching hour
+  L   4  2026-03-03 02:47  Bob Li             <- witching hour
+  L   5  2026-03-09 09:15  Bob Li          
+  L   6  2026-03-09 09:15  Bob Li          
+  L   7  2026-03-03 02:47  Bob Li             <- witching hour
+  L   8  2026-03-03 02:47  Bob Li             <- witching hour
+  L   9  2026-03-03 02:47  Bob Li             <- witching hour
+  L  10  2026-03-09 09:15  Bob Li          
+  L  11  2026-03-03 02:47  Bob Li             <- witching hour
+  L  12  2026-03-03 02:47  Bob Li             <- witching hour
+  L  13  2026-03-09 09:15  Bob Li          
+  L  14  2026-03-09 09:15  Bob Li          
+  L  15  2026-03-09 09:15  Bob Li          
+  L  16  2026-03-03 02:47  Bob Li             <- witching hour
+  L  17  2026-03-09 09:15  Bob Li          
+  L  18  2026-03-03 02:47  Bob Li             <- witching hour
+  L  19  2026-03-03 02:47  Bob Li             <- witching hour
+  L  20  2026-03-03 02:47  Bob Li             <- witching hour
+  L  21  2026-03-03 02:47  Bob Li             <- witching hour
+  L  22  2026-03-03 02:47  Bob Li             <- witching hour
+  L  23  2026-03-03 02:47  Bob Li             <- witching hour
+  L  24  2026-03-09 09:15  Bob Li          
+  L  25  2026-03-03 02:47  Bob Li             <- witching hour
+
+  25 line(s) shown, 17 born inside 22:00-06:00.
+  Those lines were written against the body's will.
