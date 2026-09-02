@@ -1,0 +1,18 @@
+# stage-time · 讲台时刻验收
+# 每次推送：跑验收测试（含 dogfood 快照比对），并输出示例演讲稿的时长估算。
+# The estimate snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: stage-time
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood snapshots)
+        run: python3 -m unittest discover -s stage-time/tests -v
+      - name: demo talk estimate (advisory)
+        run: python3 stage-time/stage_time.py estimate stage-time/examples/demo_talk.md --budget 15

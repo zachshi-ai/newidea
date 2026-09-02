@@ -13,6 +13,7 @@
 | 6 | [变更热点 · Churn Hotspot](churn-hotspot/) | 前五件都在「发现问题」，这件回答**先修哪个**：hotspot score = churn × size 找出每季度真实流血最多的文件，趋势轴再告诉你谁在恶化、谁在自愈（**自愈的别投预算**） | 方法论 + 零依赖 CLI | ✅ 40 tests |
 | 7 | [深夜灯火 · Midnight Oil](midnight-oil/) | 过劳不在问卷里，在 git 时间戳里：按**作者本地挂钟**测出深夜/周末/无休 streak，趋势对比回答「这是常态还是正在燃烧」——在人提离职之前看见信号 | 方法论 + 零依赖 CLI | ✅ 59 tests |
 | 8 | [危险时刻 · Witching Hour](witching-hour/) | 每个 bug 都有两个时间戳：**写下它的那一刻**，和**发现它的那一刻**——工具只给你第二个。本件用 blame 把 fix 删掉的行归因回**出生时刻**，风险比 RR 回答「几点写下的代码单位返工率最高」 | 方法论 + 零依赖 CLI | ✅ 38 tests |
+| 9 | [讲台时刻 · Stage Time](stage-time/) | 超时不是在台上发生的，是写稿那一刻就注定的：**口播单位**模型（数字逐位、代码逐字符、翻页换气计入）在分享前夜告诉你会不会超时；超时按**牺牲优先级**删（客套先死、论证永生），主张句藏在 64% 处照样亮红灯 | 方法论 + 零依赖 CLI | ✅ 36 tests |
 
 ## 仓库约定
 
@@ -30,6 +31,7 @@ python3 -m unittest discover -s todo-rot/tests
 python3 -m unittest discover -s witching-hour/tests
 python3 -m unittest discover -s midnight-oil/tests
 python3 -m unittest discover -s churn-hotspot/tests
+python3 -m unittest discover -s stage-time/tests
 
 # 文档漂移扫描（CI 中亦会运行，见 .github/workflows/docs.yml）
 python3 doc-drift/doc_drift.py scan . --exclude demo-repo --exclude gitweek
