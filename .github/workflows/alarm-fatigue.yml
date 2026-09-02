@@ -1,0 +1,20 @@
+# alarm-fatigue · 警报信用账本
+# 每次推送：跑验收测试（含 dogfood 审计本仓库 + 样例可复现校验），并输出当前套件信用快照。
+# The credit snapshot never fails the build: the report is a monitoring
+# artifact, the tests are the gate.
+name: alarm-fatigue
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history: patch trails need it
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s alarm-fatigue/tests -v
+      - name: alarm credit snapshot (advisory)
+        run: python3 alarm-fatigue/alarm_fatigue.py audit .

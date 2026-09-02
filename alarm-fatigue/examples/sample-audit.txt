@@ -1,0 +1,20 @@
+-- Alarm Fatigue audit: demo-repo
+  window                 : 2026-01-05 .. 2026-02-05
+  commits scanned        : 11 (non-merge)
+  test files alive       : 3
+  patched at least once  : 2 (66.7%)
+  total patch events     : 5
+  suite alarm credit     : 95 (median of alive tests)
+  deaf alarms            : 1   <- red, but nobody looks
+
+  credit: 100 every red is a fire · <40 nobody believes the red anymore
+
+  file                    credit  grade        patches  last        signals
+  tests/test_payment.py       20  !! DEAF            4  2026-02-02  mute x1 · retry x1 · signal x2 · burst
+  tests/test_search.py        95  OK trusted         1  2026-01-30  solo x1
+  tests/test_cart.py         100  OK trusted         0  -           -
+
+  graveyard (alarms removed, not fixed):
+    tests/test_legacy.py                      deleted 2026-02-05 · credit at death 70
+
+  1 alarm(s) in the deaf zone: when they burn for real, nobody will look.

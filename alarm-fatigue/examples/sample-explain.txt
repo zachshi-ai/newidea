@@ -1,0 +1,8 @@
+-- Alarm Fatigue explain: tests/test_payment.py (demo-repo)
+  2026-01-12  Eva Edge     d0be781  fix flaky payment test on CI        signal + solo -10  -> 90
+  2026-01-15  Eva Edge     b6e85ef  stabilize payment assertions        signal + solo -10  -> 80
+  * burst: 3 patches in the 14d window (2026-01-12 .. 2026-01-20)  -10  -> 70
+  2026-01-20  Eva Edge     746d050  make payment test tolerant on loa…  retry + solo -20  -> 50
+  2026-02-02  Eva Edge     15fe3da  hold payment test on CI for now     mute + solo -30  -> 20
+
+  final: credit 20 · DEAF · first patched 2026-01-12 · 4 attempt(s) later, nobody believes this red anymore
