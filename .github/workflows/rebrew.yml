@@ -1,0 +1,19 @@
+# rebrew · 复现那杯验收
+# 每次推送：跑验收测试（含 dogfood：示例数据埋入效应必须被报告恢复），
+# 并输出示例日志的分析快照。
+# The analysis snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: rebrew
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood ground-truth)
+        run: python3 -m unittest discover -s rebrew/tests -v
+      - name: example log analysis (advisory)
+        run: python3 rebrew/rebrew.py analyze rebrew/examples/realistic.tsv

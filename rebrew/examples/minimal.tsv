@@ -1,0 +1,5 @@
+# 最小可用日志：3 条，其中 2 条同配方——复现半径由此而来
+date	bean	dose_g	water_g	temp_c	grind	time_s	rating	notes
+2026-08-01	Ethiopia Chelbesa	15	225	93	6	145	7.0	酸质明亮
+2026-08-02	Ethiopia Chelbesa	15	225	93	6	150	8.0	第二天更稳
+2026-08-03	Ethiopia Chelbesa	15	225	95	6	148	7.5	水温+2 试试

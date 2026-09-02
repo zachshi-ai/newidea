@@ -1,0 +1,61 @@
+# 示例冲煮日志（合成，seed=20260902）：埃塞 49 条埋水温+/研磨- 效应，σ≈0.5
+date	bean	dose_g	water_g	temp_c	grind	time_s	rating	notes
+2026-03-01	Ethiopia Chelbesa	15	210	94	8	155	7.3	探索
+2026-03-02	Ethiopia Chelbesa	15	225	96	10	150	8.6	探索
+2026-03-04	Ethiopia Chelbesa	15	240	92	10	155	6.1	探索
+2026-03-05	Ethiopia Chelbesa	15	225	90	6	145	7.5	探索
+2026-03-07	Ethiopia Chelbesa	15	240	96	10	155	7.1	探索
+2026-03-09	Ethiopia Chelbesa	15	225	94	6	150	7.8	探索
+2026-03-10	Ethiopia Chelbesa	15	225	94	4	140	8.2	探索
+2026-03-11	Ethiopia Chelbesa	15	240	96	8	135	7.8	探索
+2026-03-12	Ethiopia Chelbesa	15	225	92	4	140	7.9	探索
+2026-03-13	Ethiopia Chelbesa	15	225	90	10	155	5.7	探索
+2026-03-14	Ethiopia Chelbesa	15	240	92	6	145	5.8	探索
+2026-03-16	Ethiopia Chelbesa	15	225	90	6	135	6.5	探索
+2026-03-17	Ethiopia Chelbesa	15	240	94	10	145	5.9	探索
+2026-03-19	Ethiopia Chelbesa	15	240	96	6	135	7.8	探索
+2026-03-20	Ethiopia Chelbesa	15	225	90	10	150	5.6	探索
+2026-03-20	Colombia Huila	15	225	90	6	150	5.5	
+2026-03-21	Ethiopia Chelbesa	15	240	94	8	135	6.8	探索
+2026-03-22	Colombia Huila	15	225	92	6	150	5.5	
+2026-03-23	Ethiopia Chelbesa	15	225	90	4	140	5.6	探索
+2026-03-24	Ethiopia Chelbesa	15	210	90	8	155	5.5	探索
+2026-03-24	Colombia Huila	15	225	88	6	150	6.4	
+2026-03-26	Ethiopia Chelbesa	15	240	92	8	135	5.6	探索
+2026-03-26	Colombia Huila	15	240	92	6	150	4.9	
+2026-03-28	Ethiopia Chelbesa	15	240	96	10	155	6.9	探索
+2026-03-28	Colombia Huila	15	225	92	8	160	5.6	
+2026-03-29	Ethiopia Chelbesa	15	225	90	10	150	4.8	探索
+2026-03-30	Colombia Huila	15	240	88	6	160	5.9	
+2026-03-31	Ethiopia Chelbesa	15	210	92	8	145	6.0	探索
+2026-04-01	Colombia Huila	15	225	92	8	140	6.0	
+2026-04-02	Ethiopia Chelbesa	15	225	92	8	145	7.2	探索
+2026-04-03	Colombia Huila	15	240	90	8	140	6.5	
+2026-04-04	Ethiopia Chelbesa	15	225	94	4	150	8.6	探索
+2026-04-05	Ethiopia Chelbesa	15	210	94	8	135	6.9	探索
+2026-04-05	Colombia Huila	15	225	90	6	160	5.7	
+2026-04-06	Ethiopia Chelbesa	15	225	96	10	150	7.8	探索
+2026-04-07	Colombia Huila	15	240	92	6	150	4.9	
+2026-04-08	Ethiopia Chelbesa	15	240	94	10	155	7.2	探索
+2026-04-09	Ethiopia Chelbesa	15	210	96	10	140	7.2	探索
+2026-04-10	Ethiopia Chelbesa	15	210	92	6	155	6.5	探索
+2026-04-11	Ethiopia Chelbesa	15	210	96	10	140	7.1	探索
+2026-04-13	Ethiopia Chelbesa	15	225	90	6	135	6.4	探索
+2026-04-14	Ethiopia Chelbesa	15	240	96	10	135	7.3	探索
+2026-04-15	Ethiopia Chelbesa	15	225	94	10	140	8.7	探索
+2026-04-16	Ethiopia Chelbesa	15	210	94	6	155	7.0	探索
+2026-04-18	Ethiopia Chelbesa	15	240	96	8	145	6.9	探索
+2026-04-19	Ethiopia Chelbesa	15	225	96	6	155	9.0	探索
+2026-04-21	Ethiopia Chelbesa	15	225	92	10	150	6.7	探索
+2026-04-22	Ethiopia Chelbesa	15	240	90	6	145	5.4	探索
+2026-04-23	Ethiopia Chelbesa	15	210	92	10	155	5.6	探索
+2026-04-25	Ethiopia Chelbesa	15	210	96	10	155	7.3	探索
+2026-04-26	Ethiopia Chelbesa	15	225	94	6	150	8.4	复冲
+2026-04-27	Ethiopia Chelbesa	15	225	94	6	140	7.4	复冲
+2026-04-28	Ethiopia Chelbesa	15	225	94	6	140	8.1	复冲
+2026-04-29	Ethiopia Chelbesa	15	225	92	8	150	7.6	复冲
+2026-04-30	Ethiopia Chelbesa	15	225	92	8	140	6.9	复冲
+2026-05-01	Ethiopia Chelbesa	15	210	90	6	140	6.0	复冲
+2026-05-02	Ethiopia Chelbesa	15	210	90	6	145	5.4	复冲
+2026-05-03	Ethiopia Chelbesa	15	240	96	8	145	7.8	复冲
+2026-05-04	Ethiopia Chelbesa	15	240	96	8	145	7.5	复冲

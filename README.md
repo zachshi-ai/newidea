@@ -14,6 +14,7 @@
 | 7 | [深夜灯火 · Midnight Oil](midnight-oil/) | 过劳不在问卷里，在 git 时间戳里：按**作者本地挂钟**测出深夜/周末/无休 streak，趋势对比回答「这是常态还是正在燃烧」——在人提离职之前看见信号 | 方法论 + 零依赖 CLI | ✅ 59 tests |
 | 8 | [危险时刻 · Witching Hour](witching-hour/) | 每个 bug 都有两个时间戳：**写下它的那一刻**，和**发现它的那一刻**——工具只给你第二个。本件用 blame 把 fix 删掉的行归因回**出生时刻**，风险比 RR 回答「几点写下的代码单位返工率最高」 | 方法论 + 零依赖 CLI | ✅ 38 tests |
 | 9 | [讲台时刻 · Stage Time](stage-time/) | 超时不是在台上发生的，是写稿那一刻就注定的：**口播单位**模型（数字逐位、代码逐字符、翻页换气计入）在分享前夜告诉你会不会超时；超时按**牺牲优先级**删（客套先死、论证永生），主张句藏在 64% 处照样亮红灯 | 方法论 + 零依赖 CLI | ✅ 36 tests |
+| 10 | [复现那杯 · Rebrew](rebrew/) | 你以为在调参，其实在抽奖：先量出**复现半径**（同配方重复冲的评分波动 = 你的手抖幅度 σ̂），再排**旋钮排行**，σ̂ 超线就拒绝调参建议——把玄学冲煮变成厨房里的单因素实验 | 方法论 + 零依赖 CLI | ✅ 91 tests |
 
 ## 仓库约定
 
@@ -32,6 +33,7 @@ python3 -m unittest discover -s witching-hour/tests
 python3 -m unittest discover -s midnight-oil/tests
 python3 -m unittest discover -s churn-hotspot/tests
 python3 -m unittest discover -s stage-time/tests
+python3 -m unittest discover -s rebrew/tests
 
 # 文档漂移扫描（CI 中亦会运行，见 .github/workflows/docs.yml）
 python3 doc-drift/doc_drift.py scan . --exclude demo-repo --exclude gitweek
