@@ -1,0 +1,6 @@
+PURCHASING POWER · the same basket, translated into money
+============================================================
+basket month cost  ¥860.50 -> ¥971.30  (11 items, base 2025-01)
+extra cost         ¥110.80 per month   ¥1,329.60 per year
+cash purchasing power: ¥100.00 in 2026-06 buys what ¥88.59 bought in 2025-01
+cumulative inflation over the span: +12.88%

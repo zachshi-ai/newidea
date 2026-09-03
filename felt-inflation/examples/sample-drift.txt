@@ -1,0 +1,21 @@
+TRADE-DOWN LEDGER · did you quietly switch to cheaper stuff?
+============================================================
+window: last 3 months before/at 2026-06 (2026-04 → 2026-06)
+
+abandoned (base-basket items absent from the window):
+  shampoo-a-400ml          last bought at ¥45.00
+
+trade-down pairs (same category, cheaper newcomer):
+  shampoo-a-400ml          ¥45.00 -> shampoo-b-500ml          ¥22.90  (-49.11%)
+newcomers with no abandoned partner: oat-milk-1l
+
+THE CONCESSION GAP
+------------------------------------------------------------
+fixed-basket inflation (keep the old cart):  +12.88%
+actual bill growth  (¥925.87/mo vs base ¥860.50/mo): +7.60%
+concession gap (fixed - actual):             +5.28pp
+
+verdict  Your bill rose less than your basket - the +5.28pp
+         difference is the concession you already made:
+         cheaper swaps and smaller cart. The published
+         average absorbs this; here it has a name.

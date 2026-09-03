@@ -1,0 +1,25 @@
+FELT INFLATION · rate
+============================================================
+ledger          ledger.tsv
+base period     2025-01 (basket 11 items, 11 evaluated, ¥860.50 / month)
+test period     2026-06
+span            17 months
+
+BASKET INTEGRITY
+------------------------------------------------------------
+base basket     11 items
+evaluated       11 (coverage 100.0%)
+imputed prices  2 of 11 (carried forward from last purchase)
+                dish-soap, shampoo-a-400ml
+
+PRICE INDEX (fixed basket = "keep buying exactly the same stuff")
+------------------------------------------------------------
+Laspeyres       +12.88% cumulative   +8.93% annualized
+Paasche         +12.65% cumulative   (current quantities)
+Fisher          +12.76% cumulative   (sqrt of the two)
+red line        5.0% annualized
+
+verdict         OVER THE RED LINE - your prices rose +8.93%
+                annualized; the identical basket now costs ¥110.80
+                more per month. The official average is not
+                your average.

@@ -1,0 +1,19 @@
+PRICE BOARD · who is driving your inflation
+============================================================
+base 2025-01 → period 2026-06   total fixed-basket inflation +12.88%
+
+item                     category             p0        p1    delta contribution
+takeaway-lunch           dining            22.00     26.00    18.2%    +4.65pp  <- driver #1
+coffee-beans-250g        grocery           48.00     58.00    20.8%    +2.32pp
+gym-monthly              health           150.00    165.00    10.0%    +1.74pp
+eggs-30pc                grocery           25.00     32.00    28.0%    +1.63pp
+chicken-breast-500g      grocery           13.50     15.00    11.1%    +0.70pp
+shampoo-a-400ml          grocery           39.00     45.00    15.4%    +0.70pp
+streaming-vip            entertainment     25.00     30.00    20.0%    +0.58pp
+milk-1l                  grocery           12.00     12.80     6.7%    +0.56pp
+dish-soap                grocery           12.50     12.50     0.0%    +0.00pp
+metro-pass               transport        100.00    100.00     0.0%    +0.00pp
+rice-5kg                 grocery           42.00     42.00     0.0%    +0.00pp
+
+top-2 concentration: +6.97pp of +12.88pp (54.2%) - half your inflation comes from two items
+flat (no push): dish-soap, metro-pass, rice-5kg
