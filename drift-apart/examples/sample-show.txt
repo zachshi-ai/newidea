@@ -1,0 +1,9 @@
+-- Drift Apart dossier: 陈默 (as of 2025-12-01)
+  circle         : inner 核心 · cadence 30d
+  band           : !! GONE
+  last contact   : 2024-11-08 (silent 388d · arrears 358d)
+  silence slope  : LENGTHENING — last gap 130d vs. median 42.5d (3.06×)
+      ↳ overdue even by your own history: 258d past 2025-03-18
+  balance        : you initiated 5 of the last 5 — UNILATERAL: it stops the moment you do
+  next occasion  : in 162d (05-12)
+  history        : 2024-01-10(me) → 2024-02-09(me) → 2024-03-08(me) → 2024-05-07(me) → 2024-07-01(me) → 2024-11-08(me)

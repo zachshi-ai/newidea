@@ -1,0 +1,13 @@
+-- Drift Apart repair list: roster.csv (as of 2025-12-01)
+  birthday doors open now (miss one and the next is a year away):
+  ★ 林小满 — birthday in 4d
+
+  today's order (birthday doors first, then farthest gone):
+  ~ 林小满              close 亲密 · silent 103d · one message is enough — a nudge inside your rhythm reopens it
+  !! 陈默               inner 核心 · silent 388d · silence this old needs an occasion (a birthday, a shared memory) — a bare 'hi' will stall
+      ↳ gaps stretching (3.1× the old median); you initiated 5 of the last 5
+  !! 老周               outer 社交 · silent 1753d · silence this old needs an occasion (a birthday, a shared memory) — a bare 'hi' will stall
+      ↳ you initiated 3 of the last 3
+  ~ 苏黎               close 亲密 · silent 122d · one message is enough — a nudge inside your rhythm reopens it
+  ?? 何朗               outer 社交 · silent — · on the roster but never contacted — first words need a reason, pick one
+  gate: FAIL — 5 relations still outside their rhythm

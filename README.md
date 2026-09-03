@@ -23,6 +23,7 @@
 | 16 | [漏带时刻 · Left Behind](left-behind/) | 漏带不是在机场发生的，是装箱那一刻就注定的：通用清单是「平均人」的清单，它不记得你上次忘了什么。本件把每次行程记成「物品×行程」错题本——同一物品漏带两次是**盲区**、反复原样往返的是**幽灵货物**、前后半程漏带率不降反升说明**清单没在迭代**——`pack` 生成的下一张清单由你的错误喂养：盲区置顶、常备在列、惯犯幽灵降级到「想清楚再带」 | 方法论 + 零依赖 CLI | ✅ 74 tests |
 | 17 | [到期悬崖 · Expiry Cliff](expiry-cliff/) | 名义有效期会撒谎：护照还剩 5 个月，对多数目的地已经等于零。本件给「会静默失效的凭证」（护照/驾照/保单/域名/证书）记一本**提前量调整的 validity 账本**：有效剩余 = 到期日 − 提前量 − 今天，按谁先坠崖排行；出行窗口对全部凭证过闸（一份失效 exit 4）；再从多段有效期里挖出你自己的**续期节奏**（每 ~10 年、惯常提前 46 天）——「现在办是早是晚」第一次有个人基线 | 方法论 + 零依赖 CLI | ✅ 39 tests |
 | 18 | [贡献错觉 · Contribution Gap](contribution-gap/) | 「这个家总是我在撑」：双方自报的家务贡献之和常年超 100%，各自都在真心高估（Ross & Sicoly）。本件把家务记成分钟账本，给四个读数——**实测份额**、**公平基尼**（总账 0.033 balanced 可同时挂 5 个部门垄断）、**领地清单**（厨房归她、户外归他，该轮换的是部门不是全家）、**感知对账**（自报 70% vs 实测 53.3%，全家感知盈余 +30 分），28 天趋势让下滑先于争吵被看见——它不裁判谁更爱这个家，它回答：你们吵的是同一个家吗 | 方法论 + 零依赖 CLI | ✅ 96 tests |
+| 19 | [渐行渐远 · Drift Apart](drift-apart/) | 友谊没有关机动画：它不会突然死亡，只会把聊天记录的日期越拉越远。本件按**各自的圈层节奏**（核心 30 天/老同学 365 天）给每段关系记**欠费账**，挖**沉默斜率**（间隔翻倍是漂移的领先指标，比「上次联系是去年」早半年亮灯）和**单程指数**（最近五次全是你发起的关系，你一停它就停），修复清单把 7 天内的**生日门**置顶——那是唯一不需要理由的开口机会；联系与否永远是人的决定，账本只拒绝继续沉默 | 方法论 + 零依赖 CLI | ✅ 62 tests |
 
 ## 仓库约定
 
@@ -50,6 +51,7 @@ python3 -m unittest discover -s cost-per-wear/tests
 python3 -m unittest discover -s left-behind/tests
 python3 -m unittest discover -s expiry-cliff/tests
 python3 -m unittest discover -s contribution-gap/tests
+python3 -m unittest discover -s drift-apart/tests
 
 # 文档漂移扫描（CI 中亦会运行，见 .github/workflows/docs.yml）
 python3 doc-drift/doc_drift.py scan . --exclude demo-repo --exclude gitweek

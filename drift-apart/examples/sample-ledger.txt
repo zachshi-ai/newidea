@@ -1,0 +1,15 @@
+-- Drift Apart ledger: roster.csv (as of 2025-12-01)
+  relations     : 8 relations
+  bands         : 3 fresh · 2 overdue · 0 drifting · 2 gone · 1 never contacted
+  signals       : 1 stretching gaps (⚠) · 2 unilateral (↺) · 1 birthday door open (★)
+  farthest gone : 陈默 (silent 388d · 12.9× your 30d rhythm)
+
+  name             circle              last cadence   silent  band
+  陈默             inner 核心    2024-11-08     30d     388d  !! GONE⚠↺
+  老周             outer 社交    2021-02-12    365d    1753d  !! GONE↺
+  苏黎             close 亲密    2025-08-01     90d     122d  ~ OVERDUE
+  林小满           close 亲密    2025-08-20     90d     103d  ~ OVERDUE★
+  唐薏             close 亲密    2025-09-30     90d      62d  OK FRESH
+  赵砚             active 有效   2025-10-20    180d      42d  OK FRESH
+  王一帆           active 有效   2025-11-10    180d      21d  OK FRESH
+  何朗             outer 社交             —    365d        —  ?? NEVER
