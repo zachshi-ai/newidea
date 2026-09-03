@@ -1,0 +1,18 @@
+# cost-per-wear · 每穿成本账本
+# 每次推送：跑验收测试（含 ground truth 恢复 + 样例可复现校验），并输出当前衣柜账本快照。
+# The audit snapshot never fails the build: the report is a monitoring
+# artifact, the tests are the gate.
+name: cost-per-wear
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. ground truth + examples sync)
+        run: python3 -m unittest discover -s cost-per-wear/tests -v
+      - name: wardrobe audit snapshot (advisory)
+        run: python3 cost-per-wear/cost_per_wear.py audit cost-per-wear/examples/wardrobe.csv --today 2026-09-04
