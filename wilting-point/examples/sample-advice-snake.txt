@@ -1,0 +1,4 @@
+wilting-point · advice — snake-plant (虎皮兰, safe 21d / wilt 45d)
+  temperament  : nearly unkillable, rots if loved
+  your cadence : 6d median gap between your waterings
+  verdict      : COMPATIBLE — it tolerates your cadence with room to spare (safe 21d ≥ 1.5 × 6d); water it on your rhythm and it lives

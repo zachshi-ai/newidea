@@ -1,0 +1,29 @@
+wilting-point · 凋萎点 — as of 2026-09-02 · ledger 10 plants · log 188 events
+
+  bands           : 2 OK · 3 DUE · 3 PARCHED · 2 WILTED
+  overwater       : 1 flagged — Orchid (rot kills faster than drought)
+  cadence         : 6d median gap between your waterings
+  mismatch        : 4 of 10 plants have a safe line shorter than your cadence
+  neglect ledger  : 9 misses on 4 plant(s)
+  blacklist       : 3 species (≥2 misses) — stop rebuying: boston-fern, calathea, nerve-plant
+  green teammates : 4 — Aloe, Haworthia, Monstera, Pothos
+
+WILTED — past the wilting point: damage is no longer reversible
+  Fern         boston-fern     safe 4d  wilt 8d  dry 15d ago · past wilt line by 7d
+  NervePlant   nerve-plant     safe 4d  wilt 7d  dry 7d ago · past wilt line by 0d
+
+PARCHED — in the damage zone: water today, not tonight
+  Jade         jade-plant      safe 14d  wilt 30d  dry 29d ago · wilt line in 1d (15d past safe)
+  Calathea     calathea        safe 5d  wilt 9d  dry 7d ago · wilt line in 2d (2d past safe)
+  Orchid       orchid          safe 7d  wilt 14d  dry 11d ago · wilt line in 3d (4d past safe)  OVERWATER(rot lamp: last gaps 3d,3d < 3.5d half-line)
+
+DUE — the watering window is open
+  Ivy          ivy             safe 5d  wilt 10d  dry 4d ago · safe line in 1d
+  Pothos       pothos          safe 7d  wilt 15d  dry 6d ago · safe line in 1d
+  Aloe         aloe            safe 14d  wilt 30d  dry 13d ago · safe line in 1d
+
+OK — soil still holds
+  Monstera     monstera        safe 7d  wilt 14d  dry 2d ago · window opens in 2.9d
+  Haworthia    haworthia       safe 10d  wilt 21d  dry 0d ago · window opens in 7d
+
+verdict: 2 plant(s) crossed the wilting point on your watch — triage the PARCHED ones today; the wilted are a lesson, not a guilt trip

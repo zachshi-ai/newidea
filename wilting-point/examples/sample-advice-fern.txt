@@ -1,0 +1,5 @@
+wilting-point · advice — boston-fern (波士顿蕨, safe 4d / wilt 8d)
+  temperament  : feathered humidity lover, dries out in days
+  your cadence : 6d median gap between your waterings
+  verdict      : INCOMPATIBLE — its safe line (4d) is shorter than your natural cadence (6d): your ordinary rhythm is already its drought
+  evidence     : your Fern already missed its line 4 time(s) in your own log

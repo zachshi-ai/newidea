@@ -1,0 +1,12 @@
+wilting-point · simulate trip 7 — away 2026-09-02 → back 2026-09-09
+
+  nobody waters          : 6 of 10 cross a line before you are back
+    Fern         dies by 2026-08-26  (safe 4d / wilt 8d) already past
+    NervePlant   dies by 2026-09-02  (safe 4d / wilt 7d) already past
+    Jade         dies by 2026-09-03  (safe 14d / wilt 30d)
+    Calathea     dies by 2026-09-04  (safe 5d / wilt 9d)
+    Orchid       dies by 2026-09-05  (safe 7d / wilt 14d)
+    Ivy          dies by 2026-09-08  (safe 5d / wilt 10d)
+  water everything and go: 1 of 10 still cross — NervePlant (wilt 7d ≤ trip 7d)
+
+  verdict: hand NervePlant to a friend before you leave; everyone else survives one soak

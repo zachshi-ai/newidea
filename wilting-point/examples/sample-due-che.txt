@@ -1,0 +1,11 @@
+wilting-point · due — as of 2026-09-02 · a countdown, not a reminder
+   1. Fern         WILTED   past wilt line by 7d
+   2. NervePlant   WILTED   past wilt line by 0d
+   3. Jade         PARCHED  wilt line in 1d
+   4. Calathea     PARCHED  wilt line in 2d
+   5. Orchid       PARCHED  wilt line in 3d
+   6. Ivy          DUE      safe line in 1d
+   7. Pothos       DUE      safe line in 1d
+   8. Aloe         DUE      safe line in 1d
+   9. Monstera     OK       window opens in 2.9d
+  10. Haworthia    OK       window opens in 7d

@@ -1,0 +1,17 @@
+wilting-point · 凋萎点 — as of 2026-08-30 · ledger 5 plants · log 45 events
+
+  bands           : 5 OK · 0 DUE · 0 PARCHED · 0 WILTED
+  overwater       : 2 flagged — SnakePlant, ZZPlant (rot kills faster than drought)
+  cadence         : 7d median gap between your waterings
+  mismatch        : 0 of 5 plants have a safe line shorter than your cadence
+  neglect ledger  : 0 misses on 0 plant(s) — a clean record
+  green teammates : 5 — Aloe, Jade, Rubber, SnakePlant, ZZPlant
+
+OK — soil still holds
+  SnakePlant   snake-plant     safe 21d  wilt 45d  dry 0d ago · window opens in 14.7d  OVERWATER(rot lamp: last gaps 7d,7d < 10.5d half-line)
+  ZZPlant      zz-plant        safe 21d  wilt 45d  dry 0d ago · window opens in 14.7d  OVERWATER(rot lamp: last gaps 7d,7d < 10.5d half-line)
+  Jade         jade-plant      safe 14d  wilt 30d  dry 0d ago · window opens in 9.8d
+  Rubber       rubber-plant    safe 10d  wilt 21d  dry 0d ago · window opens in 7d
+  Aloe         aloe            safe 14d  wilt 30d  dry 0d ago · window opens in 9.8d
+
+verdict: all green — your cadence and your shelf agree with each other
