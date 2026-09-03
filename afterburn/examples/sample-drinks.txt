@@ -1,0 +1,24 @@
+余燃 · Afterburn — 饮品缺省表 v1.0.0
+
+  名字               mg/份     说明
+  --------------------------------------------------------
+  espresso              63     单份浓缩 ~30ml
+  espresso-double      126     双份浓缩
+  americano            126     连锁美式（双 shot）
+  drip                  95     手冲 / 滴滤 ~240ml
+  cold-brew            155     冷萃 ~355ml
+  instant               60     速溶一勺 ~240ml
+  latte                126     拿铁（双 shot）
+  cappuccino            63     卡布奇诺（单 shot）
+  mocha                 90     摩卡
+  black-tea             47     红茶 ~240ml
+  green-tea             28     绿茶 ~240ml
+  matcha                70     抹茶一份
+  milk-tea              50     奶茶（波动 20–100+，务必覆盖）
+  cola                  34     可乐 330ml 罐
+  energy-drink          80     功能饮料 250ml
+  energy-can           160     功能饮料 500ml 罐
+  dark-chocolate        20     黑巧克力 ~40g
+
+缺省是粗略中位，来源与波动见 METHODOLOGY.md。
+账本第 4 列永远可以覆盖：`2026-09-03  15:30  milk-tea  120`
