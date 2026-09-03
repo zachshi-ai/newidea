@@ -20,6 +20,8 @@
 | 13 | [乐观税 · Optimism Tax](optimism-tax/) | 你的 3 天从来不是 3 天：每完成一个任务记一张收据（估算 vs 实际），账本算出**个人乐观税率**（中位膨胀比）与 P80 安全报价——全局 1.25x 看着无害，总税额已 56 人日；分桶后 research 类 3.55x 重灾区、ops 类 0.71x 在藏 buffer，规划谬误第一次有了对账的地方，报价从此有据可依 | 方法论 + 零依赖 CLI | ✅ 69 tests |
 | 14 | [社交时差 · Social Jetlag](social-jetlag/) | 「困」把两本账记成一笔：睡眠债（睡了多久）与社交时差（睡在钟面哪里）。本件从可手编的睡眠日志算出 MSW/MSF 两只钟、\|SJL\| 是否越过 2h 流行病学红线、扣掉还债超睡后的 MSFsc、年化睡眠债与周末还债率；再用三个反事实（flat/target/anchor）分离两本账——**钟的病别用早睡治** | 方法论 + 零依赖 CLI | ✅ 60 tests |
 | 15 | [每穿成本 · Cost Per Wear](cost-per-wear/) | 衣服的真实价格 = 吊牌价 ÷ 穿的次数，但购买决策只看了第一本账。本件从换季快照清单算出 CPW 排行（1200 的风衣穿 96 次后每穿 12.5，699 的衬衫只穿 1 次每穿 699）、衣柜坟场与**沉睡资金**（49.6% 的投入在睡觉，含 180 天豁免期）、品类堆积区、品类×季节覆盖矩阵，再加**剁手模拟器**：购物车逐条过堆积否决与孤儿否决——「第 8 件白 T」在下单前就被拦下，扔与不扔仍是人的决定 | 方法论 + 零依赖 CLI | ✅ 49 tests |
+| 16 | [漏带时刻 · Left Behind](left-behind/) | 漏带不是在机场发生的，是装箱那一刻就注定的：通用清单是「平均人」的清单，它不记得你上次忘了什么。本件把每次行程记成「物品×行程」错题本——同一物品漏带两次是**盲区**、反复原样往返的是**幽灵货物**、前后半程漏带率不降反升说明**清单没在迭代**——`pack` 生成的下一张清单由你的错误喂养：盲区置顶、常备在列、惯犯幽灵降级到「想清楚再带」 | 方法论 + 零依赖 CLI | ✅ 74 tests |
+| 17 | [到期悬崖 · Expiry Cliff](expiry-cliff/) | 名义有效期会撒谎：护照还剩 5 个月，对多数目的地已经等于零。本件给「会静默失效的凭证」（护照/驾照/保单/域名/证书）记一本**提前量调整的 validity 账本**：有效剩余 = 到期日 − 提前量 − 今天，按谁先坠崖排行；出行窗口对全部凭证过闸（一份失效 exit 4）；再从多段有效期里挖出你自己的**续期节奏**（每 ~10 年、惯常提前 46 天）——「现在办是早是晚」第一次有个人基线 | 方法论 + 零依赖 CLI | ✅ 39 tests |
 
 ## 仓库约定
 
@@ -44,6 +46,8 @@ python3 -m unittest discover -s redline/tests
 python3 -m unittest discover -s optimism-tax/tests
 python3 -m unittest discover -s social-jetlag/tests
 python3 -m unittest discover -s cost-per-wear/tests
+python3 -m unittest discover -s left-behind/tests
+python3 -m unittest discover -s expiry-cliff/tests
 
 # 文档漂移扫描（CI 中亦会运行，见 .github/workflows/docs.yml）
 python3 doc-drift/doc_drift.py scan . --exclude demo-repo --exclude gitweek

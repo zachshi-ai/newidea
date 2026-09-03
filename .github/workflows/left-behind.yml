@@ -1,0 +1,19 @@
+# left-behind · 漏带时刻验收
+# 每次推送：跑验收测试（含 dogfood：示例埋入的盲区/幽灵/收敛模式必须被报告恢复），
+# 并输出示例账本的错题本快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: left-behind
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood ground-truth)
+        run: python3 -m unittest discover -s left-behind/tests -v
+      - name: ledger snapshot (advisory)
+        run: python3 left-behind/left_behind.py analyze left-behind/examples/realistic.tsv

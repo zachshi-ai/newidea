@@ -1,0 +1,37 @@
+# 示例错题本（确定性剧本）：12 次行程，埋入充电头盲区/雨伞三连幽灵/收敛改善
+date	trip_id	trip_type	days	item	category	event	cost	weight_g	notes
+2026-03-02	T001	business	3	手机充电线	electronics	used			
+2026-03-02	T001	business	3	笔记本电脑+电源	electronics	used			
+2026-03-02	T001	business	3	手机充电头	electronics	used			
+2026-03-18	T002	business	2	雨伞	misc	ghost		350	深圳没下雨
+2026-03-18	T002	business	2	手机充电线	electronics	used			
+2026-04-08	T003	business	4	手机充电头	electronics	left	89		酒店前台借了一夜，第二天在机场补买
+2026-04-08	T003	business	4	手机充电线	electronics	used			
+2026-04-08	T003	business	4	笔记本电脑+电源	electronics	used			
+2026-04-24	L001	leisure	5	常用药	health	left	45		药店应急买的肠胃药
+2026-04-24	L001	leisure	5	防晒	toiletries	used			
+2026-04-24	L001	leisure	5	健身裤	clothes	ghost		400	酒店泳池没去，裤子原样回来
+2026-05-12	T004	business	3	会议名片	misc	left			临时要用，酒店商务中心打印
+2026-05-12	T004	business	3	手机充电头	electronics	used			
+2026-05-12	T004	business	3	手机充电线	electronics	used			
+2026-05-12	T004	business	3	笔记本电脑+电源	electronics	used			
+2026-05-12	T004	business	3	会议资料	misc	ghost		200	客户改期，资料原样背回
+2026-05-28	L002	leisure	4	泳镜	sports	left	39		镇上眼镜店临时买的
+2026-05-28	L002	leisure	4	折叠衣架	misc	left	25		手洗的衣服没处晾
+2026-05-28	L002	leisure	4	雨伞	misc	ghost		350	大理也没下雨
+2026-05-28	L002	leisure	4	健身裤	clothes	ghost		400	又一次原样往返
+2026-06-10	T005	business	2	雨伞	misc	ghost		350	广州还是没下雨
+2026-06-10	T005	business	2	手机充电线	electronics	used			
+2026-06-26	L003	leisure	3	防晒	toiletries	used			
+2026-06-26	L003	leisure	3	水杯	misc	used			
+2026-07-08	T006	business	3	手机充电头	electronics	left	69		第二次！从此充电包设常备位
+2026-07-08	T006	business	3	手机充电线	electronics	used			
+2026-07-08	T006	business	3	笔记本电脑+电源	electronics	used			
+2026-07-22	L004	leisure	6	创可贴	health	left	12		徒步磨脚，垭口小卖部应急
+2026-07-22	L004	leisure	6	常用药	health	ghost		50	高反药，全程没用上
+2026-07-22	L004	leisure	6	防晒	toiletries	used			
+2026-08-15	T007	business	4	手机充电头	electronics	used			
+2026-08-15	T007	business	4	手机充电线	electronics	used			
+2026-08-15	T007	business	4	笔记本电脑+电源	electronics	used			
+2026-08-29	L005	leisure	2	防晒	toiletries	used			
+2026-08-29	L005	leisure	2	水杯	misc	used			

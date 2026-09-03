@@ -1,0 +1,5 @@
+# 最小可用账本：2 次行程——行程数不足，收敛趋势拒绝评估
+date	trip_id	trip_type	days	item	category	event	cost	weight_g	notes
+2026-08-20	M001	business	2	手机充电头	electronics	left	79		临出门才发现没带
+2026-08-20	M001	business	2	手机充电线	electronics	used			
+2026-09-01	M002	business	3	雨伞	misc	ghost		350	梅雨季过了
