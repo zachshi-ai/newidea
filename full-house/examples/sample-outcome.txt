@@ -1,0 +1,13 @@
+== outcome · 产出账 ==
+recorded: 8 decision · 17 action · 55 none  (60.2% of person-hours went to meetings with no recorded outcome)
+
+decision cost: 46.1 h per decision  (¥6,932.08 each)
+no-outcome bill: ¥33,364.16 of ¥55,456.65 (60.2%)
+
+by kind (kind · meetings · person-hours · no-outcome share):
+  sync          65  166.0 h  54.2%
+  review        11  101.0 h  35.6%
+  all-hands      2  96.0 h  100.0%
+  interview      2  6.0 h  0.0%
+
+NOTE  5 scheduled meeting(s) dated in the future skipped here; `gate` audits them.

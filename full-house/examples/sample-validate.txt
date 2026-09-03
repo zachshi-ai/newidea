@@ -1,0 +1,8 @@
+== validate · 账本体检 ==
+rows: 85  (past 80 · scheduled 5)
+person-hours identity: Σ per-meeting h == total h  →  439.250000000 == 439.250000000
+scheduled rows dated after 2026-08-31: 5 — reports skip them, gate audits them
+kinds observed: all-hands, interview, review, sync
+distinct subjects: 13
+
+ledger healthy. exit 0

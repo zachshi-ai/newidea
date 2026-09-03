@@ -1,0 +1,29 @@
+# full-house · 包场
+# 每次推送：跑验收测试（含样例逐字节同步 --check），并输出样例账本的包场快照。
+# The weekly red line (exit 4 = weekly person-hours over the cap) and the
+# schedule gate (exit 4 = single-meeting cap breach) are what can actually
+# refuse something; the other report snapshots are advisory demo artifacts.
+name: full-house
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s full-house/tests -v
+      - name: examples byte-exact check
+        run: python3 full-house/examples/build_examples.py --check
+      - name: full house snapshot on the demo ledger (advisory)
+        run: |
+          python3 full-house/full_house.py --today 2026-08-31 bill full-house/examples/meetings.tsv --salary 26000 --hours 173 || true
+          python3 full-house/full_house.py --today 2026-08-31 top full-house/examples/meetings.tsv -n 5
+          python3 full-house/full_house.py --today 2026-08-31 recurring full-house/examples/meetings.tsv --salary 26000 --hours 173
+          python3 full-house/full_house.py --today 2026-08-31 density full-house/examples/meetings.tsv
+          python3 full-house/full_house.py --today 2026-08-31 outcome full-house/examples/meetings.tsv --salary 26000 --hours 173
+          python3 full-house/full_house.py --today 2026-08-31 simulate full-house/examples/meetings.tsv cancel --match 周例会 --salary 26000 --hours 173
+          python3 full-house/full_house.py --today 2026-08-31 gate full-house/examples/meetings.tsv --salary 26000 --hours 173 || true
+          python3 full-house/full_house.py --today 2026-08-31 validate full-house/examples/meetings.tsv

@@ -1,0 +1,8 @@
+== gate · 排期门禁 ==
+caps: 40.0 h/week · 16.0 h/single meeting · rate ¥150.29/person-hour
+scheduled ahead: 5 meeting(s)
+
+BREACH  weekly average 46.1 h/week over the 40.0 h cap
+BREACH  2026-09-14 16:00 '全员会' rents 48.0 h in one room, over the 16.0 h single cap
+
+VERDICT: 2 breach(es). exit 4 — shrink the room, the minutes, or the series before it books itself.

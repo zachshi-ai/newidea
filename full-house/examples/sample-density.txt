@@ -1,0 +1,20 @@
+== density · 日历形状 ==
+busiest days (person-hours rented):
+  2026-07-20 (M)  57.2 h
+  2026-08-17 (M)  57.2 h
+  2026-07-15 (W)  18.0 h
+  2026-07-07 (T)  12.2 h
+  2026-07-14 (T)  12.2 h
+
+meeting sandwiches (gap < 15 min between two meetings): 9
+  2026-07-07  评审会 → 顺便对齐  (10 min gap)
+  2026-07-14  评审会 → 顺便对齐  (10 min gap)
+  2026-07-21  评审会 → 顺便对齐  (10 min gap)
+  2026-07-28  评审会 → 顺便对齐  (10 min gap)
+  2026-08-04  评审会 → 顺便对齐  (10 min gap)
+longest back-to-back chain (gap ≤ 5 min): 2 meetings
+overlapping meetings on the books: 1
+
+clean weekdays: 5 of 40 (12.5%) had zero meetings
+
+NOTE  5 scheduled meeting(s) dated in the future skipped here; `gate` audits them.

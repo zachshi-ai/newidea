@@ -1,0 +1,26 @@
+== recurring · 周期会年化 ==
+
+· 全员会 — 2 times, median gap 28 day(s), mean 48.0 h/meeting
+  annualized: 13 meetings/year = 624.0 h = ¥93,780.35
+
+· 评审会 — 8 times, median gap 7 day(s), mean 9.0 h/meeting
+  annualized: 52 meetings/year = 468.0 h = ¥70,335.26
+
+· 周例会 — 8 times, median gap 7 day(s), mean 8.0 h/meeting
+  annualized: 52 meetings/year = 416.0 h = ¥62,520.23
+
+· 站会 — 32 times, median gap 1 day(s), mean 1.2 h/meeting
+  annualized: 208 meetings/year = 260.0 h = ¥39,075.14
+
+· 需求对齐 — 8 times, median gap 7 day(s), mean 4.0 h/meeting
+  annualized: 52 meetings/year = 208.0 h = ¥31,260.12
+
+· 顺便对齐 — 8 times, median gap 7 day(s), mean 2.0 h/meeting
+  annualized: 52 meetings/year = 104.0 h = ¥15,630.06
+
+· 周复盘 — 8 times, median gap 7 day(s), mean 1.5 h/meeting
+  annualized: 52 meetings/year = 78.0 h = ¥11,722.54
+
+one-off meetings (no repeat observed): 6 — listed by `top`, not annualized
+
+NOTE  5 scheduled meeting(s) dated in the future skipped here; `gate` audits them.

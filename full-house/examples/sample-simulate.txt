@@ -1,0 +1,11 @@
+== simulate · 反事实：少开这些会 ==
+match '周例会': 8 meeting(s), 64.0 h rented in the window
+
+weekly load: 46.1 h → 38.1 h  (−8.0 h/week)
+annualized saving: 416.0 h
+annualized saving: ¥62,520.23
+that is 17.3% of the total bill
+
+the ledger does not claim the meeting was worthless — it prices the option you are not taking.
+
+NOTE  5 scheduled meeting(s) dated in the future skipped here; `gate` audits them.

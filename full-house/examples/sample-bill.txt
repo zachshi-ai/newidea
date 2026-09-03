@@ -1,0 +1,8 @@
+== bill · 包场总账 ==
+meetings: 80  (span 56 days = 8.0 weeks)
+person-hours: 369.0 h total   46.1 h/week average
+bill: ¥55,456.65 total   ¥6,932.08/week   annualized ¥360,468.21
+money identity: Σ cost == person-hours × rate  →  369.00 h × ¥150.29 = ¥55,456.65
+
+RED LINE  46.1 meeting-hours/week over the 40.0 h cap (6.1 h) — exit 4
+          that is ¥47,867.05/year of rented attention over the line.

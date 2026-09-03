@@ -1,0 +1,10 @@
+== top · 最贵的 5 场（按人时） ==
+ 1. 2026-07-20 16:00  全员会              90 min × 32 = 48.0 h  ¥7,213.87
+ 2. 2026-08-17 16:00  全员会              90 min × 32 = 48.0 h  ¥7,213.87
+ 3. 2026-07-15 14:00  故障复盘-0712       120 min ×  9 = 18.0 h  ¥2,705.20
+ 4. 2026-07-07 14:00  评审会              90 min ×  6 = 9.0 h  ¥1,352.60
+ 5. 2026-07-14 14:00  评审会              90 min ×  6 = 9.0 h  ¥1,352.60
+
+these 5 meetings are 35.8% of all rented attention.
+
+NOTE  5 scheduled meeting(s) dated in the future skipped here; `gate` audits them.
