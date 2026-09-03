@@ -1,0 +1,20 @@
+# redline · 加量红线 —— 训练负荷转速表
+# 每次推送：跑验收测试（含 dogfood：示例日志埋入的爆缸周必须被挖出），
+# 并输出示例日志的当前转速快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate. (Strict-mode red lines exit 2, but the report
+# itself is advisory — a training log is not a CI gate.)
+name: redline
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s redline/tests -v
+      - name: training load snapshot (advisory)
+        run: python3 redline/redline.py report redline/examples/boombust.tsv
