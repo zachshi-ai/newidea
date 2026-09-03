@@ -14,6 +14,12 @@ import unittest
 from contextlib import redirect_stdout
 from datetime import date
 
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
 from redline import build_report, daily_loads, parse_session_file, main
 
 HERE = os.path.dirname(os.path.abspath(__file__))

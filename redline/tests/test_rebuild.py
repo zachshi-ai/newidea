@@ -3,6 +3,12 @@
 import unittest
 from datetime import date, timedelta
 
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
 from redline import (FREEZE_DAYS, LAYOFF_DAYS, REBUILD_LADDER, build_report,
                      chronic_weekly_at, daily_loads, find_layoffs,
                      freeze_until, is_frozen, rebuild_ladder)

@@ -3,6 +3,12 @@
 import unittest
 from datetime import date, timedelta
 
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
 from redline import (MONOTONY_FLAG, build_report, daily_loads,
                      monotony_strain, weekly_rows)
 

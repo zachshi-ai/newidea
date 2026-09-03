@@ -3,6 +3,12 @@
 import unittest
 from datetime import date, timedelta
 
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
 import redline
 from redline import (CALIBRATION_DAYS, build_report, daily_loads, zone_of)
 

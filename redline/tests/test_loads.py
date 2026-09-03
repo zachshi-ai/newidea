@@ -3,6 +3,12 @@
 import unittest
 from datetime import date, timedelta
 
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
 from redline import (acute_at, chronic_weekly_at, acwr_at, daily_loads,
                      window_sum)
 

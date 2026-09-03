@@ -4,6 +4,12 @@ import os
 import tempfile
 import unittest
 
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
 import redline
 from redline import LogError, parse_session_file, daily_loads
 
