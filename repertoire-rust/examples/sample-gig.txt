@@ -1,0 +1,15 @@
+  gig on 2026-09-12 · 12d out · line 70
+
+  ready on the night (2):
+  ✓ Blackbird               96% on the night ·  99% today · half-life 365d
+  ✓ Wish You Were Here      85% on the night ·  92% today · half-life 106d
+
+  won't make it (6):
+  ✗ Fast Car                40% on the night ·  59% today · half-life 21d
+  ✗ Firefly                 36% on the night ·  82% today · half-life 10d — fresh today is not ready on the night
+  ✗ Romance                 26% on the night ·  38% today · half-life 21d
+  ✗ More Than Words         25% on the night ·  42% today · half-life 15d
+  ✗ Classical Gas            0% on the night ·   0% today · half-life 12d
+  ✗ Hotel California Solo    0% on the night ·   0% today · half-life 5d
+
+  gate: FAIL — need 3 ready, have 2 · must-have "Fast Car" not ready

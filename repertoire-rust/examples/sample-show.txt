@@ -1,0 +1,16 @@
+  Romance
+  status: !! RUSTED · fresh 38% · half-life 21d · never stuck (2 collapses)
+  hold above the 70 line: touch every ~11d (~20 min a touch)
+
+  date         kind      q  min  h-after  fresh-before  note
+  2026-01-10   learn     4   30      9.1             —  
+  2026-01-24   learn     5   25     14.6           34%  
+  2026-02-08   maintain  5   20     23.3           49%  
+  2026-02-22   maintain  4   20     30.3           66%  
+  2026-03-08   maintain  5   20     48.5           73%  
+  2026-03-22   maintain  4   20     63.0           82%  
+  2026-04-26   maintain  2   20     21.0           68%  ← COLLAPSE (ledger said 68%, hands said no)
+  2026-05-17   learn     5   30     33.6           50%  
+  2026-06-07   maintain  5   20     53.8           65%  
+  2026-06-28   maintain  4   20     69.9           76%  
+  2026-08-02   maintain  1   15     21.0           71%  ← COLLAPSE (ledger said 71%, hands said no)

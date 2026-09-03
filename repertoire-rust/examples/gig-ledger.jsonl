@@ -1,0 +1,58 @@
+{"piece": "Blackbird", "date": "2026-03-03", "kind": "learn", "quality": 3, "minutes": 35}
+{"piece": "Blackbird", "date": "2026-03-17", "kind": "learn", "quality": 4, "minutes": 30}
+{"piece": "Blackbird", "date": "2026-04-01", "kind": "maintain", "quality": 4, "minutes": 25}
+{"piece": "Blackbird", "date": "2026-04-15", "kind": "maintain", "quality": 5, "minutes": 25}
+{"piece": "Blackbird", "date": "2026-05-01", "kind": "maintain", "quality": 5, "minutes": 20}
+{"piece": "Blackbird", "date": "2026-05-16", "kind": "perform", "quality": 5, "minutes": 15}
+{"piece": "Blackbird", "date": "2026-06-02", "kind": "maintain", "quality": 5, "minutes": 20}
+{"piece": "Blackbird", "date": "2026-06-17", "kind": "maintain", "quality": 4, "minutes": 20}
+{"piece": "Blackbird", "date": "2026-07-03", "kind": "perform", "quality": 5, "minutes": 15}
+{"piece": "Blackbird", "date": "2026-07-18", "kind": "maintain", "quality": 5, "minutes": 15}
+{"piece": "Blackbird", "date": "2026-08-03", "kind": "maintain", "quality": 4, "minutes": 15}
+{"piece": "Blackbird", "date": "2026-08-24", "kind": "maintain", "quality": 5, "minutes": 10}
+{"piece": "Wish You Were Here", "date": "2026-04-07", "kind": "learn", "quality": 4, "minutes": 30}
+{"piece": "Wish You Were Here", "date": "2026-04-21", "kind": "maintain", "quality": 4, "minutes": 25}
+{"piece": "Wish You Were Here", "date": "2026-05-05", "kind": "maintain", "quality": 5, "minutes": 25}
+{"piece": "Wish You Were Here", "date": "2026-05-26", "kind": "maintain", "quality": 5, "minutes": 20}
+{"piece": "Wish You Were Here", "date": "2026-06-16", "kind": "maintain", "quality": 4, "minutes": 20}
+{"piece": "Wish You Were Here", "date": "2026-07-07", "kind": "maintain", "quality": 5, "minutes": 20}
+{"piece": "Wish You Were Here", "date": "2026-07-28", "kind": "maintain", "quality": 4, "minutes": 15}
+{"piece": "Wish You Were Here", "date": "2026-08-18", "kind": "maintain", "quality": 4, "minutes": 15}
+{"piece": "More Than Words", "date": "2026-05-06", "kind": "learn", "quality": 4, "minutes": 30}
+{"piece": "More Than Words", "date": "2026-05-20", "kind": "maintain", "quality": 4, "minutes": 25}
+{"piece": "More Than Words", "date": "2026-06-10", "kind": "maintain", "quality": 3, "minutes": 20}
+{"piece": "More Than Words", "date": "2026-07-08", "kind": "maintain", "quality": 4, "minutes": 20}
+{"piece": "More Than Words", "date": "2026-08-12", "kind": "maintain", "quality": 3, "minutes": 15}
+{"piece": "Fast Car", "date": "2026-04-14", "kind": "learn", "quality": 4, "minutes": 35}
+{"piece": "Fast Car", "date": "2026-04-28", "kind": "learn", "quality": 5, "minutes": 30}
+{"piece": "Fast Car", "date": "2026-05-19", "kind": "maintain", "quality": 5, "minutes": 25}
+{"piece": "Fast Car", "date": "2026-06-09", "kind": "maintain", "quality": 4, "minutes": 25}
+{"piece": "Fast Car", "date": "2026-06-30", "kind": "maintain", "quality": 5, "minutes": 20}
+{"piece": "Fast Car", "date": "2026-08-04", "kind": "maintain", "quality": 2, "minutes": 20}
+{"piece": "Fast Car", "date": "2026-08-15", "kind": "maintain", "quality": 3, "minutes": 15}
+{"piece": "Romance", "date": "2026-01-10", "kind": "learn", "quality": 4, "minutes": 30}
+{"piece": "Romance", "date": "2026-01-24", "kind": "learn", "quality": 5, "minutes": 25}
+{"piece": "Romance", "date": "2026-02-08", "kind": "maintain", "quality": 5, "minutes": 20}
+{"piece": "Romance", "date": "2026-02-22", "kind": "maintain", "quality": 4, "minutes": 20}
+{"piece": "Romance", "date": "2026-03-08", "kind": "maintain", "quality": 5, "minutes": 20}
+{"piece": "Romance", "date": "2026-03-22", "kind": "maintain", "quality": 4, "minutes": 20}
+{"piece": "Romance", "date": "2026-04-26", "kind": "maintain", "quality": 2, "minutes": 20}
+{"piece": "Romance", "date": "2026-05-17", "kind": "learn", "quality": 5, "minutes": 30}
+{"piece": "Romance", "date": "2026-06-07", "kind": "maintain", "quality": 5, "minutes": 20}
+{"piece": "Romance", "date": "2026-06-28", "kind": "maintain", "quality": 4, "minutes": 20}
+{"piece": "Romance", "date": "2026-08-02", "kind": "maintain", "quality": 1, "minutes": 15}
+{"piece": "Classical Gas", "date": "2026-03-09", "kind": "learn", "quality": 3, "minutes": 40}
+{"piece": "Classical Gas", "date": "2026-03-30", "kind": "learn", "quality": 4, "minutes": 35}
+{"piece": "Classical Gas", "date": "2026-04-20", "kind": "learn", "quality": 4, "minutes": 30}
+{"piece": "Classical Gas", "date": "2026-05-02", "kind": "maintain", "quality": 3, "minutes": 25}
+{"piece": "Hotel California Solo", "date": "2026-06-14", "kind": "learn", "quality": 2, "minutes": 30}
+{"piece": "Hotel California Solo", "date": "2026-06-28", "kind": "learn", "quality": 3, "minutes": 25}
+{"piece": "Firefly", "date": "2026-08-08", "kind": "learn", "quality": 3, "minutes": 30}
+{"piece": "Firefly", "date": "2026-08-12", "kind": "learn", "quality": 2, "minutes": 25}
+{"piece": "Firefly", "date": "2026-08-19", "kind": "learn", "quality": 4, "minutes": 30}
+{"piece": "Firefly", "date": "2026-08-23", "kind": "learn", "quality": 3, "minutes": 25}
+{"piece": "Firefly", "date": "2026-08-28", "kind": "learn", "quality": 5, "minutes": 30}
+{"piece": "Landslide", "date": "2025-09-14", "kind": "learn", "quality": 4, "minutes": 30}
+{"piece": "Landslide", "date": "2025-10-05", "kind": "maintain", "quality": 4, "minutes": 25}
+{"piece": "Landslide", "date": "2025-11-02", "kind": "maintain", "quality": 3, "minutes": 20}
+{"piece": "Landslide", "date": "2025-11-30", "kind": "maintain", "quality": 4, "minutes": 20}

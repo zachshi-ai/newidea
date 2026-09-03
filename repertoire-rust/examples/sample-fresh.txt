@@ -1,0 +1,18 @@
+  repertoire    : 8 active pieces · 3 fresh · 2 rusting · 3 rusted · 1 archived · 1 never stuck
+  as of         : 2026-08-31 (pinned)
+  first to rust : Hotel California Solo — fresh 0%, 62d past its touch-by date
+  next to drop  : Firefly falls below the 70 line on 2026-09-02
+
+  piece                  fresh       h         last     touch-by  status
+  Hotel California Solo     0%      5d   2026-06-28   2026-06-30  !! RUSTED
+  Classical Gas             0%     12d   2026-05-02   2026-05-08  !! RUSTED
+  Romance                  38%     21d   2026-08-02   2026-08-12  !! RUSTED · never stuck (2 collapses)
+  More Than Words          42%     15d   2026-08-12   2026-08-19  !  RUSTING
+  Fast Car                 59%     21d   2026-08-15   2026-08-25  !  RUSTING · 1 collapse
+  Firefly                  82%     10d   2026-08-28   2026-09-02     FRESH · fragile (h 10d)
+  Wish You Were Here       92%    106d   2026-08-18   2026-10-11     FRESH
+  Blackbird                99%    365d   2026-08-24   2027-02-27     FRESH
+  · archived (>180d untouched): Landslide — last 2025-11-30
+
+  keep-alive budget : 158 min/wk holds 8 pieces above the 70 line
+  actual (last 4wk) : 54 min/wk — underfunded (34% of budget)
