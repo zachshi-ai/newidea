@@ -1,0 +1,9 @@
+smooth-sailing stress · from 2026-10, burn 9,000.00/mo (trailing 6 median)
+
+dry (income = 0)    runway 2.7 months  [RED] — cash hits zero in 2026-12
+half (income /2)    net burn 3,902.08/mo, runway 6.3 months  [OK] — cash hits zero in 2027-04
+
+assumptions: burn frozen at today's trailing median; no new borrowing;
+             no cutting of spend. Real you can do better on all three.
+
+VERDICT: dry runway 2.7 months is under the 3-month death line — the reservoir is a puddle.

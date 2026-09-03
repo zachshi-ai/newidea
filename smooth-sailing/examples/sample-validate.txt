@@ -1,0 +1,5 @@
+smooth-sailing validate · 24 months · 2024-10 ~ 2026-09
+months   continuous, ascending, no duplicates
+recon    23 months checked against the cash identity:
+           all 23 reconcile (tol 0.01)
+verdict  clean.

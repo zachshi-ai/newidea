@@ -1,0 +1,12 @@
+smooth-sailing report · 24 months · 2024-10 ~ 2026-09
+
+income  mean 10,195.83 · P10 3,460.00 · P50 9,000.00 · P90 18,570.00 · P90/P50 2.06x
+        best 23,800.00 (2025-10) · worst 2,900.00 (2026-02) · famine months (income<P50) 12/24
+        CV 57.9% -> WILD
+
+burn    trailing 6-month median spend = 9,000.00/mo (mean spend 9,916.67)
+cash    24,700.00 at 2026-09 (implied start 18,000.00, net 6,700.00 over 24 months)
+runway  24,700.00 / 9,000.00 = 2.7 months  [RED] (red line 3.0)
+recon   23 months checked, cumulative |drift| 0.00 (0.00% of income)
+
+VERDICT: life is riding the income roller coaster 1:1 | runway BELOW 3-month death line

@@ -1,0 +1,11 @@
+smooth-sailing simulate · 24 months replayed at salary 9,000.00 (explicit)
+
+consumption CV   before 25.7% -> after 0.0%  (life smoothed by 25.7 pp)
+famine months    12/24 months earn below the salary
+                 pay-as-you-go floor: those months would live on median income 5,100.00 — salaried 9,000.00 lifts them +76.5%
+                 your actual spend in those months: median 8,900.00 — the wallet was already smoothing, by hand
+reservoir        min balance 17,640.00 · end 22,230.00 · tax jar 24,470.00
+salary breaches  0/24 months the engine could not pay in full
+identity         start 18,000.00 + income 244,700.00 = paid 216,000.00 + pool 22,230.00 + jar 24,470.00 (residual 0.00e+00)
+
+VERDICT: this salary is affordable across the whole book; the reservoir never breached the floor.

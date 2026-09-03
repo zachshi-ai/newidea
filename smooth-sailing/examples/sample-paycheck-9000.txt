@@ -1,0 +1,7 @@
+smooth-sailing paycheck · 2026-10
+
+baseline  9,000.00 (explicit)
+cash      24,700.00 at 2026-09 · dead-water floor 9,000.00 (= 1.0 x burn 9,000.00)
+headroom  15,700.00
+
+PAY: 9,000.00  [OK] no clamp hit; the reservoir can carry it.
