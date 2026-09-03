@@ -1,0 +1,18 @@
+# borrowed-silence · 预支安静
+# 每次推送：跑验收测试（含 dogfood + 样例逐字节同步），并对示例账本输出剂量快照。
+# The dose snapshot never fails the build: the report is a demo artifact,
+# the gates (day/week/plan exit 4) are what can actually refuse something.
+name: borrowed-silence
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s borrowed-silence/tests -v
+      - name: dose snapshot on the demo ledger (advisory)
+        run: python3 borrowed-silence/borrowed_silence.py lifetime borrowed-silence/examples/week.tsv
