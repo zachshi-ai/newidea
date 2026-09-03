@@ -1,0 +1,6 @@
+# 住处账本 · name/rent(月租元)/commute(单程分钟)/role/note
+# role: current=现居(恰好一个) candidate=候选
+name	rent	commute	role	note
+梧桐里	4500	25	current	住了三年的两居 · 2026-08-30 收到 +12% 续租通知
+同小区两期B	4590	25	candidate	隔壁期房 · 同通勤 · 中介称「房东急租」
+滨江壹号A	3800	50	candidate	名义便宜 ¥700/月 · 通勤翻倍

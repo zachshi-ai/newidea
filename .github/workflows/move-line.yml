@@ -1,0 +1,24 @@
+# move-line · 挪窝线
+# 每次推送:跑验收测试(含账本解析/年净成本分解恒等式/无差异恒等式/回本
+# 恒等式/线对年数单调/裁决带边界/陷阱灯回本灯/糊涂账护栏/盲搬退化/门禁
+# 与拒答 exit 2·3·4 等 59 项),逐字节校验账本与示例输出,并输出裁决快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (judge exits 4 by design; `|| test $? -eq 4`).
+name: move-line
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. identities + honest gates)
+        run: python3 -m unittest discover -s move-line/tests -v
+      - name: examples byte-check (reproducible ledgers + outputs)
+        run: python3 move-line/examples/build_examples.py --check
+      - name: move-line verdict snapshot (advisory, exit 4 by design)
+        run: |
+          python3 move-line/move_line.py judge move-line/examples/homes.tsv move-line/examples/move.tsv --offer 5040 || test $? -eq 4
+          python3 move-line/move_line.py sensitivity move-line/examples/homes.tsv move-line/examples/move.tsv --offer 5040
