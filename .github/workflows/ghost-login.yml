@@ -1,0 +1,21 @@
+# ghost-login · 僵尸账号
+# 每次推送：跑验收测试（含 dogfood 样例逐字节校验），并输出当前密码库快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: ghost-login
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. examples sync)
+        run: python3 -m unittest discover -s ghost-login/tests -v
+      - name: attack surface snapshot (advisory)
+        run: |
+          cd ghost-login
+          python3 ghost_login.py report examples/zhou-vault.tsv
+          python3 ghost_login.py clusters examples/zhou-vault.tsv
