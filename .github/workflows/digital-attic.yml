@@ -1,0 +1,24 @@
+# digital-attic · 数字阁楼
+# 每次推送:跑验收测试(含出生日期考古 13 种命名模式/身份判定/连拍序号指纹/
+# 双口径门禁/房租线性外推与档位披露/库龄双尺/simulate 永不 exit 4/scan 闭环/
+# --today 逐字节复现等 61 项),逐字节校验示例输出,并输出示例账本的普查快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (census/junk exit 4 by design; `|| test $? -eq 4`).
+name: digital-attic
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. burst fingerprint + dual-ruler gates)
+        run: python3 -m unittest discover -s digital-attic/tests -v
+      - name: examples byte-check (reproducible outputs)
+        run: python3 digital-attic/examples/build_examples.py --check
+      - name: digital-attic census snapshot (advisory, exit 4 by design)
+        run: |
+          python3 digital-attic/digital_attic.py census digital-attic/examples/attic.tsv --today 2026-09-01 --price 68 --quota 2048 || test $? -eq 4
+          python3 digital-attic/digital_attic.py pyramid digital-attic/examples/attic.tsv
