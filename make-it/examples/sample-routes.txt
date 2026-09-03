@@ -1,0 +1,10 @@
+-- Make It: commute distribution ledger (as of 2026-08-29)
+  ledger    : 71 commutes · 3 routes · 2026-03-02 .. 2026-08-28 · 67 timed
+
+  ranked by P80 duration — the mean hides jitter, the P80 does not
+
+  route          n   P50    P80  worst  on-time
+  bike            4   27m    31m    31m      n/a  (thin: n=4 < 10, never crowned)
+  metro-line2    55   42m    44m    49m    92.7%  <- proven steadiest at P80
+  bus-73         12   36m    50m    60m    66.7%
+  the mean can flatter a jittery route: rank at your real bar, not at luck

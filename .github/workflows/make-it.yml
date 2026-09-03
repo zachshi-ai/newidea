@@ -1,0 +1,19 @@
+# make-it · 来得及
+# 每次推送：跑验收测试（含 dogfood + 样例逐字节同步），并输出样例账本的通勤画像快照。
+# The snapshot never fails the build: the portrait is a demo artifact;
+# the verdict gates (now/leave exit 3/4/5) are what can actually refuse something,
+# and they are exercised inside the acceptance tests.
+name: make-it
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s make-it/tests -v
+      - name: commute portrait snapshot on the demo ledger (advisory)
+        run: python3 make-it/make_it.py stats make-it/examples/commutes.csv --as-of 2026-08-29

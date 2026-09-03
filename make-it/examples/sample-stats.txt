@@ -1,0 +1,10 @@
+-- Make It: commute distribution ledger (as of 2026-08-29)
+  ledger    : 71 commutes · 3 routes · 2026-03-02 .. 2026-08-28 · 67 timed
+
+  route          n   P50   P80   P90  worst  on-time  close
+  bike            4   27m   31m   31m    31m      n/a      -  (thin: n=4 < 10)
+  bus-73         12   36m   50m   56m    60m    66.7%      1
+    ^ departures before vs from 08:15: median 36m (n=7) vs 38m (n=5) — leaving later costs +5.6%
+  metro-line2    55   42m   44m   45m    49m    92.7%     21
+    ^ departures before vs from 08:15: median 39m (n=30) vs 44m (n=25) — leaving later costs +12.8%
+  thin routes: bike — their numbers are portraits, not verdicts

@@ -1,0 +1,16 @@
+-- Make It: commute distribution ledger (as of 2026-08-29)
+  ledger    : 71 commutes · 3 routes · 2026-03-02 .. 2026-08-28 · 67 timed
+
+  late      : 8 late trips in 67 timed (11.9%) · 22 close calls
+
+  route          n  late   rate  median-late  worst
+  bus-73         12     4   33.3%           7m    12m
+  metro-line2    55     4    7.3%           8m    13m
+
+  weekday        n  late   rate
+  Mon            24     2    8.3%
+  Wed            20     0    0.0%
+  Fri            23     6   26.1%
+
+  repeat offender : metro-line2 on Fri — 50% of all lateness (50% share)
+  lateness is not weather, it is a schedule: fix the one combo first

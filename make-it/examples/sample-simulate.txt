@@ -1,0 +1,12 @@
+-- Make It: commute distribution ledger (as of 2026-08-29)
+  ledger    : 71 commutes · 3 routes · 2026-03-02 .. 2026-08-28 · 67 timed
+
+  counterfactual : every timed commute leaves 10 minutes earlier (n=67, 180 days)
+
+                 before   after
+  on-time       88.1%   97.0%
+  late trips        8       2
+  late minutes     65       5
+
+  annualized    : 16 -> 4 late trips a year, 132 -> 10 late minutes
+  verdict       : FIXED BY CLOCK (exit 0) — 10 minutes of earlier alarm buys this much year

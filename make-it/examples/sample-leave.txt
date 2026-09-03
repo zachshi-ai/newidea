@@ -1,0 +1,6 @@
+-- Make It: commute distribution ledger (as of 2026-08-29)
+  ledger    : 71 commutes · 3 routes · 2026-03-02 .. 2026-08-28 · 67 timed
+
+  target    : arrive by 09:00 on metro-line2 at P90 confidence
+  solve     : leave at 08:13 — budget 47m (47m ride, departures from 08:15, n=25)
+  verdict   : GO (exit 0) — it is 08:05 now, 8m of margin

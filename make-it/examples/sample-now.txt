@@ -1,0 +1,7 @@
+-- Make It: commute distribution ledger (as of 2026-08-29)
+  ledger    : 71 commutes · 3 routes · 2026-03-02 .. 2026-08-28 · 67 timed
+  now       : leave 08:24, arrive by 09:00 on metro-line2 — 36m of margin left
+  evidence  : P(on time) = 0% over departures from 08:15 (n=25) — the margin you have
+              is your P0 ride; worst day on record 49m
+  verdict   : DEAD (exit 5) — the median day already misses by 8m.
+              Reschedule, warn ahead, or accept the lateness.
