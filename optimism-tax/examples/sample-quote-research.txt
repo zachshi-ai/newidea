@@ -1,0 +1,5 @@
+  estimate: 3.0 days, tag=research
+  basis   : 8 records tagged 'research'
+  median quote (P50): 10.6 days  (3.0 x 3.55)
+  safe quote    (P80): 11.8 days  (3.0 x 3.92) — late 1 time in 5
+  estimation is prophecy; this is what your own prophecy is worth.

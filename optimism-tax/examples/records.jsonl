@@ -1,0 +1,26 @@
+{"date": "2026-05-06", "estimate": 3, "actual": 3.5, "tag": "feature", "note": "cart promo rules"}
+{"date": "2026-05-19", "estimate": 2, "actual": 2.0, "tag": "feature", "note": "pagination cleanup"}
+{"date": "2026-06-03", "estimate": 5, "actual": 7.0, "tag": "feature", "note": "checkout refactor"}
+{"date": "2026-06-17", "estimate": 3, "actual": 3.0, "tag": "feature", "note": "webhook retries"}
+{"date": "2026-07-01", "estimate": 2, "actual": 2.5, "tag": "feature", "note": "settings page split"}
+{"date": "2026-07-15", "estimate": 4, "actual": 6.0, "tag": "feature", "note": "search relevance v1"}
+{"date": "2026-07-29", "estimate": 3, "actual": 4.0, "tag": "feature", "note": "audit log viewer"}
+{"date": "2026-08-12", "estimate": 2, "actual": 2.0, "tag": "feature", "note": "rate limit headers"}
+{"date": "2026-08-26", "estimate": 3, "actual": 3.5, "tag": "feature", "note": "onboarding checklist"}
+{"date": "2026-05-11", "estimate": 2, "actual": 6.4, "tag": "research", "note": "OAuth provider spike"}
+{"date": "2026-05-27", "estimate": 3, "actual": 9.9, "tag": "research", "note": "vendor API evaluation"}
+{"date": "2026-06-10", "estimate": 2, "actual": 6.8, "tag": "research", "note": "search engine bake-off"}
+{"date": "2026-06-24", "estimate": 3, "actual": 10.5, "tag": "research", "note": "schema migration path"}
+{"date": "2026-07-08", "estimate": 2, "actual": 7.2, "tag": "research", "note": "ML ranking feasibility"}
+{"date": "2026-07-22", "estimate": 3, "actual": 11.4, "tag": "research", "note": "multi-tenant isolation"}
+{"date": "2026-08-05", "estimate": 2, "actual": 8.0, "tag": "research", "note": "streaming pipeline PoC"}
+{"date": "2026-08-19", "estimate": 3, "actual": 13.5, "tag": "research", "note": "offline sync design"}
+{"date": "2026-05-22", "estimate": 1, "actual": 1.0, "tag": "bugfix", "note": "duplicate charge guard"}
+{"date": "2026-06-30", "estimate": 1, "actual": 1.5, "tag": "bugfix", "note": "timezone off-by-one"}
+{"date": "2026-08-03", "estimate": 0.5, "actual": 0.5, "tag": "bugfix", "note": "404 on empty cart"}
+{"date": "2026-08-28", "estimate": 1, "actual": 0.8, "tag": "bugfix", "note": "double-submit on quote"}
+{"date": "2026-06-08", "estimate": 3, "actual": 2.0, "tag": "ops", "note": "postgres minor upgrade"}
+{"date": "2026-07-06", "estimate": 5, "actual": 3.0, "tag": "ops", "note": "log pipeline cutover"}
+{"date": "2026-08-10", "estimate": 2, "actual": 1.5, "tag": "ops", "note": "cert rotation drill"}
+{"date": "2026-08-31", "estimate": 4, "actual": 3.0, "tag": "ops", "note": "backup restore drill"}
+{"date": "2026-09-01", "estimate": 2, "note": "draft: invoice batching"}

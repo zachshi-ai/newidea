@@ -1,0 +1,5 @@
+  estimate: 3.0 days
+  basis   : whole ledger
+  median quote (P50): 3.8 days  (3.0 x 1.25)
+  safe quote    (P80): 10.3 days  (3.0 x 3.42) — late 1 time in 5
+  estimation is prophecy; this is what your own prophecy is worth.

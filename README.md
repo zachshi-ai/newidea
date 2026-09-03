@@ -17,6 +17,7 @@
 | 10 | [复现那杯 · Rebrew](rebrew/) | 你以为在调参，其实在抽奖：先量出**复现半径**（同配方重复冲的评分波动 = 你的手抖幅度 σ̂），再排**旋钮排行**，σ̂ 超线就拒绝调参建议——把玄学冲煮变成厨房里的单因素实验 | 方法论 + 零依赖 CLI | ✅ 91 tests |
 | 11 | [警报疲劳 · Alarm Fatigue](alarm-fatigue/) | flaky test 不是坏测试，是**误鸣的火警**——误鸣多了没人再看警报。本件从 git 修补痕迹（fix flaky 词表、混入的 skip、绕道的 retry、只改测试的 commit）重建每个测试的**警报信用账**：从没哭过狼的 100 分，被静音重试反复修补的滑进**失聪区**——那里的红灯只是背景噪音，不是火警 | 方法论 + 零依赖 CLI | ✅ 47 tests |
 | 12 | [加量红线 · Redline](redline/) | 伤病不住在跑量里，住在跑量的**斜率**里：四周慢性负荷当刻度盘、本周急性负荷当指针，给身体装一个**转速表**（ACWR 甜区 0.8–1.3、红线 1.5）；出门前先模拟计划转速并给出甜区余额，伤停后不给爆表的比率、给 40/60/80/100% 归队阶梯——校准门/归零重启/判据冻结三条规则把 ACWR 的三种著名误用结构性挡住 | 方法论 + 零依赖 CLI | ✅ 108 tests |
+| 13 | [乐观税 · Optimism Tax](optimism-tax/) | 你的 3 天从来不是 3 天：每完成一个任务记一张收据（估算 vs 实际），账本算出**个人乐观税率**（中位膨胀比）与 P80 安全报价——全局 1.25x 看着无害，总税额已 56 人日；分桶后 research 类 3.55x 重灾区、ops 类 0.71x 在藏 buffer，规划谬误第一次有了对账的地方，报价从此有据可依 | 方法论 + 零依赖 CLI | ✅ 69 tests |
 
 ## 仓库约定
 
@@ -38,6 +39,7 @@ python3 -m unittest discover -s stage-time/tests
 python3 -m unittest discover -s rebrew/tests
 python3 -m unittest discover -s alarm-fatigue/tests
 python3 -m unittest discover -s redline/tests
+python3 -m unittest discover -s optimism-tax/tests
 
 # 文档漂移扫描（CI 中亦会运行，见 .github/workflows/docs.yml）
 python3 doc-drift/doc_drift.py scan . --exclude demo-repo --exclude gitweek

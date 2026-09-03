@@ -1,0 +1,18 @@
+# optimism-tax · 乐观税账本
+# 每次推送：跑验收测试（含 dogfood 审计样例账本 + 样例可复现校验），并输出当前税率快照。
+# The snapshot never fails the build: the report is a monitoring
+# artifact, the tests are the gate.
+name: optimism-tax
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s optimism-tax/tests -v
+      - name: optimism tax snapshot (advisory)
+        run: python3 optimism-tax/optimism_tax.py report --file optimism-tax/examples/records.jsonl

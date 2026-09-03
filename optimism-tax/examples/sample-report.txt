@@ -1,0 +1,21 @@
+-- Optimism Tax ledger: records.jsonl
+   (warning: 1 unreadable line(s) skipped)
+  records                 : 25
+  median inflation        : 1.25x   <- your optimism tax rate
+  p80 inflation           : 3.42x   (the 1-in-5 late quote)
+  bracket                 : ~ mild tax      — plan a little slack
+  total tax paid          : 56.0 days (sum of actual - estimate across 25 tasks)
+  finished early          : 20% of records (ratio < 1)
+
+  per-tag distortion ledger (typical inflation by task type):
+    feature          n=9    1.17x median
+    research         n=8    3.55x median
+    bugfix           n=4    1.00x median
+    ops              n=4    0.71x median
+
+  trend                   : recent 1.08x vs prior 1.40x — flat — stable tax rate
+
+  red flags:
+    * FRAGMENTED CALIBRATION (p80/median = 2.74x > 2.5) — you are not one tax rate, you are several: tag your tasks and read per-tag
+
+  next time you say 'X days': X x 1.25 = what you mean, X x 3.42 = what you should promise
