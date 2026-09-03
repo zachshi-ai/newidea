@@ -1,0 +1,12 @@
+人情账 · Gift Ledger — 随礼是支付，人情是余额 v1.0.0
+账本 examples/gifts.tsv（13 笔 / 6 人）  基准日 2026-09-04  折算通胀 5.0%
+
+  笔数     13 笔（in 6 · out 7）
+  跨度     2019-10-01 → 2026-08-01
+  今日值   收进 6056 元 · 随出 4711 元（折算到 2026-09-04 购买力）
+  总余额   1345 元（正 = 人情市场整体欠你的）
+
+  关系系数（×基线）：family 1.5 · close-friend 1.2 · friend 1.0 · colleague 0.7 · distant 0.5
+  场合系数（×基线）：wedding 1.0 · funeral 1.0 · baby 0.6 · housewarming 0.5 · birthday 0.4 · illness 0.4
+
+  基线 600 元 = wedding × friend 的今日骨架，suggest --base 可整体校准，--inflation 可换折算率。

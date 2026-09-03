@@ -1,0 +1,24 @@
+# gift-ledger · 人情账
+# 每次推送:跑验收测试(含折算闭式/礼崩三条件/区间结构等 59 项),
+# 并输出示例账本的全员余额快照(含礼崩,快照按设计 exit 4 不挂 build)。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: gift-ledger
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. adjust closed-form + blackhole conditions)
+        run: python3 -m unittest discover -s gift-ledger/tests -v
+      - name: ledger snapshot (advisory, exit code by design)
+        run: |
+          python3 gift-ledger/gift_ledger.py book gift-ledger/examples/gifts.tsv --as-of 2026-09-04 || true
+          python3 gift-ledger/gift_ledger.py suggest gift-ledger/examples/gifts.tsv 表妹 --occasion wedding --as-of 2026-09-04
+          python3 gift-ledger/gift_ledger.py inflation gift-ledger/examples/gifts.tsv --as-of 2026-09-04
+      - name: examples byte-identical rebuild
+        run: python3 gift-ledger/examples/build_examples.py --check

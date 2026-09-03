@@ -1,0 +1,17 @@
+# gift-ledger 示例账本：老陈的人情往来（13 笔 / 6 人）
+# 列：date  direction  party  relation  occasion  amount  [note]
+# direction：in = 对方随给你；out = 你随出去
+date	direction	party	relation	occasion	amount	note
+2019-10-01	in	表妹	close-friend	wedding	500	我婚礼表妹随的
+2020-05-01	out	小林	close-friend	housewarming	300	小林乔迁
+2020-06-06	out	老周	colleague	wedding	500	老周婚礼
+2021-10-02	out	表哥	family	wedding	800	表哥婚礼
+2022-04-30	out	小林	close-friend	wedding	600	小林婚礼
+2022-10-01	out	老周	colleague	wedding	600	老周再婚
+2023-05-01	in	表哥	family	wedding	600	我婚礼表哥随的
+2023-05-20	out	老周	colleague	baby	400	老周家满月
+2023-10-01	in	姑姑	family	wedding	2000	我婚礼姑姑随的
+2024-06-15	out	姑姑	family	housewarming	600	姑姑乔迁
+2025-02-10	in	姑姑	family	baby	800	我家满月
+2026-03-15	in	小林	close-friend	baby	1150	我家满月小林随的
+2026-08-01	in	阿凯	distant	wedding	300	老同学补的礼
