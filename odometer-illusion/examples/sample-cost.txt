@@ -1,0 +1,5 @@
+cost ledger : 13 priced entries · ¥3,161 total
+per km      : ¥0.148 / km over 21,400 km on the ledger
+per year    : ¥851 / y over 3.7 y of car age
+costliest   : 2024-11-03 engine_oil ¥420
+by item     : engine_oil ¥2,396 (75.8%) · oil_filter ¥285 (9.0%) · wipers ¥250 (7.9%) · cabin_filter ¥120 (3.8%) · air_filter ¥110 (3.5%)

@@ -1,0 +1,12 @@
+trip gate : depart 2025-12-01 · + 2,600 km / 12 days
+return    : 2025-12-13 @ 24,000 km
+
+  6 of 11 items cross the line mid-trip:
+  ! brake_fluid       188% at return (calendar clock) — service before you leave
+  ! coolant           188% at return (calendar clock) — service before you leave
+  ! wipers            148% at return (calendar clock) — service before you leave
+  ! engine_oil        136% at return (calendar clock) — service before you leave
+  ! oil_filter        136% at return (calendar clock) — service before you leave
+  ! battery           125% at return (calendar clock) — service before you leave
+
+gate: FAIL

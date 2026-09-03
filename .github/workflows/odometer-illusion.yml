@@ -1,0 +1,18 @@
+# odometer-illusion · 里程错觉
+# 每次推送：跑验收测试（含 demo 数字核验 + 样例逐字节同步），并输出样例账本的双时钟快照。
+# The status snapshot never fails the build: the report is a demo artifact,
+# the trip gate (exit 4) is what can actually refuse something.
+name: odometer-illusion
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s odometer-illusion/tests -v
+      - name: twin-clock snapshot on the demo ledger (advisory)
+        run: python3 odometer-illusion/odometer_illusion.py status odometer-illusion/examples/family-car.csv odometer-illusion/examples/service-log.csv --as-of 2025-12-01 --km-now 21400

@@ -1,0 +1,20 @@
+car       : 小白 · bought 2022-03-15 @ 0 km
+clock     : 2025-12-01 · 21,400 km on the odometer · 3.7 y old · 5,760 km/y
+items     : 11 tracked · 6 OVERDUE · 0 DUE · 2 SOON · 3 OK
+
+  item            last done         mileage  calendar  progress  band
+  brake_fluid     assumed factory        54%      186%      186%  !! OVERDUE
+  coolant         assumed factory        54%      186%      186%  !! OVERDUE
+  wipers          2024-06-20               —      145%      145%  !! OVERDUE
+  engine_oil      2025-04-13             44%      129%      129%  !! OVERDUE
+  oil_filter      2025-04-13             44%      129%      129%  !! OVERDUE
+  battery         assumed factory          —      124%      124%  !! OVERDUE
+  brake_pads      assumed factory        54%       74%       74%  ~ SOON
+  spark_plugs     assumed factory        54%       74%       74%  ~ SOON
+  air_filter      2025-04-13             18%       64%       64%  . OK
+  cabin_filter    2025-04-13             18%       64%       64%  . OK
+  tires           assumed factory        36%       62%       62%  . OK
+
+  binding clocks of the 6 due items: 6 calendar · 0 mileage
+  you are a calendar-bound driver: 5,760 km/y means the odometer
+  barely moves — this car is aging in the garage, not on the road.
