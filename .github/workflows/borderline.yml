@@ -1,0 +1,23 @@
+# borderline · 贴线
+# 每次推送:跑验收测试(含 Theil-Sen 斜率/噪声地板/状态阶梯/门禁语义等 31 项),
+# 逐字节校验示例输出,并输出示例账本的贴线面板快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: borderline
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. noise floor + honest gates)
+        run: python3 -m unittest discover -s borderline/tests -v
+      - name: examples byte-check (reproducible outputs)
+        run: python3 borderline/examples/build_examples.py --check
+      - name: borderline panel snapshot (advisory, exit 4 by design)
+        run: |
+          python3 borderline/borderline.py panel borderline/examples/ledger.tsv --today 2026-09-04 || test $? -eq 4
+          python3 borderline/borderline.py next borderline/examples/ledger.tsv --today 2026-09-04
