@@ -1,0 +1,21 @@
+-- Job Funnel aging: pending applications (as of 2025-12-01)
+  silence deadline : 17d (P90 of 22 applications answered)
+  pending          : 12 applications · 7 expired beyond the line · 5 still alive
+
+  company              role                         channel    applied       age  verdict
+  Solango              Backend Engineer             board      2025-10-21    41d  EXPIRED — silent past the line; statistically already dead
+  Clearharbor          Senior Backend Engineer      board      2025-10-28    34d  EXPIRED — silent past the line; statistically already dead
+  Gale Studio          Backend Engineer             board      2025-11-03    28d  EXPIRED — silent past the line; statistically already dead
+  Yearbase             Backend Engineer             board      2025-11-05    26d  EXPIRED — silent past the line; statistically already dead
+  Auroracloud          Site Reliability Engineer    careers    2025-11-08    23d  EXPIRED — silent past the line; statistically already dead
+  Auroracloud          Data Engineer                careers    2025-11-10    21d  EXPIRED — silent past the line; statistically already dead
+  Slowbull Finance     Risk Data Engineer           board      2025-11-13    18d  EXPIRED — silent past the line; statistically already dead
+  Halcyon Health       Backend Engineer             recruiter  2025-11-17    14d  alive
+  Obsidian Energy      Backend Engineer             careers    2025-11-19    12d  alive
+  Forager Community    Backend Engineer             board      2025-11-21    10d  alive
+  Forge Works          Embedded Backend Engineer    referral   2025-11-24     7d  alive
+  Stargaze Observatory Backend Engineer             board      2025-11-26     5d  alive
+
+  7 pending are past your silence line — close them and the honest response rate
+  reads 25.5% -> 22.6%. A ledger that never buries anything measures nothing.
+  gate: ACTION — close the dead, keep the alive waiting

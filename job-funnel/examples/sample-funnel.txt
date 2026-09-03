@@ -1,0 +1,14 @@
+-- Job Funnel: applications-to-offer ledger (as of 2025-12-01)
+  ledger     : 69 applications · 55 decided · 12 pending · 2 withdrawn · 1 offer
+  funnel     : decided applications only — pending ones are not in the denominator yet (see the aging command)
+
+  stage                      n  passes     rate   wilson lo
+  applied -> response       55      14    25.5%       15.8%   <- weakest proven stage
+  response -> interview     14       6    42.9%       21.4%
+  interview -> offer         6       1    16.7%        3.0%  (thin)
+
+  weakest proven stage : applied -> response (wilson lo 15.8%)
+                         the wall is up front: resumes are not turning into conversations —
+                         interview polish cannot fix a funnel that leaks before anyone answers.
+  thin stages      : interview -> offer (n=6 < 10) — with this few samples the rate is a rumor, not a rate
+  pending          : 12 waiting — closing the dead ones will change this funnel
