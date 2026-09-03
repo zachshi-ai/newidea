@@ -1,0 +1,29 @@
+声源缺省表（dBA 中位；账本第 5 列 dB 永远可以按行覆盖）：
+
+  声源                    dB         1 小时
+  concert              110      40.3 sd
+  headphone-max        105      12.7 sd
+  livehouse            105      12.7 sd
+  headphone-loud       100      4.00 sd
+  ktv                  100      4.00 sd
+  bar-club              95      1.26 sd
+  construction          95      1.26 sd
+  earbuds-street        95      1.26 sd
+  gym-class             95      1.26 sd
+  motorcycle            95      1.26 sd
+  lawnmower             90      0.40 sd
+  airplane-cabin        85      0.12 sd
+  cinema                85      0.12 sd
+  headphone-normal      85      0.12 sd
+  metro                 85      0.12 sd
+  street                80      0.04 sd
+  bus                   75      0.01 sd
+  restaurant            75      0.01 sd
+  cafe                  70      0.00 sd
+  hairdryer             70      0.00 sd
+  conversation          60      0.00 sd
+  office                55      0.00 sd
+  library               45      0.00 sd
+  home-quiet            40      0.00 sd
+
+1 小时 @110dB = 40.3 个安全日：世界上没有「就听一小会儿」的 110dB。
