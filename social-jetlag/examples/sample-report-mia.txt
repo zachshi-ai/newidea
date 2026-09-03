@@ -1,0 +1,16 @@
+-- Social Jetlag report: wooly-week.tsv
+  nights logged          : 21  (15 work / 6 free · 2026-08-17 .. 2026-09-06)
+  sleep duration         : work 6h50m · free 8h10m
+  sleep midpoint         : work 03:45 (MSW) · free 06:35 (MSF)
+  MSFsc (debt-corrected) : 06:06
+  social jetlag          : +2h50m   !! HIGH   (red line = 2h)
+  debt-corrected SJL     : +2h21m   !! HIGH
+  sleep debt             : 1h20m per work night · 6h40m per week · 346h40m per year
+  weekend repay rate     : 32%  (430 repaid of 1350 owed)
+  warnings               : none
+
+Your free nights end 2h50m later on the clock than your work
+nights. Every week you fly twice: forward every free day,
+back with every alarm day — the commute your bed makes.
+The free-day oversleep repays only 32% of the work debt —
+you are paying jetlag for a loan you are not repaying.

@@ -1,0 +1,9 @@
+-- Simulation (flat): wooly-week.tsv
+  midpoint free         : 06:35 -> 05:55 (MSF)
+  social jetlag         : +2h50m -> +2h10m  (!! HIGH -> !! HIGH)
+  weekly sleep debt     : 6h40m per week (unchanged — flat closes the
+                          account, not the debt: the need goes unmeasured)
+  verdict: killing the oversleep removes 0h40m of jetlag and
+  stops the repayment entirely. Whatever jetlag remains
+  is phase, not debt — 'just stop sleeping in' does not
+  fix a chronotype, it only starves the ledger.

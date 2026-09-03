@@ -1,0 +1,14 @@
+-- Social Jetlag report: lark-week.tsv
+  nights logged          : 21  (15 work / 6 free · 2026-08-17 .. 2026-09-06)
+  sleep duration         : work 7h10m · free 7h20m
+  sleep midpoint         : work 02:15 (MSW) · free 02:30 (MSF)
+  MSFsc (debt-corrected) : 02:26
+  social jetlag          : +0h15m   OK ALIGNED   (red line = 2h)
+  debt-corrected SJL     : +0h11m   OK ALIGNED
+  sleep debt             : 0h10m per work night · 0h50m per week · 43h20m per year
+  weekend repay rate     : 40%  (60 repaid of 150 owed)
+  warnings               : none
+
+No meaningful jetlag: your biological and social clocks
+agree. If mornings still hurt, look at the debt account.
+Yours says 0h10m per work night — that is the one to fix.

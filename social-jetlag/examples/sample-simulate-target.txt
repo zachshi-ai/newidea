@@ -1,0 +1,8 @@
+-- Simulation (target): wooly-week.tsv
+  goal                  : |SJL| <= 60 min (from +2h50m)
+  required shift        : free nights 110 min EARLIER (both ends, duration kept)
+  midpoint free         : 06:35 -> 04:45 (MSF)
+  social jetlag         : +2h50m -> +1h00m  (!! HIGH -> ~~ DRIFTING)
+  weekly sleep debt     : 6h40m -> 6h40m  (repay 32%  (430 repaid of 1350 owed))
+  verdict: moving your free nights EARLIER by 1h50m lands at +1h00m —
+  reached: yes
