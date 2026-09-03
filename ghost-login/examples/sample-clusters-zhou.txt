@@ -1,0 +1,22 @@
+-- Reuse clusters: zhou-vault.tsv  (as of 2026-08-30)
+  3 cluster(s); 7 of 12 accounts share a password.
+
+  cluster #20d2fe5e  size 3
+    OldForum     normal  set 2011-03-01  zhou@mail.com
+    MusicSite    trivial set 2012-06-01  zhou85@qq.com
+    PizzaApp     trivial set 2022-05-01  13800138000
+    one leaked database anywhere above cracks every account here;
+    the fix is one password change on any member of the cluster.
+
+  cluster #e16f29ae  size 2  !! holds a vital account
+    CloudDrive   vital   set 2016-04-01  zhou@mail.com
+    NewsSite     normal  set 2017-09-01  zhou@mail.com
+    one leaked database anywhere above cracks every account here;
+    the fix is one password change (start from the vital one).
+
+  cluster #fc99a59f  size 2  !! holds a vital account
+    UtilityBill  normal  set 2018-08-01  zhou1985
+    BankApp      vital   set 2023-11-01  zhou1985
+    one leaked database anywhere above cracks every account here;
+    the fix is one password change (start from the vital one).
+

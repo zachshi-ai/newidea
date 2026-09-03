@@ -1,0 +1,22 @@
+-- Ghost login report: mei-vault.tsv  (as of 2026-08-30)
+  accounts tracked       : 3  (1 vital / 1 normal / 1 trivial)
+  grades                 : 3 SOUND · 0 MUSTY · 0 ZOMBIE
+  reuse clusters         : 0  (0 of 3 accounts share a password)
+  vital in a cluster     : no
+  primary identity       : mei@post.com (3 accounts · 0 zombie(s) behind it)
+  weakest password       : Diary  72.3 bits (strong)
+  mean score             : 17.7
+  warnings               : none
+
+  SOUND — below 40
+  score 25  Bank         vital   SOUND    #2fb2a980  mei@post.com
+    set 2024 · 0.0y silent · age 0 · stale 0 · reuse 0 · sens 25
+  score 16  Shop         trivial SOUND    #dab7dc62  mei@post.com
+    set 2023 · 0.9y silent · age 5 · stale 7 · reuse 0 · sens 4
+  score 12  Diary        normal  SOUND    #4a29c764  mei@post.com
+    set 2025 · 0.1y silent · age 0 · stale 0 · reuse 0 · sens 12
+
+No zombies: nothing here is statistically dead. The
+ledger's remaining questions are cluster ones — who
+shares a password with whom, and where your vital
+accounts sit inside those clusters.

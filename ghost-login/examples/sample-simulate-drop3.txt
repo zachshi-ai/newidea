@@ -1,0 +1,9 @@
+-- Simulation (drop 3): zhou-vault.tsv  (as of 2026-08-30)
+  dropped                : CloudDrive, NewsSite, OldForum
+  grades                 : 4 ZOMBIE · 4 MUSTY · 4 SOUND  ->  1 ZOMBIE · 4 MUSTY · 4 SOUND
+  reuse clusters         : 3 -> 2   (largest 3 -> 2)
+  primary exposure       : 4 accounts -> 1  (zombies behind it 3 -> 0)
+  mean score             : 49.8 -> 42.8
+
+Deletion cleared 3 zombie(s) — but 2 cluster(s) survived, holding: BankApp, MusicSite, PizzaApp, UtilityBill.
+Zombies are removed by deletion; clusters only by a password change.
