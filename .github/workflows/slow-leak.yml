@@ -1,0 +1,21 @@
+# slow-leak · 暗漏
+# 每次推送:跑验收测试(含同比基线/蠕升季节免疫/诚实条款等 31 项),
+# 并输出示例账本的三表体检快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: slow-leak
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. season immunity + honesty gates)
+        run: python3 -m unittest discover -s slow-leak/tests -v
+      - name: three-meter snapshot (advisory, exit 0 by design)
+        run: |
+          python3 slow-leak/slow_leak.py detect slow-leak/examples/ledger.tsv --today 2026-09-04
+          python3 slow-leak/slow_leak.py floor slow-leak/examples/ledger.tsv --today 2026-09-04
