@@ -1,0 +1,18 @@
+# contribution-gap · 贡献错觉账本
+# 每次推送：跑验收测试（含 dogfood 审计样例家庭 + 样例可复现校验），并输出当前公平快照。
+# The snapshot never fails the build: the report is a monitoring
+# artifact, the tests are the gate.
+name: contribution-gap
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s contribution-gap/tests -v
+      - name: household fairness snapshot (advisory)
+        run: python3 contribution-gap/contribution_gap.py report --file contribution-gap/examples/ledger.jsonl

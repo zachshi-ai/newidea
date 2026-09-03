@@ -1,0 +1,30 @@
+contribution gap · household audit
+  ledger              : 100 chores, 2 claims, 0 broken lines skipped
+  window              : last 28 days (2026-08-03 .. 2026-08-30)
+
+shares (by minutes):
+  maya                  :  60.7%  1275 min / 31 chores
+  noor                  :  39.3%  825 min / 19 chores
+
+  gini                : 0.107  tilted
+  chore monopolies    : 4 fiefdoms (>= 80% of a chore in one pair of hands)
+    cooking        -> maya       100% of 320 min
+    dishes         -> maya       100% of 240 min
+    fixing         -> noor       100% of 120 min
+    trash          -> noor       87.5% of 80 min
+  streaks             : cooking: last 6 in a row by maya; dishes: last 6 in a row by maya; trash: last 4 in a row by noor
+  trend               : worsening — 28-day gini 0.107 vs 0.040 (prior 28 days)
+
+perception audit (latest claim vs the ledger):
+  maya                  : claims 70%   actual 60.7%   gap +9.3 pts
+  noor                  : claims 60%   actual 39.3%   gap +20.7 pts   <- overclaim
+  perception surplus  : +30.0 pts — together you claim 130% of one household
+
+red flags:
+  * PERCEPTION SURPLUS — claimed shares sum to 130.0% of one household — the self-images do not fit in one reality, so the argument is not about chores, it is about which household you each live in
+  * OVERCLAIM — noor claims 60%, the ledger measures 39.3% (+20.7 pts) — most likely availability bias, not bad faith: frequent visible chores are easier to remember than long invisible ones
+  * FIEFDOM HOUSE — 4 chores are >= 80% in one person's hands: cooking -> maya, dishes -> maya, fixing -> noor, trash -> noor. The balanced total is masking it: fair in aggregate, monopolised by department.
+  * STREAK — cooking: last 6 sessions in a row by maya — rotation has stopped; whoever holds a chore, owns it
+  * STREAK — dishes: last 6 sessions in a row by maya — rotation has stopped; whoever holds a chore, owns it
+  * STREAK — trash: last 4 sessions in a row by noor — rotation has stopped; whoever holds a chore, owns it
+  * WORSENING TREND — 28-day gini drifted from 0.040 to 0.107 — the split is diverging, not converging; this is the slide arguments usually notice last

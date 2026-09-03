@@ -22,6 +22,7 @@
 | 15 | [每穿成本 · Cost Per Wear](cost-per-wear/) | 衣服的真实价格 = 吊牌价 ÷ 穿的次数，但购买决策只看了第一本账。本件从换季快照清单算出 CPW 排行（1200 的风衣穿 96 次后每穿 12.5，699 的衬衫只穿 1 次每穿 699）、衣柜坟场与**沉睡资金**（49.6% 的投入在睡觉，含 180 天豁免期）、品类堆积区、品类×季节覆盖矩阵，再加**剁手模拟器**：购物车逐条过堆积否决与孤儿否决——「第 8 件白 T」在下单前就被拦下，扔与不扔仍是人的决定 | 方法论 + 零依赖 CLI | ✅ 49 tests |
 | 16 | [漏带时刻 · Left Behind](left-behind/) | 漏带不是在机场发生的，是装箱那一刻就注定的：通用清单是「平均人」的清单，它不记得你上次忘了什么。本件把每次行程记成「物品×行程」错题本——同一物品漏带两次是**盲区**、反复原样往返的是**幽灵货物**、前后半程漏带率不降反升说明**清单没在迭代**——`pack` 生成的下一张清单由你的错误喂养：盲区置顶、常备在列、惯犯幽灵降级到「想清楚再带」 | 方法论 + 零依赖 CLI | ✅ 74 tests |
 | 17 | [到期悬崖 · Expiry Cliff](expiry-cliff/) | 名义有效期会撒谎：护照还剩 5 个月，对多数目的地已经等于零。本件给「会静默失效的凭证」（护照/驾照/保单/域名/证书）记一本**提前量调整的 validity 账本**：有效剩余 = 到期日 − 提前量 − 今天，按谁先坠崖排行；出行窗口对全部凭证过闸（一份失效 exit 4）；再从多段有效期里挖出你自己的**续期节奏**（每 ~10 年、惯常提前 46 天）——「现在办是早是晚」第一次有个人基线 | 方法论 + 零依赖 CLI | ✅ 39 tests |
+| 18 | [贡献错觉 · Contribution Gap](contribution-gap/) | 「这个家总是我在撑」：双方自报的家务贡献之和常年超 100%，各自都在真心高估（Ross & Sicoly）。本件把家务记成分钟账本，给四个读数——**实测份额**、**公平基尼**（总账 0.033 balanced 可同时挂 5 个部门垄断）、**领地清单**（厨房归她、户外归他，该轮换的是部门不是全家）、**感知对账**（自报 70% vs 实测 53.3%，全家感知盈余 +30 分），28 天趋势让下滑先于争吵被看见——它不裁判谁更爱这个家，它回答：你们吵的是同一个家吗 | 方法论 + 零依赖 CLI | ✅ 96 tests |
 
 ## 仓库约定
 
@@ -48,6 +49,7 @@ python3 -m unittest discover -s social-jetlag/tests
 python3 -m unittest discover -s cost-per-wear/tests
 python3 -m unittest discover -s left-behind/tests
 python3 -m unittest discover -s expiry-cliff/tests
+python3 -m unittest discover -s contribution-gap/tests
 
 # 文档漂移扫描（CI 中亦会运行，见 .github/workflows/docs.yml）
 python3 doc-drift/doc_drift.py scan . --exclude demo-repo --exclude gitweek

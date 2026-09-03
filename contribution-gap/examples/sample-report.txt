@@ -1,0 +1,32 @@
+contribution gap · household audit
+  ledger              : 100 chores, 2 claims, 0 broken lines skipped
+  window              : all time (anchor 2026-08-30)
+
+shares (by minutes):
+  maya                  :  53.3%  2240 min / 54 chores
+  noor                  :  46.7%  1960 min / 46 chores
+
+  gini                : 0.033  balanced
+  chore monopolies    : 5 fiefdoms (>= 80% of a chore in one pair of hands)
+    cooking        -> maya       87.5% of 640 min
+    dishes         -> maya       83.3% of 480 min
+    groceries      -> noor       87.5% of 480 min
+    fixing         -> noor       100% of 240 min
+    trash          -> noor       87.5% of 160 min
+  streaks             : cooking: last 6 in a row by maya; dishes: last 6 in a row by maya; fixing: last 4 in a row by noor; trash: last 4 in a row by noor
+  trend               : worsening — 28-day gini 0.107 vs 0.040 (prior 28 days)
+
+perception audit (latest claim vs the ledger):
+  maya                  : claims 70%   actual 53.3%   gap +16.7 pts   <- overclaim
+  noor                  : claims 60%   actual 46.7%   gap +13.3 pts
+  perception surplus  : +30.0 pts — together you claim 130% of one household
+
+red flags:
+  * PERCEPTION SURPLUS — claimed shares sum to 130.0% of one household — the self-images do not fit in one reality, so the argument is not about chores, it is about which household you each live in
+  * OVERCLAIM — maya claims 70%, the ledger measures 53.3% (+16.7 pts) — most likely availability bias, not bad faith: frequent visible chores are easier to remember than long invisible ones
+  * FIEFDOM HOUSE — 5 chores are >= 80% in one person's hands: cooking -> maya, dishes -> maya, groceries -> noor, fixing -> noor (and 1 more). The balanced total is masking it: fair in aggregate, monopolised by department.
+  * STREAK — cooking: last 6 sessions in a row by maya — rotation has stopped; whoever holds a chore, owns it
+  * STREAK — dishes: last 6 sessions in a row by maya — rotation has stopped; whoever holds a chore, owns it
+  * STREAK — fixing: last 4 sessions in a row by noor — rotation has stopped; whoever holds a chore, owns it
+  * STREAK — trash: last 4 sessions in a row by noor — rotation has stopped; whoever holds a chore, owns it
+  * WORSENING TREND — 28-day gini drifted from 0.040 to 0.107 — the split is diverging, not converging; this is the slide arguments usually notice last
