@@ -24,6 +24,7 @@
 | 17 | [到期悬崖 · Expiry Cliff](expiry-cliff/) | 名义有效期会撒谎：护照还剩 5 个月，对多数目的地已经等于零。本件给「会静默失效的凭证」（护照/驾照/保单/域名/证书）记一本**提前量调整的 validity 账本**：有效剩余 = 到期日 − 提前量 − 今天，按谁先坠崖排行；出行窗口对全部凭证过闸（一份失效 exit 4）；再从多段有效期里挖出你自己的**续期节奏**（每 ~10 年、惯常提前 46 天）——「现在办是早是晚」第一次有个人基线 | 方法论 + 零依赖 CLI | ✅ 39 tests |
 | 18 | [贡献错觉 · Contribution Gap](contribution-gap/) | 「这个家总是我在撑」：双方自报的家务贡献之和常年超 100%，各自都在真心高估（Ross & Sicoly）。本件把家务记成分钟账本，给四个读数——**实测份额**、**公平基尼**（总账 0.033 balanced 可同时挂 5 个部门垄断）、**领地清单**（厨房归她、户外归他，该轮换的是部门不是全家）、**感知对账**（自报 70% vs 实测 53.3%，全家感知盈余 +30 分），28 天趋势让下滑先于争吵被看见——它不裁判谁更爱这个家，它回答：你们吵的是同一个家吗 | 方法论 + 零依赖 CLI | ✅ 96 tests |
 | 19 | [渐行渐远 · Drift Apart](drift-apart/) | 友谊没有关机动画：它不会突然死亡，只会把聊天记录的日期越拉越远。本件按**各自的圈层节奏**（核心 30 天/老同学 365 天）给每段关系记**欠费账**，挖**沉默斜率**（间隔翻倍是漂移的领先指标，比「上次联系是去年」早半年亮灯）和**单程指数**（最近五次全是你发起的关系，你一停它就停），修复清单把 7 天内的**生日门**置顶——那是唯一不需要理由的开口机会；联系与否永远是人的决定，账本只拒绝继续沉默 | 方法论 + 零依赖 CLI | ✅ 62 tests |
+| 20 | [稍后永不 · Later Never](later-never/) | 稍后读的「稍后」统计意义上就是「永不」：收藏按钮是注意力唯一**只刷不还的信用卡**，点星即结算焦虑、代价全部延期。本件从手编 TSV 账本量出**消化半衰期 t½**（中位口径，收藏后 2×t½ 没读大概率永不）、封棺/断代两种读法的**老化曲线**、近一季摄入/消化速度，再给出没人回答过的结论——收藏 ≥ 阅读时**清空 ETA = ∞**（你不需要更努力地读，需要更少地收藏）；手术单按「越老越死（>4×t½）+ 类型幻觉」给出归档名单，收 ≥10 条且读率 <20% 的 tag 被点名为**幻觉类型**——为理想自我收藏的实锤，扔与不扔仍是你的决定 | 方法论 + 零依赖 CLI | ✅ 48 tests |
 
 ## 仓库约定
 
@@ -52,6 +53,7 @@ python3 -m unittest discover -s left-behind/tests
 python3 -m unittest discover -s expiry-cliff/tests
 python3 -m unittest discover -s contribution-gap/tests
 python3 -m unittest discover -s drift-apart/tests
+python3 -m unittest discover -s later-never/tests
 
 # 文档漂移扫描（CI 中亦会运行，见 .github/workflows/docs.yml）
 python3 doc-drift/doc_drift.py scan . --exclude demo-repo --exclude gitweek
