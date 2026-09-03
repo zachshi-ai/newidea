@@ -1,0 +1,19 @@
+# repair-ledger · 续命账
+# 每次推送:跑验收测试(含 dogfood 样例账本三裁决 + 钉死日期逐字节复现校验),
+# 并输出家庭账本快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: repair-ledger
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + reproducibility)
+        run: python3 -m unittest discover -s repair-ledger/tests -v
+      - name: home ledger snapshot (advisory)
+        run: python3 repair-ledger/repair_ledger.py report repair-ledger/examples/home.json --as-of 2026-09-04

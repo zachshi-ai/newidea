@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": "washer",
+      "name": "洗衣机",
+      "category": "appliance",
+      "purchased": "2016-08-01",
+      "price": 3200,
+      "expected_life_years": 10,
+      "repairs": [
+        {"date": "2023-03-12", "symptom": "不脱水", "cost": 260, "outcome": "fixed", "claimed_years": 3.0},
+        {"date": "2024-11-05", "symptom": "脱水异响", "cost": 420, "outcome": "fixed", "claimed_years": 3.0},
+        {"date": "2025-08-19", "symptom": "底部漏水", "cost": 620, "outcome": "fixed", "claimed_years": 2.0}
+      ]
+    },
+    {
+      "id": "fridge",
+      "name": "冰箱",
+      "category": "appliance",
+      "purchased": "2019-05-20",
+      "price": 3900,
+      "expected_life_years": 12,
+      "repairs": [
+        {"date": "2022-02-14", "symptom": "压缩机不启动", "cost": 550, "outcome": "fixed", "claimed_years": 5.0}
+      ]
+    },
+    {
+      "id": "laptop",
+      "name": "笔记本",
+      "category": "electronics",
+      "purchased": "2018-03-15",
+      "price": 9800,
+      "expected_life_years": 6,
+      "repairs": [
+        {"date": "2021-06-10", "symptom": "风扇狂转", "cost": 300, "outcome": "fixed", "claimed_years": 4.0},
+        {"date": "2023-05-22", "symptom": "屏幕闪线", "cost": 900, "outcome": "fixed", "claimed_years": 3.0}
+      ],
+      "retired": {"date": "2025-01-08", "salvage": 600}
+    },
+    {
+      "id": "heater",
+      "name": "热水器",
+      "category": "appliance",
+      "purchased": "2014-11-01",
+      "price": 1800,
+      "expected_life_years": 8,
+      "repairs": [
+        {"date": "2019-01-20", "symptom": "加热慢", "cost": 400, "outcome": "fixed", "claimed_years": 4.0},
+        {"date": "2021-02-08", "symptom": "水温不稳", "cost": 550, "outcome": "fixed", "claimed_years": 4.0},
+        {"date": "2022-09-15", "symptom": "内胆渗水", "cost": 780, "outcome": "fixed", "claimed_years": 3.0}
+      ],
+      "retired": {"date": "2024-03-02", "salvage": 30}
+    },
+    {
+      "id": "microwave",
+      "name": "微波炉",
+      "category": "appliance",
+      "purchased": "2020-04-18",
+      "price": 700,
+      "expected_life_years": 8,
+      "repairs": [
+        {"date": "2023-07-02", "symptom": "门扣断裂", "cost": 120, "outcome": "fixed", "claimed_years": 3.0},
+        {"date": "2025-06-14", "symptom": "不加热", "cost": 380, "outcome": "failed", "claimed_years": 3.0}
+      ]
+    }
+  ]
+}
