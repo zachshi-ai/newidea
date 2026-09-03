@@ -1,0 +1,8 @@
+-- Expiry Cliff: Passport · Aya Zhang
+  category passport · margin 180d · current period 2016-01-15 .. 2026-03-01
+  effective horizon: 2025-09-02 (OVERDUE, -90d)
+  renewal rhythm: every ~10y · you renew ~46d early (1 renewal)
+
+  periods on record:
+    2006-03-01 .. 2016-03-01
+    2016-01-15 .. 2026-03-01   <- renewed 46d before previous expiry

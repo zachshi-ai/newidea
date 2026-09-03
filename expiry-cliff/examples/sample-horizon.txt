@@ -1,0 +1,16 @@
+-- Expiry Cliff horizon: family-registry.csv (as of 2025-12-01)
+  credentials    : 8 credentials · 1 overdue · 2 in the cliff band · 3 cautioning · 2 clear
+  first to fall  : Passport · Aya Zhang (effective 2025-09-02, -90d behind you)
+
+  name             holder       category       ends         margin left(eff)  band
+  Passport         Aya Zhang    passport       2026-03-01      180      -90d  !! OVERDUE
+  HomeTLS          Zhang Family tls_cert       2026-01-04       21       13d  ! CLIFF
+  DriverLicense    Aya Zhang    driver_license 2026-02-28       60       29d  ! CLIFF
+  FamilyDomain     Zhang Family domain         2026-02-01       30       32d  ~ CAUTION
+  CarInsurance     Aya Zhang    insurance      2026-01-10        0       40d  ~ CAUTION
+  GymMembership    Aya Zhang    membership     2026-03-01        7       83d  ~ CAUTION
+  WorkVisa         Wei Zhang    visa           2027-08-01       90      518d  OK CLEAR
+  Passport         Wei Zhang    passport       2031-06-10      180     1837d  OK CLEAR
+
+  inside your usual renewal window (history says you renew early):
+  ↻ Passport         you usually renew ~46d early · every ~10y

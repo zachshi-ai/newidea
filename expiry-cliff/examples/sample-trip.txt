@@ -1,0 +1,10 @@
+-- Expiry Cliff trip: 2026-04-30 .. 2026-05-08 (as of 2025-12-01)
+  8 credentials checked, 6 fail the gate:
+  ! Passport         ends 2026-03-01 · margin 180 · effective 2025-09-02 — dead 248d before you return
+  ! HomeTLS          ends 2026-01-04 · margin  21 · effective 2025-12-14 — dead 145d before you return
+  ! DriverLicense    ends 2026-02-28 · margin  60 · effective 2025-12-30 — dead 129d before you return
+  ! FamilyDomain     ends 2026-02-01 · margin  30 · effective 2026-01-02 — dead 126d before you return
+  ! CarInsurance     ends 2026-01-10 · margin   0 · effective 2026-01-10 — dead 118d before you return
+  ! GymMembership    ends 2026-03-01 · margin   7 · effective 2026-02-22 — dead 75d before you return
+
+  gate: FAIL

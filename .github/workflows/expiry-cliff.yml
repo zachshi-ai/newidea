@@ -1,0 +1,18 @@
+# expiry-cliff · 到期悬崖
+# 每次推送：跑验收测试（含 demo 数字核验 + 样例逐字节同步），并输出样例登记的视界快照。
+# The horizon snapshot never fails the build: the report is a demo artifact,
+# the trip gate (exit 4) is what can actually refuse something.
+name: expiry-cliff
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s expiry-cliff/tests -v
+      - name: horizon snapshot on the demo registry (advisory)
+        run: python3 expiry-cliff/expiry_cliff.py horizon expiry-cliff/examples/family-registry.csv --as-of 2025-12-01
