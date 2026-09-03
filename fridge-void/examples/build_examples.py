@@ -102,6 +102,13 @@ SNAPSHOTS = [
 ]
 
 
+def resolve(arg):
+    """File-name args refer to files in HERE; resolve them absolutely so the
+    command works from any working directory (CI runs from the repo root)."""
+    path = os.path.join(HERE, arg)
+    return path if os.path.exists(path) else arg
+
+
 def main():
     check = "--check" in sys.argv
     ledger_path = os.path.join(HERE, "ledger.tsv")
@@ -122,7 +129,7 @@ def main():
     status = 0
     for args, name in SNAPSHOTS:
         path = os.path.join(HERE, name)
-        proc = subprocess.run([sys.executable, CLI] + args,
+        proc = subprocess.run([sys.executable, CLI] + [resolve(a) for a in args],
                               capture_output=True, text=True)
         out = proc.stdout
         if proc.returncode not in (0, 4):
