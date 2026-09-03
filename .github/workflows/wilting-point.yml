@@ -1,0 +1,22 @@
+# wilting-point · 凋萎点
+# 每次推送：跑验收测试（含 dogfood 样例逐字节校验），并输出当前阳台快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: wilting-point
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. examples sync)
+        run: python3 -m unittest discover -s wilting-point/tests -v
+      - name: shelf snapshot (advisory)
+        run: |
+          cd wilting-point
+          python3 wilting_point.py report examples/che-ledger.tsv examples/che-log.tsv
+          python3 wilting_point.py due examples/che-ledger.tsv examples/che-log.tsv
+          python3 wilting_point.py simulate examples/che-ledger.tsv examples/che-log.tsv trip 7
