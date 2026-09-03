@@ -1,0 +1,7 @@
+counterfactuals — same money, three pairs of hands (as-of 2026-06-30)
+
+  actual  your hands, as lived             29,036.29
+  hold    one shot on day one              35,100.00   +6,063.71 vs actual
+  dca     blind monthly   866.67 ×30       30,381.40   +1,345.11 vs actual
+
+holding still beat your hands by 6,063.71; your timing was the most expensive part of this fund.

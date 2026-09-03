@@ -1,0 +1,11 @@
+flow-by-flow audit — as-of 2026-06-30
+
+date        action  amount        nav@date  pos-365  label
+2024-01-03  BUY        5,000.00     1.0018       —  FIRST BUYS (no 365d history)
+2024-07-15  BUY       20,000.00     1.1241     0.83  CHASE-HI
+2024-10-08  SELL      12,000.00     0.9853       —  PANIC
+                                          └ +7.30% rebound in 90 days → 875.60 went to whoever held
+2025-03-20  BUY        8,000.00     1.1627     1.00  CHASE-HI
+2025-08-10  BUY        5,000.00     1.2426     0.94  CHASE-HI
+
+buy-side amount-weighted position: 0.89 → CHASING

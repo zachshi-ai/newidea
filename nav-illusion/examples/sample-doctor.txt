@@ -1,0 +1,8 @@
+doctor — data physical exam
+
+  navs   : 11 rows · span 911 days (need >= 180)
+  flows  : 5 rows (buy 4 · sell 1 · div 0)
+  replay : min shares 4,991.0162 (negative = over-sell)
+  warn   : 4 flow(s) priced by interpolated navs — disclosed in every report
+
+verdict: USABLE WITH NOTES — the audit will disclose each note.

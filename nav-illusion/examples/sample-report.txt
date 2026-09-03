@@ -1,0 +1,20 @@
+NAV ILLUSION · behavior audit — as-of 2026-06-30
+
+ledger
+  navs         : 11 points · 2024-01-01 → 2026-06-30 (911 days)
+  flows        : 5 (buy 4 · sell 1 · div 0) · 4 nav(s) interpolated
+  shares now   : 21,508.3633
+  net invested : 26,000.00   (buys 38,000.00 − sells 12,000.00)
+  market value : 29,036.29   profit +3,036.29 on net
+
+two clocks of return
+  fund TWR     : +12.78%/yr   the fund's report card (nav 1.0000 → 1.3500, +35.00% total)
+  your XIRR    : +6.46%/yr   what your money actually earned
+  behavior gap : -6.32 pp/yr   XIRR − TWR
+
+behavior profile
+  buy price position (365d, amount-weighted): 0.89 → CHASING
+  panic sells  : 1 of 1 — worst sold in a -14.32% drawdown (180d high 1.1500)
+                 2024-10-08 — next 90 days paid +7.30% back: 875.60 went to whoever held
+
+verdict: BLEEDING — gap -6.32 pp <= -5.00 pp line. The fund earned; your hands paid the difference.
