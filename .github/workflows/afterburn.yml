@@ -1,0 +1,21 @@
+# afterburn · 余燃
+# 每次推送:跑验收测试(含 cutoff 回代/稳态收敛/跨夜连续等 56 项),
+# 并输出示例账本的一周就寝红绿灯快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: afterburn
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. cutoff round-trip + steady-state convergence)
+        run: python3 -m unittest discover -s afterburn/tests -v
+      - name: week ledger snapshot (advisory, exit 0 by design)
+        run: |
+          python3 afterburn/afterburn.py week afterburn/examples/week.tsv --end 2026-09-04 --at 23:30
+          python3 afterburn/afterburn.py cutoff afterburn/examples/week.tsv --at 23:30 --drink latte --date 2026-09-04 --now "2026-09-04 14:00"
