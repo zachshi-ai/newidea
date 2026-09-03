@@ -1,0 +1,24 @@
+# mood-barometer · 阴晴表
+# 每次推送:跑验收测试(含日度口径/中位数基线/星期节律样本下限/事件成本
+# THIN/回弹与滞留判定/气候漂移/双信号门禁等 39 项),
+# 逐字节校验示例输出,并输出示例账本的气候快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (snapshot exits 4 by design; `|| test $? -eq 4`).
+name: mood-barometer
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. rebound/stranding + honest gates)
+        run: python3 -m unittest discover -s mood-barometer/tests -v
+      - name: examples byte-check (reproducible outputs)
+        run: python3 mood-barometer/examples/build_examples.py --check
+      - name: mood-barometer climate snapshot (advisory, exit 4 by design)
+        run: |
+          python3 mood-barometer/mood_barometer.py climate mood-barometer/examples/moods.tsv --today 2026-09-04 || test $? -eq 4
+          python3 mood-barometer/mood_barometer.py events mood-barometer/examples/moods.tsv --today 2026-09-04
