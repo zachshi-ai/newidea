@@ -1,0 +1,21 @@
+新鲜度榜 · 按目标 · 今天 2026-09-04
+
+  art      NAS·作品   home     26 天前（周期 7）  ✗ ROTTEN（静默断链）
+                     verify 从未 / drill 从未
+  art      工位冷备盘 office   170 天前（周期 90）  △ STALE
+                     verify 从未 / drill 从未
+  art      硬盘·作品  home     3 天前（周期 7）  · FRESH
+                     verify 从未 / drill 从未
+  docs     NAS·文档   home     5 天前（周期 7）  · FRESH
+                     verify 201 天前 / drill 从未
+  docs     文档云     cloud    10 天前（周期 30）  · FRESH
+                     verify 187 天前 / drill 107 天前
+  photos   NAS·照片   home     26 天前（周期 7）  ✗ ROTTEN（静默断链）
+                     verify 86 天前 / drill 从未
+  photos   照片云     cloud    2 天前（周期 7）  · FRESH
+                     verify 从未 / drill 从未
+  photos   硬盘·照片  home     3 天前（周期 7）  · FRESH
+                     verify 40 天前 / drill 从未
+
+ROTTEN 的门槛是 2× 周期：错过一次是人祸，错过两次是断链——
+断链的备份不再是你以为的那份副本。

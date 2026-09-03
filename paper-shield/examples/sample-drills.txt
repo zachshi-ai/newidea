@@ -1,0 +1,14 @@
+验证与演练史 · verify / drill 是账本里唯二的硬通货
+
+  art      NAS·作品     backup  26 天前  verify     从未  drill     从未  共 1 条
+  art      工位冷备盘   backup 170 天前  verify     从未  drill     从未  共 1 条
+  art      硬盘·作品    backup   3 天前  verify     从未  drill     从未  共 1 条
+  docs     NAS·文档     backup   5 天前  verify 201 天前  drill     从未  共 2 条
+  docs     文档云       backup  10 天前  verify 187 天前  drill 107 天前  共 3 条
+  photos   NAS·照片     backup  26 天前  verify  86 天前  drill     从未  共 2 条
+  photos   照片云       backup   2 天前  verify     从未  drill     从未  共 1 条
+  photos   硬盘·照片    backup   3 天前  verify  40 天前  drill     从未  共 2 条
+
+1/8 个目标演练过恢复。演练过的才算盾，没演练过的算愿望。
+
+账本只记你声称的事实，它不扫描磁盘——verify 与 drill 才是硬通货。

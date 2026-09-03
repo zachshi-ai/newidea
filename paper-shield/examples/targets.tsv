@@ -1,0 +1,12 @@
+# paper-shield 示例目标账 · 阿May（虚构人物，自由插画师）
+# 列：目标/内容域/介质/存放地/周期天
+# 存放地：home | office | offsite | cloud（勒索软件和火灾够不着的只有后两种）
+# 周期天：计划备份周期；留空或 - 表示不定期（不判新鲜度）
+硬盘·照片	photos	disk	home	7
+硬盘·作品	art	disk	home	7
+NAS·照片	photos	nas	home	7
+NAS·作品	art	nas	home	7
+NAS·文档	docs	nas	home	7
+照片云	photos	cloud	cloud	7
+文档云	docs	cloud	cloud	30
+工位冷备盘	art	disk	office	90

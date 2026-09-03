@@ -1,0 +1,8 @@
+两本账体检 · 8 个目标 · 13 条事件
+
+  目标账：NAS·作品（art/nas/home/7d）、NAS·文档（docs/nas/home/7d）、NAS·照片（photos/nas/home/7d）、工位冷备盘（art/disk/office/90d）、文档云（docs/cloud/cloud/30d）、照片云（photos/cloud/cloud/7d）、硬盘·作品（art/disk/home/7d）、硬盘·照片（photos/disk/home/7d）
+
+  事件账：backup ×8、drill ×1、verify ×4
+
+账本干净：日期合法且不在未来、事件类型合法、每个事件的目标都在目标账中、
+无重复目标、存放地合法。
