@@ -1,0 +1,11 @@
+== fridge-void · pantry (ledger today = 2026-08-24) ==
+6 open items worth ¥69.20 on the shelves
+
+DUE   19d  2026-08-05   茄果       ¥8.00 冬瓜  g
+DUE   12d  2026-08-12   茄果       ¥11.70 南瓜  g
+       6d  2026-08-18   蛋奶       ¥21.90 鸡蛋  g
+       4d  2026-08-20   豆制品      ¥5.00 豆腐  g
+       1d  2026-08-23   水果       ¥9.60 香蕉  g
+       0d  2026-08-24   蛋奶       ¥13.00 牛奶  ml
+
+2 item(s) past the 7-day DUE line — eat them first, buy nothing new.

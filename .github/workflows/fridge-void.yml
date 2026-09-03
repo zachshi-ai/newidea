@@ -1,0 +1,28 @@
+# fridge-void · 冰箱黑洞
+# 每次推送：跑验收测试（含样例逐字节同步 --check），并输出样例账本的浪费快照。
+# The waste-rate gate (exit 4 = waste rate over the red line) and the plan gate
+# (exit 4 = blacklisted cart line) are what can actually refuse something;
+# the other report snapshots are advisory demo artifacts.
+name: fridge-void
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s fridge-void/tests -v
+      - name: examples byte-exact check
+        run: python3 fridge-void/examples/build_examples.py --check
+      - name: fridge void snapshot on the demo ledger (advisory)
+        run: |
+          python3 fridge-void/fridge_void.py ledger fridge-void/examples/ledger.tsv || true
+          python3 fridge-void/fridge_void.py board fridge-void/examples/ledger.tsv || true
+          python3 fridge-void/fridge_void.py cause fridge-void/examples/ledger.tsv
+          python3 fridge-void/fridge_void.py tax fridge-void/examples/ledger.tsv
+          python3 fridge-void/fridge_void.py pantry fridge-void/examples/ledger.tsv || true
+          python3 fridge-void/fridge_void.py item fridge-void/examples/ledger.tsv 燕麦奶
+          python3 fridge-void/fridge_void.py plan fridge-void/examples/ledger.tsv fridge-void/examples/cart.tsv || true

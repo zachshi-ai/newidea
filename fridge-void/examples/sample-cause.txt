@@ -1,0 +1,15 @@
+== fridge-void · cause of death ==
+tossed total: ¥192.40 across 15 rows
+
+spoiled   ¥80.50  41.8%  (5 rows)   bought too much to finish in time — a QUANTITY problem
+           worst single loss: ¥45.00 600.0 g on 基围虾 (2026-07-03)
+rejected  ¥65.90  34.3%  (3 rows)   tried, disliked — a BLACKLIST problem, plan() will block it
+           worst single loss: ¥28.00 1000.0 ml on 燕麦奶 (2026-06-03)
+forgot    ¥21.50  11.2%  (4 rows)   found too late in the back — a VISIBILITY problem
+           worst single loss: ¥6.50 400.0 g on 菠菜 (2026-06-01)
+expired   ¥18.00  9.4%  (1 rows)   sat past its date untouched — a MOMENTUM problem
+           worst single loss: ¥18.00 900.0 ml on 酸奶 (2026-06-10)
+leftover  ¥6.50  3.4%  (2 rows)   cooked too much — a PORTION problem
+           worst single loss: ¥4.00 800.0 g on 米饭 (2026-06-07)
+
+cause shares add up to 1: 1.000000000

@@ -1,0 +1,18 @@
+== fridge-void · waste tax ==
+waste rate 23.8% -> every yuan actually eaten cost ¥1.313 at the till
+tax paid on this ledger: ¥192.40 you bought but never ate
+
+per-category real price of food you eat:
+  肉禽         rate 0.0%  ->  ¥1 of 肉禽 eaten really costs ¥1.00
+  水产         rate 31.5%  ->  ¥1 of 水产 eaten really costs ¥1.46
+  水果         rate 18.1%  ->  ¥1 of 水果 eaten really costs ¥1.22
+  蛋奶         rate 20.7%  ->  ¥1 of 蛋奶 eaten really costs ¥1.26
+  茄果         rate 0.0%  ->  ¥1 of 茄果 eaten really costs ¥1.00
+  绿叶菜        rate 66.4%  ->  ¥1 of 绿叶菜 eaten really costs ¥2.97
+  乳品         rate 100.0% -> every gram of 乳品 you ever bought
+             ended in the bin. Price per yuan eaten: INFINITE. Stop buying it.
+  豆制品        rate 0.0%  ->  ¥1 of 豆制品 eaten really costs ¥1.00
+  根茎         rate 26.3%  ->  ¥1 of 根茎 eaten really costs ¥1.36
+  主食         rate 76.5%  ->  ¥1 of 主食 eaten really costs ¥4.25
+
+CPI does not know this tax exists. It is entirely yours.

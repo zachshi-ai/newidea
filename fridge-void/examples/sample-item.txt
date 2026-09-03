@@ -1,0 +1,9 @@
+== fridge-void · item history: 燕麦奶 ==
+batches: 2 bought, 2 settled, 0 still open
+money: ¥56.00 bought | ate ¥0.00 | gave ¥0.00 | tossed ¥56.00
+item waste rate: 100.0%
+
+  bought 2026-06-03  1000.0 ml  ¥28.00  -> tossed 2026-06-17 (rejected)
+  bought 2026-07-22  1000.0 ml  ¥28.00  -> tossed 2026-08-05 (rejected)
+
+dominant cause: rejected (2 of 2 tosses)

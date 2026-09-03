@@ -1,0 +1,14 @@
+== fridge-void · category board ==
+global waste rate 23.8%   (settled ¥807.20, tossed ¥192.40)
+
+category      bought    tossed     rate      share
+乳品            ¥56.00    ¥56.00   100.0%       6.9%
+水产           ¥143.00    ¥45.00    31.5%       5.6%
+绿叶菜           ¥63.90    ¥42.40    66.4%       5.3% <-- disaster
+水果           ¥110.50    ¥20.00    18.1%       2.5%
+蛋奶            ¥86.90    ¥18.00    20.7%       2.2%
+主食             ¥8.50     ¥6.50    76.5%       0.8%
+根茎            ¥17.10     ¥4.50    26.3%       0.6%
+肉禽           ¥223.60     ¥0.00     0.0%       0.0%
+
+contributions add up to the global rate: 23.8% + unlisted = 0.238354807

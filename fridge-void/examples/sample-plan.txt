@@ -1,0 +1,10 @@
+== fridge-void · shopping cart gate ==
+cart: 3 lines, ¥47.70   |   your history: ¥73.03/week bought, waste rate history below
+
+BLOCKED  燕麦奶          ¥28.00 — you bought this before, tossed it as
+         rejected (tried, disliked). The blacklist is your own history.
+WARNING  菠菜           ¥6.50  disaster zone: you toss 66.4% of everything you buy in 绿叶菜
+ok       鸡腿           ¥13.20  
+
+VERDICT: BLOCKED — 1 line(s) on your own rejected blacklist. exit 4
+(drop them or overrule consciously; the ledger only refuses to stay silent.)
