@@ -1,0 +1,21 @@
+-- Dusty Subs scan: bank.csv
+  window                 : 2023-09-01 .. 2026-08-25 (293 rows, 256 debits, 12 merchants)
+  subscriptions found    : 9   annualized total : 71,635.37
+  next year already locked: 72,898 (through 2027-08-25)
+  · 1 duplicate row(s) dropped
+
+  merchant                    hits  cycle           last  annualized  flags
+  房租                            36  monthly        5,200   61,225.81  -
+  平安车险-自动续保                      6  182d           2,200    4,412.09  -
+  超级猩猩月卡                        36  monthly          299    3,520.48  -
+  NETFLIX.COM 8665797172        36  monthly           70      824.19  hike +13% (62 -> 70)
+  P9RSK SPOTIFY STOCKHOLM SE    36  monthly           38      447.42  -
+  NOTION LABS INC               36  monthly           36      423.87  promo 4 first, real 36
+  OFFICE 365 HOME (MSFT)         3  annual           398         398  -
+  爱奇艺季卡-自动续费                    12  quarterly         78      312.86  -
+  ICLOUD+ STORAGE 50GB          36  monthly            6       70.65  -
+
+  periodic-looking, but failed the checks:
+    盒马鲜生                        12 hits ~every 84d · amounts too scattered (17% within +/-20% of 194.15)
+    滴滴出行                         6 hits ~every 46d · gap 130d is a 2.8x outlier against median 46d
+

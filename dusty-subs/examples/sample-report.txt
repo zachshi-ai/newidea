@@ -1,0 +1,53 @@
+-- Dusty Subs report: bank.csv
+  window                 : 2023-09-01 .. 2026-08-25 (293 rows, 256 debits, 12 merchants)
+  subscriptions found    : 8   annualized total : 10,409.56
+  next year already locked: 10,498 (through 2027-08-25)
+  · 1 duplicate row(s) dropped
+  · ignored by --ignore: 房租
+
+  ledger (annualized, worst first):
+    merchant                    hits  cycle           last    per-year   locked-1yr  flags
+    平安车险-自动续保                      6  182d           2,200    4,412.09        4,400  -
+    超级猩猩月卡                        36  monthly          299    3,520.48        3,588  -
+    NETFLIX.COM 8665797172        36  monthly           70      824.19          840  hike +13% (62 -> 70)
+    P9RSK SPOTIFY STOCKHOLM SE    36  monthly           38      447.42          456  -
+    NOTION LABS INC               36  monthly           36      423.87          432  promo 4 first, real 36
+    OFFICE 365 HOME (MSFT)         3  annual           398         398          398  -
+    爱奇艺季卡-自动续费                    12  quarterly         78      312.86          312  -
+    ICLOUD+ STORAGE 50GB          36  monthly            6       70.65           72  -
+
+  next-12-months calendar (your future, already sold):
+    2026-09         2,649   (6 charge(s))
+    2026-10           527   (6 charge(s))
+    2026-11           449   (5 charge(s))
+    2026-12           449   (5 charge(s))
+    2027-01           527   (6 charge(s))
+    2027-02           449   (5 charge(s))
+    2027-03         3,047   (7 charge(s))
+    2027-04           527   (6 charge(s))
+    2027-05           449   (5 charge(s))
+    2027-06           449   (5 charge(s))
+    2027-07           527   (6 charge(s))
+    2027-08           449   (5 charge(s))
+    TOTAL           10,498
+
+  price moves worth a second look:
+    NETFLIX.COM 8665797172      hike +13% (62 -> 70)
+    NOTION LABS INC             promo 4 first, real 36
+
+  periodic-looking, but failed the checks:
+    盒马鲜生                        12 hits ~every 84d · amounts too scattered (17% within +/-20% of 194.15)
+    滴滴出行                         6 hits ~every 46d · gap 130d is a 2.8x outlier against median 46d
+
+  cost per use (annualized / uses-per-year, mpu 15; >3x mpu is dust):
+    !! CUT  pure dust      平安车险 自动续保
+    !! CUT  1,760.24/use   超级猩猩月卡
+    ~ watch  18.32/use      netflix com
+    OK keep  1.49/use       p9rsk spotify stockholm se
+    !! CUT  70.64/use      notion labs inc
+    ~ watch  19.90/use      office home msft
+    OK keep  10.43/use      爱奇艺季卡 自动续费
+    OK keep  0.19/use       icloud storage gb
+
+  cutting the dust refunds 8,356.44 a year. The gym is not judging; the ledger is.
+

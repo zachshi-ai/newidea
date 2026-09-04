@@ -1,0 +1,19 @@
+# dusty-subs · 吃灰订阅账本
+# 每次推送：跑验收测试（含 dogfood：提交样例经真实 CLI 与 ground truth 对账），
+# 并输出样例流水的订阅账本快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: dusty-subs
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s dusty-subs/tests -v
+      - name: subscription ledger snapshot (advisory)
+        run: python3 dusty-subs/dusty_subs.py report dusty-subs/examples/demo-data/bank.csv --usage dusty-subs/examples/demo-data/usage.csv --ignore 房租
