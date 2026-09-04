@@ -19,6 +19,9 @@ jobs:
         run: python3 pace-gap/examples/build_examples.py --check
       - name: example snapshot (advisory)
         run: |
+          set +e
+          # the sample ledger deliberately gates (REDLINE exit 4): gate
+          # exits are expected output here, never a build failure
           python3 pace-gap/pace_gap.py report pace-gap/examples/syllabus.tsv pace-gap/examples/study.tsv --exam-date 2026-12-19
           python3 pace-gap/pace_gap.py pace pace-gap/examples/syllabus.tsv pace-gap/examples/study.tsv --exam-date 2026-12-19
           python3 pace-gap/pace_gap.py allocation pace-gap/examples/syllabus.tsv pace-gap/examples/study.tsv
