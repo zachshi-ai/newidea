@@ -1,0 +1,9 @@
+== streaks · 灰条纹（≥ 14 天才上榜） ==
+  2026-02-09 → 2026-04-11  62 day(s)
+  2026-04-13 → 2026-04-30  18 day(s)
+  2026-05-13 → 2026-05-29  17 day(s)
+  2026-05-31 → 2026-07-04  35 day(s)
+  2026-07-06 → 2026-08-31  57 day(s)  ← current
+
+longest: 62 day(s) · current: 57 day(s) · grey days total: 227 of 243 (93.4%)
+a streak is the unit of forgetting: inside one, days trade places and none of them happened.

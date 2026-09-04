@@ -1,0 +1,11 @@
+== months · 月历（floor = 2 firsts/month） ==
+  2026-01   5  0.1613/day  LIVE   #####
+  2026-02   1  0.0357/day  BLUR  #
+  2026-03   0  0.0000/day  BLUR  
+  2026-04   1  0.0333/day  BLUR  #
+  2026-05   8  0.2581/day  LIVE   ########
+  2026-06   0  0.0000/day  BLUR  
+  2026-07   1  0.0323/day  BLUR  #
+  2026-08   0  0.0000/day  BLUR  
+
+the calendar turned 8 pages; memory bound 2 of them.

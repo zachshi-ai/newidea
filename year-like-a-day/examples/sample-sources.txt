@@ -1,0 +1,20 @@
+== sources · 供新结构 ==
+by category (count · share · last one):
+  place   地点   5   31.2%  last 2026-05-07, 116 day(s) ago
+  skill   技艺   3   18.8%  last 2026-05-30, 93 day(s) ago
+  food    味道   3   18.8%  last 2026-05-09, 114 day(s) ago
+  event   事件   3   18.8%  last 2026-07-05, 57 day(s) ago
+  person  人   2   12.5%  last 2026-02-08, 204 day(s) ago
+  media   作品   0    0.0%  last never in this ledger
+  other   其他   0    0.0%  last never in this ledger
+
+novelty diet: 18.8% bought (food/media) vs 81.2% walked into (place/person/skill/event)
+
+suppliers (co-occurrence, correlation not causation):
+  阿芳         9 first(s) (56.2%)
+  老周         2 first(s) (12.5%)
+  小柯         1 first(s) (6.2%)
+solitary firsts: 5 of 16 (31.2%) — fine either way, the ledger does not grade company.
+
+hungriest tried category: person (人) — 204 day(s) since its last first.
+untouched categories: media, other — a whole blank category is the largest first on the shelf.

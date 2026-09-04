@@ -1,0 +1,10 @@
+== simulate · 反事实：每周（每 7 天）一个初事 ==
+inserted 27 synthetic first(s) into the grey streaks of the past 243 day(s)
+
+total firsts: 16 → 43  (conservation: 16 + 27 = 43)
+daily density: 0.0658 → 0.1770 firsts/day  (annualized 24.0 → 64.6)
+longest grey streak: 62 → 6 day(s)
+remembered months: 2 → 8 of 8  (floor pinned at 2/month — your real pace, not the counterfactual's)
+
+identity: new total == old total + inserted  →  43 == 16 + 27 (exact)
+the ledger cannot send you back; it can only price the firsts you did not spend — and remind you that the next one is still available.

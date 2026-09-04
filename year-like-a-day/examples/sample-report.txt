@@ -1,0 +1,15 @@
+== report · 度年如日总账 ==
+ledger: 16 first(s) over 243 day(s) (2026-01-01 → 2026-08-31)
+daily density: 0.0658 firsts/day  (annualized 24.0/year)
+baseline (median month): 0.0328 firsts/day — the ordinary month, immune to your best one
+recent windows: 30d 0.0000 · 60d 0.0167 · 90d 0.0111 firsts/day
+
+grey streaks: longest 62 day(s) (2026-02-09 → 2026-04-11) · current 57 day(s)
+remembered months: 2 of 8 at or above the floor of 2 firsts/month — the rest will blur into a sentence
+
+categories: place 5 (31.2%) · skill 3 (18.8%) · food 3 (18.8%) · event 3 (18.8%) · person 2 (12.5%)
+novelty diet: 18.8% bought (food/media) · 81.2% walked into (place/person/skill/event)
+top supplier: 阿芳 was there for 9 of 16 firsts (56.2%)
+
+RED LINE  climate greying: last-90d density 0.0111 < baseline 0.0328 × 0.50, AND the current streak is 57 day(s) (cap 21) — exit 4
+          a grey year is not a verdict on your life; it is a queue of firsts you have not spent yet.

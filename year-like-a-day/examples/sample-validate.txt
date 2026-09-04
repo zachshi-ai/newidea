@@ -1,0 +1,9 @@
+== validate · 账本体检 ==
+rows: 16  (coverage 2026-01-01 → 2026-08-31, 243 day(s); future rows are refused at parse time)
+count identity: Σ months == Σ categories == total  →  16 == 16 == 16
+density identity: total ÷ covered days  →  16 ÷ 243 = 0.065843621
+rows without people: 5 (fine — solitary firsts count the same)
+categories present: event, food, person, place, skill
+suppliers named: 阿芳, 老周, 小柯
+
+ledger healthy. exit 0

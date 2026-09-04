@@ -1,0 +1,8 @@
+== gate · 变灰门禁 ==
+caps: collapse < baseline × 0.50 over 90d · streak cap 21d · desert cap 60d
+baseline 0.0328/day · last-90d 0.0111/day · current streak 57 day(s)
+
+signals: density collapse YES · streak over cap YES · desert no
+
+RED LINE  climate greying: last-90d density 0.0111 < baseline 0.0328 × 0.50, AND the current streak is 57 day(s) (cap 21) — exit 4
+          a grey year is not a verdict on your life; it is a queue of firsts you have not spent yet.
