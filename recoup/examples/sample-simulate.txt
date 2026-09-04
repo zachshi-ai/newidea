@@ -1,0 +1,8 @@
+== RECOUP · simulate: open-book recovery window ==
+as-of 2026-08-20   7 open lots
+
+  paid-in on open lots   ¥14,982
+  upper bound            ¥6,367  (everything recovers at category baseline)
+  lower bound            ¥4,428  (DEAD lots = 0, the rest recovers)
+  fantasy exposure       ¥1,939  — money you are still dreaming about
+  carried                622 lot-days on the shelf since listing

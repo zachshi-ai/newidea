@@ -1,0 +1,21 @@
+== RECOUP · open positions (stale check) ==
+as-of 2026-08-20   7 open   span 172d
+
+item         category       age  ask    price  max/off  ratio  light
+平板           electronics   171d    0   ¥2,000        -    56%  DEAD
+冲锋衣          apparel       111d    0     ¥400        -    31%  DEAD
+显示器          electronics   102d    1     ¥900     ¥700    47%  RED
+电饭锅          appliance      80d    1     ¥330     ¥350    37%  RED
+空气炸锅         appliance      61d    0     ¥250        -    50%  YELLOW
+落地灯          furniture      56d    1      ¥90      ¥60    30%  YELLOW
+无人机          electronics    41d    0   ¥3,999        -    62%  GREEN
+
+  平板           DEAD — white-gift line crossed: zero asks in 171d, verdict ~ 0
+  冲锋衣          DEAD — white-gift line crossed: zero asks in 111d, verdict ~ 0
+  显示器          RED — fantasy price: real ask ¥700 parked 102d past line
+  电饭锅          RED — offer line: wallet is knocking (¥350 >= 80% of ask)
+  空气炸锅         YELLOW — cooling: 61d silent, white-gift line at 98d
+  落地灯          YELLOW — interest exists but price not aligned (top offer ¥60)
+  无人机          GREEN — market still looking (41d / 84d line)
+
+REDLINE — '平板' is 171d silent on a 84d white-gift line (>= 2x): hoarding alarm — give away, reclaim the space

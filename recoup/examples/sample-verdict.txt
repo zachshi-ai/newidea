@@ -1,0 +1,8 @@
+== RECOUP · verdict: 电饭锅 ==
+
+  listed 2026-06-01   age 80d / white-gift line 98d (81%)
+  paid ¥899   ask ¥330   implied ratio 36.7%   baseline 40.0% (prior: own sales < 3)
+  asks 1   top offer ¥350   reductions 1
+
+  RED — offer line: wallet is knocking (¥350 >= 80% of ask)
+  action: accept around ¥350, or reprice below it. An offer at the line is the market paying you respect — meet it.

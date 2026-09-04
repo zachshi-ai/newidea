@@ -1,0 +1,22 @@
+== RECOUP · cash-out ledger ==
+as-of 2026-08-20 (ledger end)   14 lots (7 open)   span 172d
+
+REALIZED
+  sold 4 lots   cash-in ¥1,810   paid-in ¥5,596   realized ratio 32.3%
+  closed otherwise: gave 1  pull 1  trash 1
+
+FUNNEL
+  listed 14 -> asked 7 (50.0%) -> sold 4 (28.6% of listed, 57.1% of asked)
+
+OPEN POSITIONS (7)
+  DEAD    2
+  RED     2
+  YELLOW  2
+  GREEN   1
+
+ANCHOR GAP (open lots)
+  implied ratio median (ask/paid)   47.4%
+  category baseline median           40.0%
+  anchor gap                         +7.4pp   [ok]
+
+REDLINE — 1 lot(s) >= 2x white-gift line with zero asks: hoarding alarm — give away, reclaim the space

@@ -1,0 +1,13 @@
+== RECOUP · price elasticity of reductions ==
+as-of 2026-08-20   window 14d
+
+item         date           cut  asks/day before -> after
+电纸书          2026-03-20   11.1%  0.000 -> 0.071  (0->1 asks)
+婴儿车          2026-03-28   16.8%  0.000 -> 0.071  (0->1 asks)
+书架           2026-04-01   33.3%  0.000 -> 0.000  (0->0 asks)
+电饭锅          2026-07-12   17.5%  0.071 -> 0.000  (1->0 asks)
+无人机          2026-08-01   11.1%  0.000 -> 0.000  (0->0 asks)
+
+  mean ask rate  0.014 -> 0.029 per day
+  response ratio  2.00x
+  verdict: RESPONSIVE — the market is watching, the price was wrong. Keep cutting toward the realized band.

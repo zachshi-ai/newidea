@@ -1,0 +1,26 @@
+# recoup · 回血 —— 二手闲置变现账本
+# 每次推送:跑验收测试(含解析重放/状态机四灯边界/漏斗守恒/回血加总恒等式/
+# 金额加权回血率/simulate 敞口分解/降价弹性判级/先验回退门/拒答 exit 3 与
+# 红线 exit 4 恋物·锚税·出手线等 65 项),逐字节校验账本与示例输出,
+# 并输出在架判决快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (report/stale/verdict exit 4 by design; `|| test $? -eq 4`).
+name: recoup
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. identities + honest gates)
+        run: python3 -m unittest discover -s recoup/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 recoup/examples/build_examples.py --check
+      - name: recoup verdict snapshot (advisory, exit 4 by design)
+        run: |
+          python3 recoup/recoup.py report recoup/examples/events.tsv --as-of 2026-08-20 || test $? -eq 4
+          python3 recoup/recoup.py stale recoup/examples/events.tsv --as-of 2026-08-20 || test $? -eq 4
+          python3 recoup/recoup.py verdict recoup/examples/events.tsv 电饭锅 --as-of 2026-08-20 || test $? -eq 4

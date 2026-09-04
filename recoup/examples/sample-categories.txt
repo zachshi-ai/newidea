@@ -1,0 +1,18 @@
+== RECOUP · category calibration ==
+as-of 2026-08-20   baseline rule: your own sales >= 3, else prior
+
+category      lot sold gave  trsh pull open   realized    P50d   P90d   asked
+apparel         1    0    0     0    0    1     25.0%*       -      -    0/1
+appliance       3    1    0     0    0    2     40.0%*      21     21    2/3
+               own sales: ¥130 recovered / ¥399 paid = 32.6% (n=1, below prior gate)
+book            1    0    1     0    0    0     35.0%*       -      -    0/1
+electronics     4    1    0     0    0    3     45.0%*      32     32    2/4
+               own sales: ¥700 recovered / ¥1,999 paid = 35.0% (n=1, below prior gate)
+furniture       2    1    0     0    0    1     30.0%*      53     53    2/2
+               own sales: ¥80 recovered / ¥599 paid = 13.4% (n=1, below prior gate)
+other           1    0    0     1    0    0     35.0%*       -      -    0/1
+toy             2    1    0     0    1    0     40.0%*      41     41    1/2
+               own sales: ¥900 recovered / ¥2,599 paid = 34.6% (n=1, below prior gate)
+
+  * prior fallback (own sales < 3) — the ledger, not the table, is the manual.
+  cash-in check: ¥1,810 across categories

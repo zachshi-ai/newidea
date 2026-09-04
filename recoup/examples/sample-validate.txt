@@ -1,0 +1,2 @@
+== RECOUP · validate ==
+account clean: 14 lots, 7 open, span 172d, as-of 2026-08-20
