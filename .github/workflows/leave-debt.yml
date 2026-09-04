@@ -1,0 +1,26 @@
+# leave-debt · 欠休 —— 年假债权账本
+# 每次推送:跑验收测试(含批次 FIFO/到期日当天可用日终作废/守恒恒等式/
+# 节奏外推与门禁分层(算术门禁不拒答、统计门禁拒薄账)/连休桥接(周末桥/
+# 法定桥/调休补班日反桥)/拼假杠杆分档/还款计划 INFEASIBLE 缺口一致/
+# simulate 过闸/拒答 exit 3 与红线 exit 4 等 66 项),逐字节校验账本与
+# 示例输出,并输出临期作废判决快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (report/plan/simulate exit 4 by design; `|| test $? -eq 4`).
+name: leave-debt
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. identities + honest gates)
+        run: python3 -m unittest discover -s leave-debt/tests -v
+      - name: examples byte-check (reproducible ledgers + outputs)
+        run: python3 leave-debt/examples/build_examples.py --check
+      - name: leave-debt verdict snapshot (advisory, exit 4 by design)
+        run: |
+          python3 leave-debt/leave_debt.py report leave-debt/examples/grants.tsv leave-debt/examples/leave.tsv --as-of 2025-11-28 --holidays leave-debt/examples/holidays.txt --monthly-salary 13050 || test $? -eq 4
+          python3 leave-debt/leave_debt.py plan leave-debt/examples/grants.tsv leave-debt/examples/leave.tsv --as-of 2025-11-28 || test $? -eq 4
