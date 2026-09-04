@@ -1,0 +1,22 @@
+# timezone-tax · 时区税验收
+# 每次推送：跑验收测试（含 dogfood：示例埋入答案必须被工具挖出），
+# 并输出示例团队的税单快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: timezone-tax
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood ground-truth)
+        run: python3 -m unittest discover -s timezone-tax/tests -v
+      - name: example snapshot (advisory)
+        run: |
+          python3 timezone-tax/timezone_tax.py inspect timezone-tax/examples/team-global.json --utc 2026-09-10T15:00
+          python3 timezone-tax/timezone_tax.py plan timezone-tax/examples/team-global.json --start 2026-09-07 --weeks 12
+          python3 timezone-tax/timezone_tax.py report timezone-tax/examples/ledger-halfyear.json --team timezone-tax/examples/team-global.json || true

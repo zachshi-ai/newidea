@@ -1,0 +1,50 @@
+{
+  "name": "Impossible Pod",
+  "members": [
+    {
+      "name": "Alice · 旧金山",
+      "offset_min": -480,
+      "dst": [
+        {
+          "from": "03-08",
+          "to": "11-01",
+          "offset_min": -420
+        }
+      ]
+    },
+    {
+      "name": "Bruno · 柏林",
+      "offset_min": 60,
+      "dst": [
+        {
+          "from": "03-29",
+          "to": "10-25",
+          "offset_min": 120
+        }
+      ]
+    },
+    {
+      "name": "Ella · 奥克兰",
+      "offset_min": 720,
+      "dst": [
+        {
+          "from": "09-27",
+          "to": "04-05",
+          "offset_min": 780
+        }
+      ]
+    }
+  ],
+  "workdays": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "waking": {
+    "start": "09:00",
+    "end": "18:00"
+  },
+  "grid_min": 30
+}

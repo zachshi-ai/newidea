@@ -1,0 +1,47 @@
+{
+  "name": "Global Pod",
+  "members": [
+    {
+      "name": "Alice · 旧金山",
+      "offset_min": -480,
+      "dst": [
+        {
+          "from": "03-08",
+          "to": "11-01",
+          "offset_min": -420
+        }
+      ]
+    },
+    {
+      "name": "Bruno · 柏林",
+      "offset_min": 60,
+      "dst": [
+        {
+          "from": "03-29",
+          "to": "10-25",
+          "offset_min": 120
+        }
+      ]
+    },
+    {
+      "name": "Chitra · 班加罗尔",
+      "offset_min": 330
+    },
+    {
+      "name": "Dawei · 上海",
+      "offset_min": 480
+    }
+  ],
+  "workdays": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "waking": {
+    "start": "07:00",
+    "end": "24:00"
+  },
+  "grid_min": 30
+}
