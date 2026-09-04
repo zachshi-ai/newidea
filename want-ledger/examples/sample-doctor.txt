@@ -1,0 +1,5 @@
+doctor — data physical exam
+
+  sprouts : 22 rows (13 bought · 7 wilted · 2 growing)
+
+verdict: HEALTHY — this desire ledger deserves the audit.

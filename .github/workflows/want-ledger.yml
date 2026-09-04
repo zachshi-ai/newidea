@@ -1,0 +1,20 @@
+# want-ledger · 种草账
+# 每次推送：跑验收测试（含 demo 数字核对 + 样例逐字节同步），并输出样例账本的数据体检快照。
+# The status snapshot never fails the build: the demo report intentionally
+# ends REGRET-HEAVY (exit 4) and the cooling-gate demo intentionally blocks
+# (exit 4) — both gates are pinned by the acceptance tests, and doctor
+# (exit 0) is the advisory artifact shown here.
+name: want-ledger
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s want-ledger/tests -v
+      - name: data exam on the demo ledger (advisory)
+        run: python3 want-ledger/want_ledger.py doctor want-ledger/examples/grass.csv

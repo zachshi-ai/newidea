@@ -1,0 +1,7 @@
+WANT LEDGER · cooling gate — 机械键盘
+
+  sprout    : 机械键盘 · 899.00 · seeded 2026-08-10, age 25 day(s)
+  evidence  : of your past wants, 19.0% lived past day 30 (21 observable)
+  testimony : impulse regret 75.0% (n=8) · deliberate regret 20.0% (n=5) · tuition 45.9% of spending
+
+verdict: DECIDE NOW — the cooling period is served (age 25 >= 14). The evidence is on the table; the vote is yours. Whatever you decide, backfill the 后悔 column — that grade is the next vote's evidence.

@@ -1,0 +1,26 @@
+WANT LEDGER · desire audit — as-of 2026-09-04
+
+the census
+  sprouts   : 22 seeded (13 bought · 7 wilted · 2 still growing)
+  half-life : a want lives 13.0 days before it wilts (median of 7 wilted)
+  30d survival: 19.0% of wants live past day 30 (4 of 21 observable)
+
+two arms of you — regret by buying speed
+  impulse    (bought within  7 days)   8 bought, 8 graded: 75.0% regret it
+  deliberate (bought after    7 days)   5 bought, 5 graded: 20.0% regret it
+  verdict on arms: your hands buy faster than your heart approves — impulse regret 75.0% vs deliberate 20.0%. Slow is your cheaper gear.
+
+the tuition bill
+  bought     : 12,717.00 across 13 priced purchase(s), 1 want(s) unpriced and left out of all money accounts
+  tuition    : 5,833.00 bought in regret — 45.9% of everything you bought (line 30%)
+  saved by wilting: 8,214.00 of wants you let die — the cheapest purchases you never made
+
+tag profiles (worst tuition first)
+  数码         n=5  bought 2 · wilted 2 · t½ — · regret 50.0% · tuition 2,999.00
+  健身         n=3  bought 3 · wilted 0 · t½ — · regret 66.7% · tuition 1,158.00
+  衣服         n=2  bought 1 · wilted 1 · t½ — · regret 100.0% · tuition 899.00
+  家居         n=6  bought 5 · wilted 1 · t½ — · regret 40.0% · tuition 678.00
+  厨房         n=5  bought 2 · wilted 2 · t½ — · regret 50.0% · tuition 99.00
+  户外         n=1  bought 0 · wilted 1 · t½ — · regret — · tuition 0.00
+
+verdict: REGRET-HEAVY — 45.9% of what you bought, you regret buying: 5,833.00 of your money went to desires that did not survive their own checkout. The cooling gate exists for exactly this ledger.
