@@ -1,0 +1,19 @@
+== fat-creep report ==
+ledger: weights.tsv + events.tsv
+as-of: 2026-09-03 (pinned)
+
+[糯米] latest 2.41 kg (2026-09-03, 0d ago) | n=2 span=14d
+  creep: +0.1286 kg/mo = +5.33%/mo (90d +5.33%) -> DECLINE (thin(<3 obs or <60d))
+
+[胖橘] latest 4.86 kg (2026-09-01, 2d ago) | n=14 span=427d
+  creep: +0.0534 kg/mo = +1.10%/mo (90d +1.68%) -> CREEP
+  due RED: 体外驱虫 since 2026-08-24
+  due soon: 体内驱虫 at 2026-09-08 (5d); 猫三联 at 2026-09-15 (12d); 狂犬疫苗 at 2026-09-15 (12d)
+  spend: 5159.00 total / 354d -> monthly 437.20, yearly 5246.44
+
+[豆包] latest 8.23 kg (2026-09-01, 2d ago) | n=7 span=180d
+  creep: +0.0050 kg/mo = +0.06%/mo (90d +0.22%) -> STEADY
+  never seen: 体外驱虫 (no record = unmanaged, not un-injected)
+  spend: 1695.00 total / 268d -> monthly 189.74, yearly 2276.87
+
+RED present: see CREEP/OVERDUE lines above.

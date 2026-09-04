@@ -1,0 +1,15 @@
+== fat-creep report ==
+ledger: weights.tsv + events.tsv
+as-of: 2026-03-20 (pinned)
+
+[胖橘] latest 4.48 kg (2026-03-20, 0d ago) | n=9 span=262d
+  creep: +0.0435 kg/mo = +0.97%/mo (90d +1.12%) -> STEADY
+  never seen: 体外驱虫, 体内驱虫 (no record = unmanaged, not un-injected)
+  spend: 4230.00 total / 187d -> monthly 678.61, yearly 8143.32
+
+[豆包] latest 8.20 kg (2026-03-05, 15d ago) | n=1 span=0d
+  creep: +0.0000 kg/mo = +0.00%/mo (90d n/a) -> DECLINE (thin(<3 obs or <60d))
+  never seen: 体外驱虫, 体内驱虫 (no record = unmanaged, not un-injected)
+  spend: 1140.00 total / 101d -> monthly 338.61, yearly 4063.37
+
+no red lights: nothing overdue, nobody creeping (thin ledgers still DECLINE, honestly).

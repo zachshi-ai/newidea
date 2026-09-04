@@ -1,0 +1,7 @@
+== fat-creep diet (safe-projection, not a challenge) ==
+pet: 胖橘 | current 4.86 (2026-09-01) | target 4.40 | excess 0.46 kg
+safe rate: 1.00%/wk (= 0.0486 kg/wk at current weight; prior, adjustable; clinic wins)
+projection: 9.47 raw-weeks -> 10 weeks -> arrive 2026-11-12
+deadline 2026-09-25: 22d = 3.14 weeks -> needed 0.1464 kg/wk = 3.01%/wk
+RED: 3.01%/wk exceeds the 2.0%/wk hard line. A 10-week job squeezed into 3 weeks burns more than fat — feline hepatic lipidosis does not negotiate. Move the deadline or shrink the target.
+This tool does not push for thinner; it blocks crash-dieting. Cats must never fast.

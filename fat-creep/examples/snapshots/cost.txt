@@ -1,0 +1,19 @@
+== fat-creep cost (the human's annual bill) ==
+ledger: weights.tsv + events.tsv
+as-of: 2026-09-03 (ledger-anchored) | care rows with amount count as spend too (one row, two books, no double-entry)
+
+[胖橘] total 5159.00 | first spend 2025-09-15 | coverage 354d
+  food        1554.00   30.1%
+  medical     3440.00   66.7%
+  supply       165.00    3.2%
+  monthly 437.20 | yearly 5246.44 | top category: medical (66.7%)
+  "吃穷了" is a myth: vet care, not food, is the biggest line. Budget for the clinic, not just the bowl.
+
+[豆包] total 1695.00 | first spend 2025-12-10 | coverage 268d
+  food         975.00   57.5%
+  medical      535.00   31.6%
+  supply        65.00    3.8%
+  groom        120.00    7.1%
+  monthly 189.74 | yearly 2276.87 | top category: food (57.5%)
+
+ALL PETS total 6854.00 | yearly(sum of pets) 7523.31

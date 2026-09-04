@@ -1,0 +1,16 @@
+== fat-creep due (immunization calendar) ==
+ledger: weights.tsv + events.tsv
+as-of: 2026-09-03 (ledger-anchored) | due-soon window: <=14d | intervals are common-sense priors; the clinic wins (--interval)
+pet       item          last        interval next        remain_d status
+胖橘      体检          2025-09-20  365      2026-09-20  17       OK
+胖橘      体外驱虫      2026-07-25  30       2026-08-24  -10      OVERDUE
+胖橘      体内驱虫      2026-06-10  90       2026-09-08  5        DUE-SOON
+胖橘      猫三联        2025-09-15  365      2026-09-15  12       DUE-SOON
+胖橘      狂犬疫苗      2025-09-15  365      2026-09-15  12       DUE-SOON
+豆包      体检          2025-12-10  365      2026-12-10  98       OK
+豆包      体内驱虫      2026-08-28  90       2026-11-26  84       OK
+豆包      犬四联/八联   2026-01-20  365      2027-01-20  139      OK
+豆包      狂犬疫苗      2026-01-20  365      2027-01-20  139      OK
+豆包      体外驱虫      -           30       -           -        NEVER-SEEN
+NEVER-SEEN: 豆包/体外驱虫 — no record means unmanaged, not un-injected. Fill in what actually happened.
+RED: overdue shots: 胖橘 体外驱虫 since 2026-08-24

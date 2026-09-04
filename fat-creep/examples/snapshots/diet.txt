@@ -1,0 +1,5 @@
+== fat-creep diet (safe-projection, not a challenge) ==
+pet: 胖橘 | current 4.86 (2026-09-01) | target 4.40 | excess 0.46 kg
+safe rate: 1.00%/wk (= 0.0486 kg/wk at current weight; prior, adjustable; clinic wins)
+projection: 9.47 raw-weeks -> 10 weeks -> arrive 2026-11-12
+This tool does not push for thinner; it blocks crash-dieting. Cats must never fast.

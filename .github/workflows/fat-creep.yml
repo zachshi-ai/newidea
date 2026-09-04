@@ -1,0 +1,28 @@
+# fat-creep · 缓胖
+# 每次推送：跑验收测试，并在样例账本上输出各命令快照（红灯命令是演示主体）。
+# CREEP / OVERDUE / 猛减红线 (exit 4) 是真实门禁；其余快照为 advisory 演示。
+name: fat-creep
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s fat-creep/tests -v
+      - name: snapshot byte-check on the demo ledger
+        run: python3 fat-creep/examples/build_examples.py --check
+      - name: snapshots on the demo ledger (red gates expected to exit 4)
+        run: |
+          python3 fat-creep/fat_creep.py report fat-creep/examples/weights.tsv fat-creep/examples/events.tsv --as-of 2026-09-03 || true
+          python3 fat-creep/fat_creep.py report fat-creep/examples/weights.tsv fat-creep/examples/events.tsv --as-of 2026-03-20
+          python3 fat-creep/fat_creep.py trend fat-creep/examples/weights.tsv fat-creep/examples/events.tsv || true
+          python3 fat-creep/fat_creep.py due fat-creep/examples/weights.tsv fat-creep/examples/events.tsv || true
+          python3 fat-creep/fat_creep.py due fat-creep/examples/weights.tsv fat-creep/examples/events.tsv --interval 体外驱虫=45
+          python3 fat-creep/fat_creep.py cost fat-creep/examples/weights.tsv fat-creep/examples/events.tsv
+          python3 fat-creep/fat_creep.py diet fat-creep/examples/weights.tsv fat-creep/examples/events.tsv --pet 胖橘 --target 4.40
+          python3 fat-creep/fat_creep.py diet fat-creep/examples/weights.tsv fat-creep/examples/events.tsv --pet 胖橘 --target 4.40 --deadline 2026-09-25 || true
+          python3 fat-creep/fat_creep.py validate fat-creep/examples/weights.tsv fat-creep/examples/events.tsv

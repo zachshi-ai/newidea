@@ -1,0 +1,9 @@
+== fat-creep trend (weights) ==
+ledger: weights.tsv + events.tsv
+as-of: 2026-09-03 (ledger-anchored) | creep line: 1.0%/mo | verdict uses FULL span; 90d is acceleration preview only
+pet       latest(kg) as-of-d n   span_d kg/mo   %/mo   90d-%/mo  verdict
+糯米      2.41 09-03 0       2   14     +0.1286 +5.33  +5.33     DECLINE (thin(<3 obs or <60d))
+胖橘      4.86 09-01 2       14  427    +0.0534 +1.10  +1.68     CREEP
+豆包      8.23 09-01 2       7   180    +0.0050 +0.06  +0.22     STEADY
+NOTE: DECLINE = statistics refused (thin ledger). Raw rate still printed; arithmetic is not gated.
+RED: 胖橘 is creeping at full-span rate. You look at it every day; the month-scale needs this ledger.
