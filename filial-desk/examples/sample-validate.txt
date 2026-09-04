@@ -1,0 +1,7 @@
+VALIDATE · 账本体检
+tickets: 21
+coverage: 2025-09-01 -> 2026-08-30 (364 days)
+identity minutes: parent 505 | device 505 | topic 505 == total 505  [OK]
+disclosures: taught unrecorded on 1 ticket(s); clock recorded on 8 of 21
+
+ledger healthy.

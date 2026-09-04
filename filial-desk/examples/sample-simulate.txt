@@ -1,0 +1,8 @@
+SIMULATE · 反事实 (exit 0 always; red lines live in relapse/fleet)
+cure '手机弹广告': every relapse this topic ever caused is healed
+tickets: 21 -> 17 (removed 4, 120 min)
+support tax: 505 min/yr -> 385 min/yr (-120 min = -2.0 h)
+relapse rate: 33.3% -> 17.6%
+at 50.00/h: saves 100.00/yr
+
+counterfactual replay — the tutorial/retirement is still your move. (`cure` removes relapses only; the head ticket remains — teaching once is assumed to take.)

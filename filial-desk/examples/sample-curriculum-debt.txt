@@ -1,0 +1,10 @@
+CURRICULUM · 教程债 (a topic becomes debt at 2 topic-level relapses; a tutorial amortizes forever)
+
+  手机弹广告            x4 relapse(s), last 2026-06-18  ->  covered by your tutorials
+  WiFi 断网          x2 relapse(s), last 2026-02-08  ->  UNCOVERED DEBT
+  话费莫名变多           x1 relapse(s), last 2026-03-08  ->  watch (one relapse may be luck; two is a pattern)
+
+tutorial file: 1 entries loaded
+
+RED LINE: 1 uncovered tutorial debt(s): WiFi 断网. Each relapse is a rerun you are paying for by hand; write it once.
+[exit 4]

@@ -1,0 +1,29 @@
+# filial-desk · 孝心工单
+# 每次推送：跑验收测试（含样例逐字节同步 --check），并输出样例账本的工单快照。
+# The relapse/fleet/curriculum gates (exit 4 = a red line is on the books) are
+# what can actually refuse something; the other report snapshots are advisory
+# demo artifacts.
+name: filial-desk
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s filial-desk/tests -v
+      - name: examples byte-exact check
+        run: python3 filial-desk/examples/build_examples.py --check
+      - name: support-desk snapshots on the demo ledger (advisory)
+        run: |
+          python3 filial-desk/filial_desk.py report filial-desk/examples/ledger.tsv --hourly 50
+          python3 filial-desk/filial_desk.py relapse filial-desk/examples/ledger.tsv
+          python3 filial-desk/filial_desk.py fleet filial-desk/examples/ledger.tsv --residual "红米 9A:200" --hourly 50 || true
+          python3 filial-desk/filial_desk.py curriculum filial-desk/examples/ledger.tsv
+          python3 filial-desk/filial_desk.py curriculum filial-desk/examples/ledger.tsv --tutorials filial-desk/examples/tutorials.txt || true
+          python3 filial-desk/filial_desk.py simulate filial-desk/examples/ledger.tsv cure --topic 手机弹广告 --hourly 50
+          python3 filial-desk/filial_desk.py simulate filial-desk/examples/ledger.tsv retire --device "红米 9A"
+          python3 filial-desk/filial_desk.py validate filial-desk/examples/ledger.tsv

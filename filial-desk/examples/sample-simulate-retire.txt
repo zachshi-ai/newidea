@@ -1,0 +1,8 @@
+SIMULATE · 反事实 (exit 0 always; red lines live in relapse/fleet)
+retire '红米 9A': the device (and every ticket it caused) is gone
+tickets: 21 -> 10 (removed 11, 315 min)
+support tax: 505 min/yr -> 190 min/yr (-315 min = -5.2 h)
+relapse rate: 33.3% -> 20.0%
+at 50.00/h: saves 262.50/yr
+
+counterfactual replay — the tutorial/retirement is still your move. (`cure` removes relapses only; the head ticket remains — teaching once is assumed to take.)

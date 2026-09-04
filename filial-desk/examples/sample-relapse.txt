@@ -1,0 +1,21 @@
+RELAPSE AUDIT · 复发审计 (window 90 days, rolling chains)
+
+  妈 / WiFi 断网 — 3 ticket(s), 2 relapse(s)
+    2025-10-13  ticket   25 min  taught=yes
+    2025-11-20  relapse (TAUGHT-BUT-BACK, +38d)  the taught=yes claim on 2025-10-13 did not hold
+    2026-02-08  relapse (UNTAUGHT, +80d)  previous ticket (2025-11-20) ended fixed, not taught
+
+  爸 / 手机弹广告 — 5 ticket(s), 4 relapse(s)
+    2025-09-01  ticket   35 min  taught=no
+    2025-11-03  relapse (UNTAUGHT, +63d)  previous ticket (2025-09-01) ended fixed, not taught
+    2026-01-12  relapse (UNTAUGHT, +70d)  previous ticket (2025-11-03) ended fixed, not taught
+    2026-04-02  relapse (UNTAUGHT, +80d)  previous ticket (2026-01-12) ended fixed, not taught
+    2026-06-18  relapse (UNTAUGHT, +77d)  previous ticket (2026-04-02) ended fixed, not taught
+
+  爸 / 话费莫名变多 — 2 ticket(s), 1 relapse(s)
+    2025-12-08  ticket   45 min  taught=no
+    2026-03-08  relapse (UNTAUGHT, +90d)  previous ticket (2025-12-08) ended fixed, not taught
+
+relapse rate: 7 of 21 tickets (33.3%); taught-but-back 1
+
+verdict: under both lines — but every UNTAUGHT relapse above is tutorial debt taking interest (`curriculum`).

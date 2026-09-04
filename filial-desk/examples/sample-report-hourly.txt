@@ -1,0 +1,27 @@
+FILIAL DESK · 孝心工单 report
+ledger: ledger.tsv  tickets: 21  as-of: 2026-08-30 (ledger end)
+coverage: 2025-09-01 -> 2026-08-30  (364 days, 52.0 ledger weeks)
+
+support time: 505 min total | annualized 505 min = 8.4 h/yr
+  ^ the support tax: 8.4 hours a year spent being your parents' IT department
+
+by parent:
+  爸          x11 tickets   315 min
+  妈          x10 tickets   190 min
+by device:
+  红米 9A          x11 tickets   315 min
+  iPhone 12      x 9 tickets   165 min
+  iPad Air       x 1 tickets    25 min
+most supported topics (by minutes):
+  手机弹广告            x5 tickets   155 min
+  WiFi 断网          x3 tickets    75 min
+  话费莫名变多           x2 tickets    75 min
+  手机内存满            x1 tickets    40 min
+  字体太小             x2 tickets    25 min
+
+teaching: 7 claimed / 20 judged -> claimed-taught rate 35.0%
+  verified 4 | open 2 (no chance to relapse yet, claims not credit) | taught-but-back 1
+relapse: 7 of 21 tickets were a relapse (33.3%)
+rhythm: clock on 8 tickets; night calls (22:00-08:00): 2 (25.0% of timed)
+modes: video x8  phone x7  remote x4  onsite x2
+at 50.00/h: the support tax is 420.83/yr — an unpaid salary nobody budgeted

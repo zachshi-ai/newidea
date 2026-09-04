@@ -1,0 +1,9 @@
+FLEET · 设备经济 (annualized over 52 ledger weeks)
+
+  device          ticks     min  median-gap    h/yr  verdict
+  红米 9A          x11       315       31.5d     5.2  annual support 262.50 vs residual 200 -> SUNK
+  iPhone 12      x9        165       42.0d     2.8  no residual on file (hours only)
+  iPad Air       x1         25           -     0.4  no residual on file (hours only)
+
+RED LINE: SUNK — 红米 9A costs 262.50/yr in your hours against a residual of 200. The phone is cheaper than the time you spend on it; replacing it is not extravagance, it is amortization.
+[exit 4]
