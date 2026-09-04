@@ -1,0 +1,24 @@
+# float-loan · 无息贷款
+# 每次推送:跑验收测试(含三态解析/三态恒等式/分位数手算对表/催办线 P90
+# 标定与 THIN 拒答/浮存金逐笔精确与线性/回款速率与排空/门禁 exit 2·3·4
+# 等 45 项),逐字节校验账本与示例输出,并输出催办快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (pipeline/nudge exit 4 by design; `|| test $? -eq 4`).
+name: float-loan
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. three-state identity + honest gates)
+        run: python3 -m unittest discover -s float-loan/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 float-loan/examples/build_examples.py --check
+      - name: float-loan pipeline snapshot (advisory, exit 4 by design)
+        run: |
+          python3 float-loan/float_loan.py pipeline float-loan/examples/floats.tsv --today 2026-09-04 || test $? -eq 4
+          python3 float-loan/float_loan.py stats float-loan/examples/floats.tsv --today 2026-09-04
