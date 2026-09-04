@@ -1,0 +1,12 @@
+{
+  "currency": "¥",
+  "commute_cost": 300,
+  "commute_min": 55,
+  "daily_hours": 8,
+  "gross_monthly": 18000,
+  "pulse_line": 8,
+  "recovery_ratio": 0.3,
+  "tax_rate": 0.15,
+  "work_costs_extra": 700,
+  "workdays": 21
+}

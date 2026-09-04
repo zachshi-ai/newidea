@@ -1,0 +1,19 @@
+# life-tag · 生命价签验收
+# 每次推送：跑验收测试（含 dogfood：示例画像的手算事实必须被报告恢复），
+# 并输出示例画像的时薪报告快照。
+# The analysis snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: life-tag
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood ground-truth)
+        run: python3 -m unittest discover -s life-tag/tests -v
+      - name: example profile report (advisory)
+        run: python3 life-tag/life_tag.py hourly --path life-tag/examples/metro_worker.json
