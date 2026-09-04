@@ -1,0 +1,6 @@
+# 预付历史 · date(生效日)/amount(元)/target(具体贷款名)/mode/note
+# mode: term=缩期(月供不变期限变短) payment=减供(期限不变月供变低)
+# target 不收 ALL——历史要记到具体账上；预付 ≥ 届时余额是结清，不进本账本
+date	amount	target	mode	note
+2024-01-15	200000	商贷	term	2023 年终奖
+2025-01-10	100000	商贷	payment	2024 年终奖改减月供，缓解现金流

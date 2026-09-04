@@ -1,0 +1,25 @@
+# redemption · 赎契
+# 每次推送：跑验收测试（含账本解析/摊销恒等式/预付重放/等效定理两世界
+# 必平/分配恒等式/谬误法庭单调/双倍房灯·先还低息灯·跑输灯与拒答
+# exit 2·3·4 等 68 项），逐字节校验账本与示例输出，并输出等效校验快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (gates exit 4 by design; `|| test $? -eq 4`).
+name: redemption
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. equivalence theorem + honest gates)
+        run: python3 -m unittest discover -s redemption/tests -v
+      - name: examples byte-check (reproducible ledgers + outputs)
+        run: python3 redemption/examples/build_examples.py --check
+      - name: redemption gates snapshot (advisory, exit 4 by design)
+        run: |
+          python3 redemption/redemption.py prepay redemption/examples/loans.tsv redemption/examples/prepays.tsv --amount 300000 --target 公积金 --today 2026-09-04 || test $? -eq 4
+          python3 redemption/redemption.py vsinvest redemption/examples/loans.tsv redemption/examples/prepays.tsv --amount 500000 --yield 2.3 --today 2026-09-04 || test $? -eq 4
+          python3 redemption/redemption.py myth redemption/examples/loans.tsv redemption/examples/prepays.tsv --today 2026-09-04

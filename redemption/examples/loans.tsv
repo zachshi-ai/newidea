@@ -1,0 +1,6 @@
+# 贷款账本 · name/principal(本金元)/rate(执行年利率%)/years(年)/start(首期还款日)/method/note
+# method: annuity=等额本息 linear=等额本金；rate 抄合同当前执行值——本件不预测 LPR
+# start 按首期还款日口径；最多 4 笔（组合贷）
+name	principal	rate	years	start	method	note
+商贷	1400000	4.2	30	2021-03-01	annuity	2024-10 存量房贷利率调整后执行值
+公积金	600000	3.1	30	2021-03-01	annuity	5 年期以上首套
