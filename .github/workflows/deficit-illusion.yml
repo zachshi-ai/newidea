@@ -1,0 +1,26 @@
+# deficit-illusion · 赤字幻觉
+# 每次推送：跑验收测试，并在样例账本上输出各命令快照（红灯命令是演示主体）。
+# RECORD GAP / MUSCLE RISK (exit 4) 是真实门禁；其余快照为 advisory 演示。
+name: deficit-illusion
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s deficit-illusion/tests -v
+      - name: snapshots on the demo ledger (red gates expected to exit 4)
+        run: |
+          python3 deficit-illusion/deficit_illusion.py report deficit-illusion/examples/ledger.tsv --sex f --age 30 --height 168 --activity 1.5 --goal 62 || true
+          python3 deficit-illusion/deficit_illusion.py trend deficit-illusion/examples/ledger.tsv
+          python3 deficit-illusion/deficit_illusion.py reconcile deficit-illusion/examples/ledger.tsv --sex f --age 30 --height 168 --activity 1.5 || true
+          python3 deficit-illusion/deficit_illusion.py rate deficit-illusion/examples/ledger.tsv || true
+          python3 deficit-illusion/deficit_illusion.py plateau deficit-illusion/examples/ledger.tsv
+          python3 deficit-illusion/deficit_illusion.py plateau deficit-illusion/examples/ledger.tsv --as-of 2026-07-19 || true
+          python3 deficit-illusion/deficit_illusion.py simulate deficit-illusion/examples/ledger.tsv continue --goal 62
+          python3 deficit-illusion/deficit_illusion.py simulate deficit-illusion/examples/ledger.tsv intake 1600 --sex f --age 30 --height 168 --activity 1.5 --goal 62
+          python3 deficit-illusion/deficit_illusion.py validate deficit-illusion/examples/ledger.tsv
