@@ -1,0 +1,14 @@
+REPEAT OFFENDERS · 惯犯审计 (window 90 days: 2026-05-24 -> 2026-08-21)
+  保温杯盖           x2 hunts    7 min in window  WATCH  -> no recurring hiding spot yet
+  充电线            x3 hunts   18 min in window  REPEAT OFFENDER  -> no recurring hiding spot yet
+  剪刀             x4 hunts   14 min in window  REPEAT OFFENDER  -> prescription: fixed home at '抽屉' (x3)
+  户口本            x1 hunts   12 min in window  WATCH  -> no recurring hiding spot yet
+  指甲刀            x2 hunts    7 min in window  WATCH  -> prescription: fixed home at '药盒' (x2)
+  灭火器            x2 hunts    9 min in window  WATCH  -> no recurring hiding spot yet
+  老花镜            x1 hunts    5 min in window  WATCH  -> no recurring hiding spot yet
+  门禁卡            x5 hunts   18 min in window  REPEAT OFFENDER  -> no recurring hiding spot yet
+  雨伞             x1 hunts    6 min in window  WATCH  -> no recurring hiding spot yet
+  (WATCH = one hunt below the offender line)
+
+RED LINE: 3 repeat offender(s). Before you buy a replacement, give these a fixed home (`place` for prescriptions).
+[exit 4]

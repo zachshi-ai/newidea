@@ -1,0 +1,9 @@
+DUPLICATE-BUY AUDIT · 重购税对账
+  充电线            x2 buy     59.80  CONFIRMED (hunt history: lost it, then bought it twice)
+  门禁卡            x1 buy     30.00  CONFIRMED (hunt history: lost it, then bought it twice)
+  剪刀             x1 buy     19.90  CONFIRMED (hunt history: lost it, then bought it twice)
+  卷尺             x1 buy     16.90  UNEXPLAINED (no hunt on record — why did you rebuy?)
+
+duplicate-buy total: 126.60 across 4 item(s); confirmation rate 3/4 = 75.0%
+  CONFIRMED rows are the price of not knowing where things live;
+  UNEXPLAINED rows are for you to explain — the ledger only asks.

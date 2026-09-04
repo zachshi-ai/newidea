@@ -1,0 +1,15 @@
+VALIDATE · 账本体检
+rows: 28 (21 search / 5 buy / 2 fix)
+coverage: 2026-06-30 -> 2026-08-21 (53 days)
+identity rows: 21 + 5 + 2 == 28  [OK]
+identity minutes: per-item sum 96 == total 96  [OK]
+busiest day: 2026-07-08 x2 events (同日多事件合法，完全相同行已拒绝)
+
+disclosures:
+  line 6: search of '充电线' never found (no place)
+  line 9: search of '灭火器' never found (no place)
+  line 11: search of '门禁卡' never found (no place)
+  line 14: search of '剪刀' never found (no place)
+  line 26: search of '保温杯盖' never found (no place)
+
+ledger healthy.

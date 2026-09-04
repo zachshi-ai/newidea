@@ -1,0 +1,24 @@
+SEARCH TAX · 寻物税 report
+ledger: search-tax/examples/lostfound.tsv  events: 21 search / 5 buy / 2 fix
+coverage: 2026-06-30 -> 2026-08-21  (53 days, 8 ledger weeks)
+
+hunt time: 96 min total | 12.0 min/week | annualized 624 min = 10.4 h/yr
+  ^ the search tax: 10.4 hours a year spent finding things you own
+
+most hunted (by minutes):
+  充电线             3 hunts   18 min  (avg 6.0 min/hunt)
+  门禁卡             5 hunts   18 min  (avg 3.6 min/hunt)
+  剪刀              4 hunts   14 min  (avg 3.5 min/hunt)
+  户口本             1 hunts   12 min  (avg 12.0 min/hunt)
+  灭火器             2 hunts    9 min  (avg 4.5 min/hunt)
+
+where they turn up (found-in-place counts):
+  抽屉             x3
+  沙发缝            x2
+  药盒             x2
+  五斗柜最底层         x1
+  阳台角落           x1
+
+duplicate buys: 5 rows, 126.60 total (see `dup` for the audit)
+
+NOTE unpriced: minutes are the hard currency; add --wage (or --salary/--hours) to translate the tax into money.

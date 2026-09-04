@@ -1,0 +1,10 @@
+SIMULATE · 反事实 (exit 0 always; red lines live in `repeat`)
+item: 剪刀 | window 90 days: 4 hunts, 3.5 min avg
+cure rate: 82% (measured from this ledger's fix reviews (median reduction))
+
+as-is:    57 min/yr hunted for this item
+fixed:    10 min/yr (-47 min/yr)
+ledger-wide annual hunt: 624 min -> would drop to 577 min
+at 40.00/h: saves 31.23/yr
+
+counterfactual replay — assigning the home is still your move.

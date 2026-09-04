@@ -1,0 +1,27 @@
+# search-tax · 寻物税
+# 每次推送：跑验收测试（含样例逐字节同步 --check），并输出样例账本的寻物税快照。
+# The repeat-offender gate (exit 4 = a repeat offender is on the books) is
+# what can actually refuse something; the other report snapshots are advisory
+# demo artifacts.
+name: search-tax
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s search-tax/tests -v
+      - name: examples byte-exact check
+        run: python3 search-tax/examples/build_examples.py --check
+      - name: search tax snapshot on the demo ledger (advisory)
+        run: |
+          python3 search-tax/search_tax.py report search-tax/examples/lostfound.tsv --wage 40
+          python3 search-tax/search_tax.py repeat search-tax/examples/lostfound.tsv || true
+          python3 search-tax/search_tax.py dup search-tax/examples/lostfound.tsv
+          python3 search-tax/search_tax.py place search-tax/examples/lostfound.tsv
+          python3 search-tax/search_tax.py simulate search-tax/examples/lostfound.tsv fix --item 剪刀 --wage 40
+          python3 search-tax/search_tax.py validate search-tax/examples/lostfound.tsv

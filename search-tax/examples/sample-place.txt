@@ -1,0 +1,10 @@
+FIXED-HOME CLINIC · 固定位置处方与回访 (review window 30 days)
+
+prescriptions (items still unfixed, hunted in a recurring spot):
+  剪刀             x4 hunts -> give it a home at '抽屉' (found there x3)
+
+reviews (fix rows, 30-day before/after rates per observed day):
+  门禁卡            fixed at '玄关托盘' on 2026-07-20 -> WORKING (post 0.033/day vs pre 0.190/day)
+  指甲刀            fixed at '药盒挂钩' on 2026-08-20 -> TOO EARLY (only 1 of 30 post days in the ledger; come back when it had chances to wander)
+
+measured cure rate feeds `simulate fix` — the ledger is the lab.
