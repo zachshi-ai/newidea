@@ -124,7 +124,7 @@ python3 lowball.py validate examples/quote.tsv examples/addons.tsv # 恒等式�
 8. **宰客单价**:找平 95(1.58x 上沿)、搬运 2,400(2.40x)→ prices exit 4;pct 行按合同额比例审计(8.0% 区间上半、3.5% 区间内);无基线条目标注「自报,只登记不审计」;
 9. **签字门禁**:宰客样例 exit 4 附上沿倍数;区间内样例 exit 0;低于下沿 exit 1 并提示开口风险;推荐记账行是可直粘 addons.tsv 的七列制表符行;
 10. **THIN 拒答**:增项流水 < 3 笔 → audit/prices exit 3;报价单 < 5 条 → judge/gaps exit 3;
-11. **逐字节复现**:示例输出不依赖当前时间,`build_examples.py --check` 对 9 份快照做字节级校验,CI 中运行。
+11. **逐字节复现**:示例输出不依赖当前时间,`examples/build_examples.py --check` 对 9 份快照做字节级校验,CI 中运行。
 
 ## 诚实条款
 
