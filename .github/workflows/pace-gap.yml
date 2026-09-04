@@ -1,0 +1,27 @@
+# pace-gap · 赶考线验收
+# 每次推送：跑验收测试（判级边界与速率三线全部钉值），dogfood：仓库示例
+# 账本本身是测试夹具，并输出覆盖/法庭/错配/反事实的快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: pace-gap
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s pace-gap/tests -v
+      - name: example ledger byte-check
+        run: python3 pace-gap/examples/build_examples.py --check
+      - name: example snapshot (advisory)
+        run: |
+          python3 pace-gap/pace_gap.py report pace-gap/examples/syllabus.tsv pace-gap/examples/study.tsv --exam-date 2026-12-19
+          python3 pace-gap/pace_gap.py pace pace-gap/examples/syllabus.tsv pace-gap/examples/study.tsv --exam-date 2026-12-19
+          python3 pace-gap/pace_gap.py allocation pace-gap/examples/syllabus.tsv pace-gap/examples/study.tsv
+          python3 pace-gap/pace_gap.py simulate pace-gap/examples/syllabus.tsv pace-gap/examples/study.tsv --rate 0.3 --exam-date 2026-12-19
+          python3 pace-gap/pace_gap.py simulate pace-gap/examples/syllabus.tsv pace-gap/examples/study.tsv --finish-by 2026-12-19
+          python3 pace-gap/pace_gap.py validate pace-gap/examples/syllabus.tsv pace-gap/examples/study.tsv

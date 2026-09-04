@@ -1,0 +1,36 @@
+date	subject	order	minutes	status
+2026-03-02	math	1	140	done
+2026-03-03	english	1	160	
+2026-03-04	math	1	150	done
+2026-03-05	math	2	130	
+2026-03-06	english	1	170	done
+2026-03-07	math	2	160	done
+2026-03-09	math	3	150	
+2026-03-09	english	2	165	
+2026-03-11	math	3	140	done
+2026-03-12	english	2	175	done
+2026-03-12	math	4	150	
+2026-03-14	english	3	170	
+2026-03-14	math	4	155	done
+2026-03-16	math	5	140	
+2026-03-18	english	3	180	
+2026-03-18	math	5	145	
+2026-03-21	math	5	150	done
+2026-03-24	english	3	165	done
+2026-04-20	english	4	175	
+2026-05-06	english	4	170	done
+2026-05-18	english	5	180	
+2026-06-02	english	5	175	done
+2026-06-15	math	7	90	open
+2026-06-22	math	7	60	open
+2026-08-03	english	6	170	
+2026-08-10	major	1	40	open
+2026-08-12	english	6	180	done
+2026-08-15	math	6	120	
+2026-08-17	major	1	30	open
+2026-08-20	math	6	135	done
+2026-08-22	english	7	175	
+2026-08-24	major	2	45	open
+2026-08-26	english	7	170	
+2026-08-30	english	7	165	done
+2026-09-05	math	7	50	open
