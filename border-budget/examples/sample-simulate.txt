@@ -1,0 +1,8 @@
+== simulate · 反事实：不去了 ==
+cancelled: 2026-10-02 .. 2026-10-15  booked autumn
+
+balance today: 83/90 -> 83/90 (spare 7 -> 7)
+projected 365-day peak: 89/90 -> 83/90
+leave today: could stay 15 day(s) instead of 15  (the cancelled trip was in the future — today's walk is unchanged)
+
+the ledger does not judge the trip — it prices the days it hands back to the window.

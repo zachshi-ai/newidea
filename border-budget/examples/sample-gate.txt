@@ -1,0 +1,5 @@
+== gate · 已订行程门禁 (schengen, 180/90) ==
+booked trips ahead: 1
+projected window peak: 89/90 on 2026-10-15
+
+VERDICT: SAFE — every booked trip fits, peak 89/90. exit 0

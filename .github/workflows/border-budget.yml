@@ -1,0 +1,29 @@
+# border-budget · 窗期
+# 每次推送：跑验收测试（含样例逐字节同步 --check），并输出样例账本的窗口快照。
+# The over-quota verdicts (exit 4 = a trip pushes the rolling window past the
+# quota) are what can actually refuse something; the other report snapshots
+# are advisory demo artifacts.
+name: border-budget
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s border-budget/tests -v
+      - name: examples byte-exact check
+        run: python3 border-budget/examples/build_examples.py --check
+      - name: border budget snapshot on the demo ledger (advisory)
+        run: |
+          python3 border-budget/border_budget.py --today 2026-09-06 balance border-budget/examples/trips.tsv
+          python3 border-budget/border_budget.py --today 2026-09-06 check border-budget/examples/trips.tsv --entry 2026-10-02 --exit 2026-10-15
+          python3 border-budget/border_budget.py --today 2026-09-06 check border-budget/examples/trips.tsv --entry 2026-10-02 --exit 2026-11-13 || true
+          python3 border-budget/border_budget.py --today 2026-09-06 when border-budget/examples/trips.tsv --days 30
+          python3 border-budget/border_budget.py --today 2026-09-06 gate border-budget/examples/trips.tsv
+          python3 border-budget/border_budget.py --today 2026-09-06 history border-budget/examples/trips.tsv
+          python3 border-budget/border_budget.py --today 2026-09-06 simulate border-budget/examples/trips.tsv cancel --match autumn
+          python3 border-budget/border_budget.py --today 2026-09-06 validate border-budget/examples/trips.tsv

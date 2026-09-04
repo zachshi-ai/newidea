@@ -1,0 +1,6 @@
+== check · 行程过闸 (schengen) ==
+NOTE  trip overlaps 1 booked stay(s): shared days count once (rebooking semantics), not twice
+trip 2026-10-02 .. 2026-11-13 = 43 day(s) (entry and exit days both count)
+window usage peaks 104/90 on 2026-11-13
+VERDICT: OVER by 14 day(s) on 2026-10-31 — exit 4
+shortest fix: exit by 2026-10-30 (a 29-day stay still fits)

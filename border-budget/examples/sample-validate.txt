@@ -1,0 +1,5 @@
+== validate · 账本体检 ==
+stays: 7  (open 0 · future 1)
+identity (schengen): day-by-day == per-stay clipping  ->  83 == 83
+
+ledger healthy. exit 0
