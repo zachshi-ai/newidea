@@ -1,0 +1,19 @@
+# safety-floor · 兜底
+# 每次推送：跑验收测试（含 demo 数字核验 + 样例逐字节同步），并输出样例账本的保费账快照。
+# The status snapshot never fails the build: the demo report intentionally
+# ends EXPOSED (exit 4) — that gate is pinned by the acceptance tests, and
+# premium (exit 0) is the advisory artifact shown here.
+name: safety-floor
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood + examples sync)
+        run: python3 -m unittest discover -s safety-floor/tests -v
+      - name: premium snapshot on the demo ledger (advisory)
+        run: python3 safety-floor/safety_floor.py premium safety-floor/examples/family.csv safety-floor/examples/policies.csv

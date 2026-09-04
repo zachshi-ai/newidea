@@ -1,0 +1,23 @@
+SAFETY FLOOR · family coverage audit
+
+family ledger
+  members  : 4 (beam 1 · spouse 1 · child 1 · elder 1)
+  policies : 8 (ci 2 · medical 3 · accident 2 · other 1)
+  expense  : 200,000/yr (anchor for CI targets)
+  income   : 450,000/yr (household)
+
+coverage matrix (have/target)
+  member   role     life                  ci                    medical               accident
+  陈小明   beam     BARE    0/3.00M       BARE    0/600k        COVERED 3.00M/1.00M   THIN    100k/1.50M
+  林悦     spouse   BARE    0/1.50M       THIN    200k/600k     COVERED 2.00M/1.00M   BARE    0/750k
+  陈小满   child    —                     SHORT   500k/600k     COVERED 1.00M/1.00M   BARE    0/200k
+  陈母     elder    —                     BARE    0/600k        BARE    0/1.00M       COVERED 200k/200k
+
+premium ledger
+  total premium : 14,043/yr
+  premium ratio : 3.1% of income · OK
+  savings-type  : 8,000/yr = 57.0% of every premium yuan (buys no protection)
+  premium feeds : 陈小满 70.3% · 林悦 25.0% · 陈小明 2.5% · 陈母 2.1%
+
+verdict: EXPOSED — the pillar stands bare (陈小明: life (0 of 3,000,000), ci (0 of 600,000)).
+the day the pillar falls, this family lands on nothing. exit 4

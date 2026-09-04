@@ -1,0 +1,13 @@
+gap list — what to fix first (bare before thin, pillar before everyone)
+
+  #   member   role     peril    status           have       target          gap
+  1   陈小明   beam     life     BARE                0    3,000,000    3,000,000
+  2   陈小明   beam     ci       BARE                0      600,000      600,000
+  3   林悦     spouse   life     BARE                0    1,500,000    1,500,000
+  4   林悦     spouse   accident BARE                0      750,000      750,000
+  5   陈小满   child    accident BARE                0      200,000      200,000
+  6   陈母     elder    medical  BARE                0    1,000,000    1,000,000
+  7   陈母     elder    ci       BARE                0      600,000      600,000
+  8   陈小明   beam     accident THIN          100,000    1,500,000    1,400,000
+  9   林悦     spouse   ci       THIN          200,000      600,000      400,000
+  10  陈小满   child    ci       SHORT         500,000      600,000      100,000

@@ -1,0 +1,8 @@
+premium ledger — what every yuan buys
+
+  total premium : 14,043/yr
+  household inc : 450,000/yr
+  premium ratio : 3.1% of income · OK (<= 10.0% OK · > 15.0% OVERPAY, exit 4)
+  savings-type  : 8,000/yr = 57.0% of every premium yuan — annuities and education funds buy no protection
+  premium feeds : 陈小满 70.3% · 林悦 25.0% · 陈小明 2.5% · 陈母 2.1%
+  by peril      : other 8,000 · ci 4,400 · medical 1,343 · accident 300
