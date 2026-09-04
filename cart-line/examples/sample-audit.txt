@@ -1,0 +1,23 @@
+== cart-line · order audit ==
+8 orders, 2026-10-21 → 2026-11-11 (3.0 weeks)
+planned ¥2709.00 | filler ¥232.00 | discount ¥460.00 | paid ¥2481.00
+
+the platform says:  "you saved ¥460.00"
+the ledger says:    you really kept ¥228.00  (net = discount - filler)
+the difference ¥232.00 is EXACTLY the filler total — to the last cent,
+by algebra: every yuan of filler you paid is a yuan the banner never mentions.
+
+where the discount came from:
+  free   ¥300.00  (planned alone already crossed the line — no filler needed)
+  earned ¥160.00  (bought with ¥232.00 of fillers -> cash diff +¥72.00)
+
+illusion identity: discount - net - filler = 0.000000000
+filler ratio: 50.4% of the discount was eaten by fillers (red line 30.0%)
+  -> VERDICT: RED, exit 4 — the promotion is mostly a mirror of your own spending.
+
+overpaid orders (net < 0 — paid more than bare-buy):
+  O-106   net -¥68.00  (filler ¥88.00 for a ¥20.00 discount — gap ¥54.00 > d ¥20.00, unwinnable)
+  O-102   net -¥14.00  (filler ¥34.00 for a ¥20.00 discount — line was ¥11.00, you filled ¥34.00)
+
+at this pace the promo season taxes ¥1248.00/year in filler cash
+(promo pace is not the year's pace — same-ruler reading only.)

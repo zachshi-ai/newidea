@@ -1,0 +1,12 @@
+== cart-line · the line ==
+rule every:300:50, subtotal ¥268.00
+line: gap ¥32.00, win zone [¥32.00, ¥50.00], max gain ¥18.00
+      (fill exactly ¥32.00 and pay ¥250.00 instead of ¥268.00)
+
+candidates:
+   ¥15.00  OVERPAY pays +¥15.00  (overpays ¥15.00)
+   ¥32.00  FILL    pays -¥18.00  (net gain ¥18.00)
+   ¥49.00  FILL    pays -¥1.00  (net gain ¥1.00)
+
+best single pick: ¥32.00 (gain ¥18.00)
+best combo: ¥32.00 (¥32.00, 1 item(s), gain ¥18.00)

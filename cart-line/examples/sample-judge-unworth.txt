@@ -1,0 +1,12 @@
+== cart-line · the line ==
+rule full:99:20, subtotal ¥45.00
+line: gap ¥54.00 > discount ¥20.00 — NO winning fill exists.
+      any filler either misses the line (pays +C) or crosses it
+      paying +¥34.00 at best. The cheapest way through this checkout
+      is to buy nothing extra.
+
+candidates (for the record):
+   ¥30.00  OVERPAY pays +¥30.00
+   ¥54.00  OVERPAY pays +¥34.00
+
+VERDICT: NOT_WORTH — the discount is priced out of reach. exit 4

@@ -1,0 +1,23 @@
+# cart-line · 凑单线
+# 每次推送：跑验收测试（含缺口判据矩阵/幻觉差恒等式/分层恒等式/回放最小性对拍等 74 项），
+# 逐字节校验示例输出，并输出示例账本的凑单线快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: cart-line
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. line math + illusion identities)
+        run: python3 -m unittest discover -s cart-line/tests -v
+      - name: examples byte-check (reproducible outputs)
+        run: python3 cart-line/examples/build_examples.py --check
+      - name: checkout line snapshot (advisory, exit 4 is the demo's verdict)
+        run: |
+          python3 cart-line/cart_line.py judge --subtotal 268 --rule every:300:50 --fill 15 --fill 32 --fill 49
+          python3 cart-line/cart_line.py audit cart-line/examples/orders.tsv || true

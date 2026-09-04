@@ -1,0 +1,12 @@
+== cart-line · validate ==
+orders loaded:                     8
+I1 rule recompute residual:        0.000000000
+I2 paid = planned+filler-discount: 0.000000000
+I3 illusion gap == filler total:   0.000000000
+I4 free + earned == discount:      0.000000000
+I5 cash diff == filler - earned:   0.000000000
+I6 net == free - cash diff:        0.000000000
+worst residual:                    0.000000000  -> OK
+items loaded:                      31
+filler value coverage:             100.0%
+planned value coverage:            100.0%

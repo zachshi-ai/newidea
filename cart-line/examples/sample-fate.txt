@@ -1,0 +1,15 @@
+== cart-line · filler fate ==
+coverage: filler items ¥232.00 of ¥232.00 (100.0%)
+
+                rows  settled   used  junk(n)    junk(¥)  junk(%)             
+filler items      10       10      4        6    ¥161.20    60.0%   <-- RED
+planned items     21       21     19        2    ¥381.00     9.5% 
+
+filler junk rate 69.5% — more than half of what you bought for the
+line gathers dust. The discount was never the point; the point
+was the line.
+-> VERDICT: RED, exit 4
+vs planned items 14.1% — fillers die 4.9x faster.
+
+(the filler tag is a motive, not a product property — only you
+ know which purchase was yours and which was the threshold's.)
