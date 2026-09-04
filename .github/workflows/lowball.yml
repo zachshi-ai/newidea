@@ -1,0 +1,25 @@
+# lowball · 低价签 —— 装修增项审计账本
+# 每次推送:跑验收测试(含解析层/四分类恒等式/开口爆量/低价幻觉指数/
+# 诱饵×开口杀局/宰客单价/签字门禁/THIN 拒答/基线覆盖翻转裁决等 62 项),
+# 并对 9 份示例快照做字节级校验。
+# The snapshot never fails the build: the red exits are by design
+# (audit/gaps/judge/prices/sign-kill exit 4; --check is the byte gate).
+name: lowball
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. identities + honest gates)
+        run: python3 -m unittest discover -s lowball/tests -v
+      - name: examples byte-check (reproducible ledgers + outputs)
+        run: python3 lowball/examples/build_examples.py --check
+      - name: lowball red-exit snapshot (advisory, exit 4 by design)
+        run: |
+          python3 lowball/lowball.py audit lowball/examples/quote.tsv lowball/examples/addons.tsv || test $? -eq 4
+          python3 lowball/lowball.py judge lowball/examples/quote.tsv || test $? -eq 4
+          python3 lowball/lowball.py prices lowball/examples/quote.tsv lowball/examples/addons.tsv || test $? -eq 4
