@@ -1,0 +1,7 @@
+# 暗息 · Stealth Interest 示例账本 —— 三笔在途分期
+# 列：platform item principal months fee_rate paid mode prepay_rule
+# fee_rate 每期费率，0.006 即 0.6%/期；paid 已还期数，留空按 0
+platform	item	principal	months	fee_rate	paid	mode	prepay_rule
+huabei	phone-12k	12000	12	0.006	3	flat	remaining
+jingdong	laptop-8k	8000	24	0.005	10	flat	waived
+merchant	tour-6k	6000	6	0.008	0	flat	remaining

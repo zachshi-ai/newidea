@@ -1,0 +1,24 @@
+# stealth-interest · 暗息验收
+# 每次推送：跑验收测试（数值真值由独立牛顿法钉死，dogfood：仓库示例账本
+# 本身是测试夹具），并输出翻译/法庭/总账的快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: stealth-interest
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood ground-truth)
+        run: python3 -m unittest discover -s stealth-interest/tests -v
+      - name: example snapshot (advisory)
+        run: |
+          python3 stealth-interest/stealth_interest.py rate --principal 12000 --months 12 --fee-rate 0.006
+          python3 stealth-interest/stealth_interest.py prepay --principal 12000 --months 12 --fee-rate 0.006 --paid 3 --rule remaining
+          python3 stealth-interest/stealth_interest.py offer --price 12000 --months 12 --cash-discount 400 --yield 0.02
+          python3 stealth-interest/stealth_interest.py stack stealth-interest/examples/plans.tsv --salary 10000
+          python3 stealth-interest/stealth_interest.py validate stealth-interest/examples/plans.tsv
