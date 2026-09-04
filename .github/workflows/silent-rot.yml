@@ -1,0 +1,29 @@
+# silent-rot · 暗蛀
+# 每次推送：跑验收测试（含棘轮合法性/价差钉值/as-of 时间机器等 50 项），
+# 逐字节校验示例账本，并输出样例账本的五灯快照。
+# The gate verdicts (exit 4 = WATCH-HOLD / SILENT / CARE-GAP lamps on the
+# demo ledger) are what the demo is supposed to show; the snapshot is
+# advisory, the tests are the gate.
+name: silent-rot
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s silent-rot/tests -v
+      - name: examples byte-exact check
+        run: python3 silent-rot/examples/build_examples.py --check
+      - name: silent rot snapshot on the demo ledger (advisory)
+        run: |
+          python3 silent-rot/silent_rot.py report silent-rot/examples/ledger.tsv || true
+          python3 silent-rot/silent_rot.py ratchet silent-rot/examples/ledger.tsv
+          python3 silent-rot/silent_rot.py silent silent-rot/examples/ledger.tsv || true
+          python3 silent-rot/silent_rot.py due silent-rot/examples/ledger.tsv || true
+          python3 silent-rot/silent_rot.py cost silent-rot/examples/ledger.tsv
+          python3 silent-rot/silent_rot.py validate silent-rot/examples/ledger.tsv
+          python3 silent-rot/silent_rot.py report silent-rot/examples/ledger.tsv --as-of 2022-12-31 || true
