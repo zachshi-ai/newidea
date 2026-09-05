@@ -1,0 +1,32 @@
+exit code: 4
+
+=== Mute Levy · Unclaimed Deduction Audit (gap) 2025 ===
+eligible items 3, claimed-overlapped 1, with silent months: 2
+
+-- silent months, priced --
+item                silent months   deduction    approx-tax  
+elderly support     05..12 (8)      24,000.00    2,400.00    
+continuing edu      06..12 (7)      2,800.00     280.00      
+mute levy total                     26,800.00    2,680.00    
+(approx-tax at the current 10% marginal bracket; the exact figure is the settle delta below)
+
+-- settle as booked --
+coverage 12/12 months
+gross 237,000.00 - exemption 60,000.00 (12 x 5,000.00) - social+fund+other 52,140.00
+     - special additional claims 12,000.00 = taxable income 112,860.00
+bracket 10% (quick deduction 2,520.00) -> annual tax 8,766.00
+prepaid through withholding: 6,246.00
+BALANCE-DUE 2,520.00 -- the withholding was an estimate; the reconciliation is the audit
+window: Mar 1 - Jun 30 of the following year; after it closes a due stays due (with late-payment surcharge), a refund stays unclaimed.
+
+-- settle after refilling every gap --
+coverage 12/12 months
+gross 237,000.00 - exemption 60,000.00 (12 x 5,000.00) - social+fund+other 52,140.00
+     - special additional claims 38,800.00 = taxable income 86,060.00
+bracket 10% (quick deduction 2,520.00) -> annual tax 6,086.00
+prepaid through withholding: 6,246.00
+REFUND 160.00 -- money parked at the treasury with your name on it; claim it inside the window
+window: Mar 1 - Jun 30 of the following year; after it closes a due stays due (with late-payment surcharge), a refund stays unclaimed.
+
+refilling flips the bottom line by 2,680.00 == mute levy exact total
+MUTE-LIT: silent deductions cost you 2,680.00 this year (line 500.00) -- nobody warned you because nobody has to

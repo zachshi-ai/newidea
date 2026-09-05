@@ -1,0 +1,6 @@
+# 已申报的专项附加扣除（预扣时公司已按此减除）
+# item 用规范词或别名（房贷/rent/赡养老人/elderly/继续教育/continuing...）
+# monthly 留空 = 用全国统一标准先验（rent 档 --rent-tier，赡养 --elderly-monthly）
+# to 留空 = 至今
+item	from	to	monthly	note
+房贷利息	2025-01		1000.00	首套房贷，1 月起申报

@@ -1,0 +1,26 @@
+exit code: 0
+
+=== Mute Levy · Withholding Reconciliation 2025 ===
+ledger payslips.tsv: 12 salary rows, 2 employer(s), 12 months (2025-01..2025-12)
+claims claims.tsv: 1 item(s), 12 covered month-amounts
+
+-- monthly replay (cumulative withholding method) --
+month  employer    cum-taxable   bracket  due-this   paid-this  diff    
+01     A公司       8,040.00      3%      241.20     241.20     0.00    
+02     A公司       16,080.00     3%      241.20     241.20     0.00    
+03     A公司       24,120.00     3%      241.20     241.20     -0.00   
+04     A公司       32,160.00     3%      241.20     241.20     0.00    
+05     A公司       40,200.00     10%     535.20     535.20     0.00    
+06     B公司       10,380.00     3%      311.40     311.40     0.00    
+07     B公司       20,760.00     3%      311.40     311.40     0.00    
+08     B公司       31,140.00     3%      311.40     311.40     0.00    
+09     B公司       41,520.00     10%     697.80     697.80     -0.00   
+10     B公司       51,900.00     10%     1,038.00   1,038.00   0.00    
+11     B公司       62,280.00     10%     1,038.00   1,038.00   0.00    
+12     B公司       72,660.00     10%     1,038.00   1,038.00   0.00    
+
+emp A公司     : withheld 1,500.00, paid 1,500.00
+emp B公司     : withheld 4,746.00, paid 4,746.00
+year total: withheld 6,246.00, paid 6,246.00, diff 0.00
+
+every employer withheld correctly -- the gap is structural, not clerical: two cumulative ladders both starting from zero do not add up to one year.

@@ -1,0 +1,12 @@
+exit code: 0
+
+=== Mute Levy · Bonus Bracket Choice (bonus 36,000.00) ===
+comprehensive taxable income (from settle): 112,860.00 -> annual tax 8,766.00
+
+solo : 36,000.00 / 12 = 3,000.00 -> 3% bracket (quick 0.00) -> bonus tax 1,080.00
+       total tax 8,766.00 + 1,080.00 = 9,846.00
+merge: 112,860.00 + 36,000.00 = 148,860.00 -> annual tax 12,852.00 (total 12,852.00)
+
+SOLO saves 3,006.00 -- merging pushes the whole year across a bracket line
+cliff: at 36,000.01 the solo tax jumps to 3,390.00 (+2,310.00) -- the monthly table has hard edges, a 1-yuan raise can cost thousands
+solo-taxation relief currently runs through Dec 2027; the choice is yours, the cliff is not.

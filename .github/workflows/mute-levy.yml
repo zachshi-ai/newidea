@@ -1,0 +1,27 @@
+# mute-levy · 哑税
+# 每次推送：跑验收测试（税率表钉值/样例账本全链路手算/恒等式/账坏九种/
+# 薄账分层/零锚定等 47 项），逐字节校验示例快照，并输出样例账本的五段快照。
+# The gate verdicts (exit 4 = BALANCE-DUE / MUTE-LIT on the demo ledger) are
+# what the demo is supposed to show — the snapshot is advisory, the tests
+# are the gate.
+name: mute-levy
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s mute-levy/tests -v
+      - name: examples byte-exact check
+        run: python3 mute-levy/examples/build_examples.py --check
+      - name: mute-levy snapshot on the demo ledger (advisory)
+        run: |
+          python3 mute-levy/mute_levy.py --payslips mute-levy/examples/payslips.tsv --claims mute-levy/examples/claims.tsv report || true
+          python3 mute-levy/mute_levy.py --payslips mute-levy/examples/payslips.tsv --claims mute-levy/examples/claims.tsv settle || true
+          python3 mute-levy/mute_levy.py --payslips mute-levy/examples/payslips.tsv --claims mute-levy/examples/claims.tsv --eligibles mute-levy/examples/eligibles.tsv gap || true
+          python3 mute-levy/mute_levy.py --payslips mute-levy/examples/payslips.tsv --claims mute-levy/examples/claims.tsv bonus --amount 36000 || true
+          python3 mute-levy/mute_levy.py --payslips mute-levy/examples/payslips.tsv --claims mute-levy/examples/claims.tsv validate || true

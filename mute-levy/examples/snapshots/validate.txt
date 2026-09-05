@@ -1,0 +1,10 @@
+exit code: 0
+
+=== Mute Levy · Ledger Integrity (validate) 2025 ===
+[ok] identity: per-employer incremental taxable == aggregate decomposition (0.000000)
+[ok] identity: reconcile due == annual tax - total prepaid
+[ok] replay: all 12 months paid == replayed due (0 hidden-item month(s))
+[ok] cliff: solo tax 36000->1,080.00, 36001->3,390.10
+[ok] claims: 0 month(s) outside the ledger were clipped
+
+all identities green
