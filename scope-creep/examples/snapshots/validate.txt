@@ -1,0 +1,13 @@
+exit code: 0
+
+=== scope-creep · validate ===
+ledger: quote.tsv + changes.tsv + meta.tsv (as-of 2026-01-18)
+  [PASS] settlement identity  quote+net == declared (resid ¥0.00 ≤ ¥1.00)
+  [PASS] line arithmetic  qty×price == amount on all 15 rows
+  [PASS] deduct/reaudit reference quoted trades
+  [PASS] no change order before start
+  [PASS] dual algorithm  net by rows == net by groups (¥14,726.00)
+  [PASS] dual algorithm  timedelta == ordinal difference (50 pairs)
+  [PASS] monthly split sums to net (¥14,726.00)
+
+ledger checks out — 10 settled rows, 1 pending, quote ¥88,938.00.

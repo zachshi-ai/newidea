@@ -1,0 +1,32 @@
+exit code: 4
+
+=== scope-creep · report ===
+ledger: quote.tsv + changes.tsv (mode full, as-of 2026-01-18, FINAL AUDIT)
+
+contract quote          ¥88,938.00  (15 line items)
+  油漆       ¥12,880.00
+  地板       ¥11,036.00
+  封窗       ¥8,160.00
+  水电       ¥8,000.00
+  橱柜       ¥7,896.00
+  瓷砖       ¥7,830.00
+  卫浴洁具   ¥7,800.00
+  瓦工       ¥6,740.00
+  室内门     ¥6,320.00
+  灯具开关   ¥4,200.00
+  吊顶       ¥2,992.00
+  美缝       ¥2,380.00
+  拆改       ¥1,904.00
+  保洁       ¥800.00
+
+change orders: 10 settled, 1 pending (excluded), 0 after as-of
+  add +¥6,930.00 / upgrade +¥3,300.00 / reaudit 5,796.00 / deduct -1,300.00
+net change              +¥14,726.00  (16.56% of contract)
+settlement              ¥103,664.00
+reaudit share of gross positive changes: 36.17%  <- quantity under-estimated at quote time
+monthly net: 2025-10 +3,600 / 2025-11 +5,780 / 2025-12 +4,496 / 2026-01 +850   (peak 2025-11 — the trade phase where change orders cluster)
+settlement date 2026-01-18 — 8 days past plan
+declared settlement    ¥103,664.00
+
+VERDICT: AMBUSH — settlement runs 16.56% over contract (ambush line 15.00%).
+LOWBALL LAMP: 79.41% of gross positive changes were proposed by the contractor (line 50.00%) — a cheap contract is bought on installments.

@@ -1,0 +1,14 @@
+# 变更单流水 —— date 留空 = 现场喊价还没签字（pending，不进结算）
+# type: add/deduct/upgrade/reaudit   who: owner/contractor
+date	type	category	item	unit	qty	price	amount	who	reason
+2025-10-12	add	垃圾清运	装修垃圾外运（报价未含）	车	2	600	1200	contractor	签约时说好全包，现在说清运另算
+2025-10-20	add	防水	卫生间墙面防水返高	m²	12	200	2400	contractor	不做防水楼下遭殃——报价单里确实没有防水
+2025-11-05	add	瓦工	墙面挂网找平	m²	36	50	1800	contractor	原墙不平，不找平瓷砖会空鼓
+2025-11-18	upgrade	瓷砖	全屋瓷砖升级差价	m²	58	33	1900	owner	主材升级，自己要好的
+2025-11-18	upgrade	卫浴洁具	花洒升级差价	项	1	1400	1400	owner	花洒换恒温
+2025-11-26	add	水电	开关插座移位增补	位	8	85	680	contractor	现场觉得插座位置不顺手
+2025-12-08	reaudit	水电	水电按实结算（100m→156m）	m	56	80	4480	contractor	实际米数超预估
+2025-12-22	deduct	室内门	窗套减项（决定不做）	樘	2	650	1300	owner	窗套不做了，简单点
+2025-12-30	reaudit	橱柜	橱柜米数复核（4.2m→4.9m）	m	0.7	1880	1316	contractor	现场量出多 0.7m
+2026-01-05	add	灯具开关	晾衣架及五金挂件安装	项	1	850	850	contractor	不装没法晾衣服
+	add	瓦工	卫生间壁龛砌筑	个	2	550	1100	contractor	顺手做，便宜

@@ -1,0 +1,16 @@
+exit code: 4
+
+=== scope-creep · census ===
+ledger: quote.tsv (mode full) — pre-signature scan of the quote
+quote prices 14 trades: 保洁, 卫浴洁具, 吊顶, 地板, 室内门, 封窗, 拆改, 橱柜, 水电, 油漆, 灯具开关, 瓦工, 瓷砖, 美缝
+
+LOW absence (reminders — some owners self-buy these):
+  - 木工
+  - 监理
+
+HIGH absence — a trade that will almost surely happen is not in the quote:
+  ! 垃圾清运 — absent from the quote is not absent from the site; it comes back as a change order, priced by the crew that lowballed you.
+  ! 管理费 — absent from the quote is not absent from the site; it comes back as a change order, priced by the crew that lowballed you.
+  ! 防水 — absent from the quote is not absent from the site; it comes back as a change order, priced by the crew that lowballed you.
+
+VERDICT: AMBUSH PRE-LOADED — 3 high-risk trade(s) missing. Before signing: have them written into the contract price, or get a written 'not included' and price them yourself.

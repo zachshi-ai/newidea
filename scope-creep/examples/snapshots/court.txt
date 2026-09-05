@@ -1,0 +1,19 @@
+exit code: 4
+
+=== scope-creep · court ===
+ledger: quote.tsv + changes.tsv (as-of 2026-01-18)
+
+signed change orders, attributed by who proposed them:
+  contractor +12,726.00 across 7 positive order(s)  <- LOWBALL: majority of the add-ons are theirs
+  owner      +3,300.00 across 2 positive order(s)
+  (1 deduct(s) excluded from attribution)
+  reaudit share 36.17% — 'settle by actual quantity' is the quote's escape hatch; re-read the estimate.
+
+pending order(s): 1
+  #1 卫生间壁龛砌筑 [瓦工] +1,100.00 (proposed by contractor)
+     says: "顺手做，便宜"
+     evidence: 瓦工 is priced in the quote.
+     after signing: 17.79% over contract (lines 5.00%/15.00%)
+     verdict: REDO — this order pushes the projected settlement past the ambush line; cut it or trade something off the table
+
+gate: at least one pending order verdicts REDO (exit 4).

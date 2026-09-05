@@ -1,0 +1,29 @@
+# scope-creep · 增项镜
+# 每次推送：跑验收测试（结算恒等式/变更率与被动率边界/漏项先验扫描/
+# as-of 时间机器/零锚定等 83 项），逐字节校验示例快照，并输出样例账本
+# 的六段快照。
+# The gate verdicts (exit 4 = AMBUSH / LOWBALL / FORESHADOW / HIGH
+# absence on the demo ledger) are what the demo is supposed to show —
+# the snapshot is advisory, the tests are the gate.
+name: scope-creep
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s scope-creep/tests -v
+      - name: examples byte-exact check
+        run: python3 scope-creep/examples/build_examples.py --check
+      - name: scope-creep snapshot on the demo ledger (advisory)
+        run: |
+          python3 scope-creep/scope_creep.py --quote scope-creep/examples/quote.tsv --changes scope-creep/examples/changes.tsv --meta scope-creep/examples/meta.tsv report || true
+          python3 scope-creep/scope_creep.py --quote scope-creep/examples/quote.tsv --changes scope-creep/examples/changes.tsv --meta scope-creep/examples/meta.tsv --as-of 2025-12-01 report || true
+          python3 scope-creep/scope_creep.py --quote scope-creep/examples/quote.tsv --meta scope-creep/examples/meta.tsv census || true
+          python3 scope-creep/scope_creep.py --quote scope-creep/examples/quote.tsv --changes scope-creep/examples/changes.tsv --meta scope-creep/examples/meta.tsv court || true
+          python3 scope-creep/scope_creep.py --quote scope-creep/examples/quote.tsv --changes scope-creep/examples/changes.tsv --meta scope-creep/examples/meta.tsv compare --quote2 scope-creep/examples/quote2.tsv || true
+          python3 scope-creep/scope_creep.py --quote scope-creep/examples/quote.tsv --changes scope-creep/examples/changes.tsv --meta scope-creep/examples/meta.tsv validate
