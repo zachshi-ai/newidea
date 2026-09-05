@@ -1,0 +1,15 @@
+exit code: 4
+
+=== Avalanche · new-card quota gate ===
+ledger: reviews.tsv   rows: 117   span: 2025-09-01 .. 2025-12-29   as-of: 2025-12-29
+idle days (no rows): 3 -- card-days accrue on recorded days only; the true debt is larger
+
+  due pressure D:     2970/day
+  capacity C:         60/day
+  surface spread:     +2910/day
+  quota:              0 new cards   (max(0, C - D): today's spare capacity)
+  requested: 30
+  recent pipeline:    840 new cards   (added in the trailing window; still maturing into future due)
+
+verdict: LEVERAGED [exit 4] -- 30 > quota 0: every new card starts a lifetime due stream; adding them today borrows capacity you do not have
+  freeze new cards or clear the backlog first; the quota is today's spare capacity, not a lifetime allowance

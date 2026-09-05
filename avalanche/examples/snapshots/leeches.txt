@@ -1,0 +1,29 @@
+exit code: 4
+
+=== Avalanche · leech census ===
+ledger: reviews.tsv   rows: 117   table: leeches.tsv   cards: 2092
+lapses total: 3313
+parity vs ledger: lapses 3313 == again 3313 OK
+forgetting concentration: top 20% of cards (419) hold 40.5% of all lapses
+
+busiest cards:
+  w-0056                     10
+  w-0084                     10
+  w-0007                     9
+  w-0014                     9
+  w-0021                     9
+  w-0028                     9
+  w-0063                     9
+  w-0070                     9
+  w-0077                     9
+  w-0091                     9
+  w-0098                     9
+  w-0105                     9
+  w-0112                     9
+  w-0119                     9
+  w-0035                     8
+  ... and 2077 more rows
+
+kill list (lapses >= 8): 22 card(s), 192 lapses (5.8% of all forgetting)
+suspending the kill list removes at least 6.9 due/day (lower bound = their past lapses / 28 review-days)
+verdict: KILL-LIST [exit 4] -- these cards are the avalanche's core sample; suspension is a decision, not an action

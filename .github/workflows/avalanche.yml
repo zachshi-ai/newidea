@@ -1,0 +1,29 @@
+# avalanche · 雪崩
+# 每次推送：跑验收测试（解析与账坏/五档判级与含边界/崩盘投影一致性/
+# 配额闸边界/simulate 偿还恒等式/双账 parity/薄账分层/零锚定复现等
+# 55 项），逐字节校验示例快照，并输出样例账本的六段快照。
+# The gate verdicts (exit 4 = OVERFLOW / AVALANCHE replay / LEVERAGED /
+# MATH-DEAD / KILL-LIST on the demo ledger) are what the demo is supposed
+# to show — the snapshot is advisory, the tests are the gate.
+name: avalanche
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s avalanche/tests -v
+      - name: examples byte-exact check
+        run: python3 avalanche/examples/build_examples.py --check
+      - name: avalanche snapshot on the demo ledger (advisory)
+        run: |
+          python3 avalanche/avalanche.py report avalanche/examples/reviews.tsv --leeches avalanche/examples/leeches.tsv || true
+          python3 avalanche/avalanche.py report avalanche/examples/reviews.tsv --leeches avalanche/examples/leeches.tsv --as-of 2025-10-05 || true
+          python3 avalanche/avalanche.py add avalanche/examples/reviews.tsv 30 || true
+          python3 avalanche/avalanche.py simulate avalanche/examples/reviews.tsv || true
+          python3 avalanche/avalanche.py leeches avalanche/examples/reviews.tsv --leeches avalanche/examples/leeches.tsv || true
+          python3 avalanche/avalanche.py validate avalanche/examples/reviews.tsv --leeches avalanche/examples/leeches.tsv

@@ -1,0 +1,22 @@
+exit code: 4
+
+=== Avalanche · catch-up simulation ===
+ledger: reviews.tsv   rows: 117   span: 2025-09-01 .. 2025-12-29   as-of: 2025-12-29
+idle days (no rows): 3 -- card-days accrue on recorded days only; the true debt is larger
+
+state: backlog 3352, capacity 60/day, fresh inflow 89/day, surface spread +2910/day, doom line 180
+assumptions: rates held constant; days are calendar days (daily practice assumed); F held constant -- cards cleared today start
+returning after their intervals, so freeze/accelerate clear dates are the EARLIEST possible (override inflow: --freeze-inflow)
+
+as-is          : keep doing what you do
+                 backlog 3352 >= doom line 180 now (OVERFLOW)
+
+freeze         : new = 0 from today, capacity 60/day, inflow 89/day
+                 net -29/day -> NEVER clears
+                 verdict: MATH-DEAD [exit 4] -- even with zero new cards the matured deck returns at least as fast as you clear; cutting the deck or adding time are the only exits
+
+accelerate x2  : capacity 120.0/day, inflow 89/day
+                 net +31.0/day -> clears the 3352-card backlog in 109 review-day(s), earliest clear date 2026-04-17
+                 repayment check: 108 x 31 + 4 = 3352 == backlog (last day partial)
+
+verdict: GATE RED [exit 4] -- at least one scenario is mathematically dead or the doom date is inside the window

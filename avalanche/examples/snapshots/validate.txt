@@ -1,0 +1,11 @@
+exit code: 0
+
+=== Avalanche · ledger check ===
+ledger: reviews.tsv   rows: 117   span: 2025-09-01 .. 2025-12-29   as-of: 2025-12-29
+idle days (no rows): 3 -- card-days accrue on recorded days only; the true debt is larger
+columns and values (non-negative integers, again <= done) .. OK
+dates strictly ascending, unique, valid calendar .. OK
+paid-ahead rows (done > due): 1 .. disclosed, not an error
+carried continuity: 0 rows with due < previous carried .. OK
+leech parity: lapses 3313 == again 3313 .. OK
+verdict: LEDGER OK [exit 0]

@@ -1,0 +1,26 @@
+exit code: 4
+
+=== Avalanche · spaced-repetition backlog ledger ===
+ledger: reviews.tsv   rows: 117   span: 2025-09-01 .. 2025-12-29   as-of: 2025-12-29
+idle days (no rows): 3 -- card-days accrue on recorded days only; the true debt is larger
+
+-- stock (as of 2025-12-29) --
+  backlog now:        3352 cards   (last day: due 3412 - done 60)
+  debt so far:        171711 card-days   (sum of daily backlog)
+  paid-ahead rows:    1   (done > due: future maturities paid early)
+  forgiven rows:      0   (due < carried: cards left the deck off-book)
+  backlog curve (older -> newer):
+  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▂▂▂▂▂▂▂▃▃▃▃▃▃▃▃▃▄▄▄▄▄▄▄▄▄▄▅▅▅▅▅▅▅▅▅▅▅▅▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇████████████████
+
+-- flow (trailing 28 review-days) --
+  due pressure D:     2970/day
+  capacity C:         60/day
+  surface spread:     +2910/day   (D - C: today's bleed)
+  fresh inflow F:     89/day   (matured cards returning; carried backlog excluded)
+  structural spread:  +29/day   (F - C: the deck cannot self-heal while this is positive)
+  forgetting rate:    83.8%   (again / done, trailing window)
+
+-- doom --
+  doom line:          180 cards   (3 x C; override with --doom-line)
+projection: backlog 3352 >= doom line 180 -- already crossed (still growing +2910/day)
+verdict: OVERFLOW [exit 4]
