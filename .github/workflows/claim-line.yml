@@ -1,0 +1,27 @@
+# claim-line · 报险线验收
+# 每次推送：跑验收测试（自费线/隐身保费按 NCD 表手工推演钉死，两世界必平
+# 与边际可加两条恒等式独立对拍；dogfood：仓库示例账本本身是测试夹具），
+# 并输出审计/裁决/续保预演/沙盒/体检的快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: claim-line
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood ground-truth)
+        run: python3 -m unittest discover -s claim-line/tests -v
+      - name: example snapshot (advisory)
+        run: |
+          python3 claim-line/claim_line.py report claim-line/examples/policies.tsv claim-line/examples/claims.tsv
+          python3 claim-line/claim_line.py decide 1200 --policies claim-line/examples/policies.tsv --claims claim-line/examples/claims.tsv
+          python3 claim-line/claim_line.py decide 1200 --target other --policies claim-line/examples/policies.tsv --claims claim-line/examples/claims.tsv
+          python3 claim-line/claim_line.py decide 5000 --base 6000 --clean 3 --claims-ytd 0
+          python3 claim-line/claim_line.py renewal claim-line/examples/policies.tsv claim-line/examples/claims.tsv
+          python3 claim-line/claim_line.py simulate never-claim --policies claim-line/examples/policies.tsv --claims claim-line/examples/claims.tsv
+          python3 claim-line/claim_line.py validate claim-line/examples/policies.tsv claim-line/examples/claims.tsv

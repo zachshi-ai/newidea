@@ -1,0 +1,8 @@
+# 报险线 · Claim Line 示例账本 —— 出险事件账
+# 列：date fault channel cost note
+# fault: mine=有责 other=无责
+# channel: own=自己商业险 ctp=自己交强险 other=对方/第三方 cash=自费未报
+date	fault	channel	cost	note
+2024-06-03	mine	own	600	停车场剐蹭门板，报了商业险
+2025-01-20	other	other	2300	被追尾，对方全责走对方保险
+2026-03-11	mine	own	12000	追尾大修：大灯总成+钣金喷漆
