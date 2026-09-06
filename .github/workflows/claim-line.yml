@@ -16,10 +16,10 @@ jobs:
           python-version: "3.10"
       - name: acceptance tests (incl. dogfood ground-truth)
         run: python3 -m unittest discover -s claim-line/tests -v
-      - name: example snapshot (advisory)
+      - name: example snapshot (advisory, exit 4 by design)
         run: |
-          python3 claim-line/claim_line.py report claim-line/examples/policies.tsv claim-line/examples/claims.tsv
-          python3 claim-line/claim_line.py decide 1200 --policies claim-line/examples/policies.tsv --claims claim-line/examples/claims.tsv
+          python3 claim-line/claim_line.py report claim-line/examples/policies.tsv claim-line/examples/claims.tsv || test $? -eq 4
+          python3 claim-line/claim_line.py decide 1200 --policies claim-line/examples/policies.tsv --claims claim-line/examples/claims.tsv || test $? -eq 4
           python3 claim-line/claim_line.py decide 1200 --target other --policies claim-line/examples/policies.tsv --claims claim-line/examples/claims.tsv
           python3 claim-line/claim_line.py decide 5000 --base 6000 --clean 3 --claims-ytd 0
           python3 claim-line/claim_line.py renewal claim-line/examples/policies.tsv claim-line/examples/claims.tsv
