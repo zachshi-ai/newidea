@@ -1,0 +1,4 @@
+# 自定义药表:药表里没有的药,自己教给账本(说明书永远赢)
+# name/ingredient/mg/unit —— 同名药多行=多成分;同名整药替换内置
+name	ingredient	mg	unit
+诊所白瓶药	对乙酰氨基酚	300	片

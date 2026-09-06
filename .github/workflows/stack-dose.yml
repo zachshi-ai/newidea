@@ -1,0 +1,29 @@
+# stack-dose · 叠方
+# 每次推送：跑验收测试（含成分归一/Σ逐行==Σ按日聚合恒等式/展开恒等式/
+# 判级恰线语义（恰 2000 不亮、恰 4000 仍 STACKED）/间隔闸恰线与跨日累计/
+# --soft/--hard/--gap 翻案/无先验 n/a 不参与日灯/combo 无共享不冤枉/
+# as-of 时间机器等 63 项），逐字节校验账本与示例输出，并输出总账快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (report/combo/interval exit 4 by design; `|| test $? -eq 4`).
+name: stack-dose
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. stacking identity + exact-line gates)
+        run: python3 -m unittest discover -s stack-dose/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 stack-dose/examples/build_examples.py --check
+      - name: stack-dose snapshots (advisory, exit 4 by design)
+        run: |
+          python3 stack-dose/stack_dose.py report stack-dose/examples/doses.tsv --meds stack-dose/examples/meds_custom.tsv --as-of 2026-01-09 || test $? -eq 4
+          python3 stack-dose/stack_dose.py interval stack-dose/examples/doses.tsv --meds stack-dose/examples/meds_custom.tsv --as-of 2026-01-09 || test $? -eq 4
+          python3 stack-dose/stack_dose.py combo --drugs 泰诺,999感冒灵,维C银翘片 --times 4 || test $? -eq 4
+          python3 stack-dose/stack_dose.py report stack-dose/examples/doses.tsv --meds stack-dose/examples/meds_custom.tsv --as-of 2026-01-05
+          python3 stack-dose/stack_dose.py share --ingredient 对乙酰氨基酚
+          python3 stack-dose/stack_dose.py validate stack-dose/examples/doses.tsv --meds stack-dose/examples/meds_custom.tsv
