@@ -1,0 +1,32 @@
+# past-prime · 超役
+# 每次推送：跑验收测试（判级 730/365/0 天边界/到站日日历口径与 2-29/
+# 三级寿命来源与全链覆盖/退休潮 730 天聚簇与划分/池构成与月摊 fen 级
+# 恒等/守恒/突击回放/双算法/单调性/薄账分层/exit codes/as-of 确定性等
+# 51 项），并输出样例账本的六段快照。
+# examples/fleet.tsv 是手编 fixture（非脚本生成），钉值全部由测试字面量
+# 把守，故无 build_examples 步骤。
+# The gate verdicts (exit 4 = OVERDUE-SAFE ×2 on the demo ledger, the 2017
+# cohort story) are what the demo is supposed to show — the snapshot is
+# advisory, the tests are the gate.
+name: past-prime
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s past-prime/tests -v
+      - name: past-prime snapshot on the demo fleet (advisory)
+        run: |
+          python3 past-prime/past_prime.py report past-prime/examples/fleet.tsv --as-of 2026-09-05 || true
+          python3 past-prime/past_prime.py report past-prime/examples/fleet.tsv || true
+          python3 past-prime/past_prime.py queue past-prime/examples/fleet.tsv --as-of 2026-09-05
+          python3 past-prime/past_prime.py fund past-prime/examples/fleet.tsv --as-of 2026-09-05
+          python3 past-prime/past_prime.py simulate past-prime/examples/fleet.tsv replace-all --as-of 2026-09-05
+          python3 past-prime/past_prime.py simulate past-prime/examples/fleet.tsv keep 厨房燃气热水器 --years 3 --as-of 2026-09-05
+          python3 past-prime/past_prime.py energy past-prime/examples/fleet.tsv --as-of 2026-09-05
+          python3 past-prime/past_prime.py validate past-prime/examples/fleet.tsv --as-of 2026-09-05
