@@ -1,0 +1,28 @@
+# handoff · 交底
+# 每次推送：跑验收测试（含判级恰线语义/三灯独立性/六类覆盖矩阵恒等式/
+# 零墙钟静态扫描/时间机器翻灯不翻清单/交接卡行号回溯与打码幂等等 69 项），
+# 逐字节校验账本与快照，并输出快照总账。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (report/brief/who exit 4 by design; `|| test $? -eq 4`).
+name: handoff
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. exact-line gates + zero-wall-clock scan)
+        run: python3 -m unittest discover -s handoff/tests -v
+      - name: examples byte-check (reproducible ledger + snapshots)
+        run: python3 handoff/examples/build_examples.py --check
+      - name: handoff snapshots (advisory, exit 4 by design)
+        run: |
+          python3 handoff/handoff.py report handoff/examples/handoff.tsv || test $? -eq 4
+          python3 handoff/handoff.py brief handoff/examples/handoff.tsv --top 5 || test $? -eq 4
+          python3 handoff/handoff.py brief handoff/examples/handoff.tsv --top 5 --mask || test $? -eq 4
+          python3 handoff/handoff.py who handoff/examples/handoff.tsv || test $? -eq 4
+          python3 handoff/handoff.py report handoff/examples/handoff.tsv --as-of 2024-02-10 || test $? -eq 4
+          python3 handoff/handoff.py validate handoff/examples/handoff.tsv
