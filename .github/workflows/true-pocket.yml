@@ -1,0 +1,30 @@
+# true-pocket · 实掏验收
+# 每次推送：跑验收测试（恒等式破裂/分担交叉/抵扣边界/灾难线/薄账/as-of 剪切
+# 全部钉值），dogfood：仓库示例账本本身是测试夹具，并输出六命令快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: true-pocket
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s true-pocket/tests -v
+      - name: example ledger byte-check
+        run: python3 true-pocket/examples/build_examples.py --check
+      - name: example snapshot (advisory)
+        run: |
+          set +e
+          # all six commands over the sample family ledger; every exit
+          # code here is expected output, never a build failure
+          python3 true-pocket/true_pocket.py true-pocket/examples/settlements.tsv report --income 120000
+          python3 true-pocket/true_pocket.py true-pocket/examples/settlements.tsv progress --threshold 1800 --rate-after 0.6
+          python3 true-pocket/true_pocket.py true-pocket/examples/settlements.tsv deduce
+          python3 true-pocket/true_pocket.py true-pocket/examples/settlements.tsv claim --all
+          python3 true-pocket/true_pocket.py true-pocket/examples/settlements.tsv family
+          python3 true-pocket/true_pocket.py true-pocket/examples/settlements.tsv validate
