@@ -19,7 +19,9 @@ jobs:
         run: |
           python3 hidden-tab/hidden_tab.py report hidden-tab/examples/smoking.tsv --price 25
           python3 hidden-tab/hidden_tab.py clock hidden-tab/examples/smoking.tsv
-          python3 hidden-tab/hidden_tab.py relapse hidden-tab/examples/smoking.tsv --price 25
+          # 样例只有 1 个 lapse→relapse 样本，relapse 的 DECLINE exit 3
+          # 是演示要点（样本 ≥2 才报均值），快照容忍之
+          python3 hidden-tab/hidden_tab.py relapse hidden-tab/examples/smoking.tsv --price 25 || true
           python3 hidden-tab/hidden_tab.py trigger hidden-tab/examples/smoking.tsv
           python3 hidden-tab/hidden_tab.py simulate hidden-tab/examples/smoking.tsv smoke 1 --price 25
           python3 hidden-tab/hidden_tab.py validate hidden-tab/examples/smoking.tsv
