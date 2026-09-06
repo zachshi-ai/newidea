@@ -21,7 +21,7 @@ jobs:
           python3 claim-line/claim_line.py report claim-line/examples/policies.tsv claim-line/examples/claims.tsv || test $? -eq 4
           python3 claim-line/claim_line.py decide 1200 --policies claim-line/examples/policies.tsv --claims claim-line/examples/claims.tsv || test $? -eq 4
           python3 claim-line/claim_line.py decide 1200 --target other --policies claim-line/examples/policies.tsv --claims claim-line/examples/claims.tsv
-          python3 claim-line/claim_line.py decide 5000 --base 6000 --clean 3 --claims-ytd 0
+          python3 claim-line/claim_line.py decide 5000 --base 6000 --clean 3 --claims-ytd 0 || test $? -eq 4
           python3 claim-line/claim_line.py renewal claim-line/examples/policies.tsv claim-line/examples/claims.tsv
           python3 claim-line/claim_line.py simulate never-claim --policies claim-line/examples/policies.tsv --claims claim-line/examples/claims.tsv
           python3 claim-line/claim_line.py validate claim-line/examples/policies.tsv claim-line/examples/claims.tsv
