@@ -1,0 +1,28 @@
+# shed-count · 秋毫
+# 每次推送：跑验收测试（间隔归一/GAP 恰 45 入池 46 剔除/判级恰线宁可少亮灯/
+# 干预三庭 起效潜伏窗+CONFOUNDED 潜伏期混药回归+VOID/反弹庭恰线不亮/
+# 口径门 wash≠comb/表外口径点名/薄账分层/别名幂等/双算法/as-of 截断回放
+# 确定性等 52 项），并输出样例账本的五段快照。
+# The gate verdicts (exit 4 = 近30天 101.3 回到 SHED 红线，停药反弹的第二幕)
+# are what the demo is supposed to show — the snapshot is advisory,
+# the tests are the gate.
+name: shed-count
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s shed-count/tests -v
+      - name: shed-count snapshot on the demo ledger (advisory)
+        run: |
+          python3 shed-count/shed_count.py report shed-count/examples/sheds.tsv || true
+          python3 shed-count/shed_count.py report shed-count/examples/sheds.tsv --as-of 2025-12-31 || true
+          python3 shed-count/shed_count.py rate shed-count/examples/sheds.tsv || true
+          python3 shed-count/shed_count.py intervention shed-count/examples/sheds.tsv || true
+          python3 shed-count/shed_count.py season shed-count/examples/sheds.tsv || true
+          python3 shed-count/shed_count.py validate shed-count/examples/sheds.tsv
