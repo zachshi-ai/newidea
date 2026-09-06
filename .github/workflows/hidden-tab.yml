@@ -1,0 +1,25 @@
+# hidden-tab · 瘾账验收
+# 每次推送：跑验收测试（样例真值手算钉死，dogfood：仓库示例账本本身是
+# 测试夹具），并输出总账/时钟/复吸审计的快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate.
+name: hidden-tab
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood ground-truth)
+        run: python3 -m unittest discover -s hidden-tab/tests -v
+      - name: example snapshot (advisory)
+        run: |
+          python3 hidden-tab/hidden_tab.py report hidden-tab/examples/smoking.tsv --price 25
+          python3 hidden-tab/hidden_tab.py clock hidden-tab/examples/smoking.tsv
+          python3 hidden-tab/hidden_tab.py relapse hidden-tab/examples/smoking.tsv --price 25
+          python3 hidden-tab/hidden_tab.py trigger hidden-tab/examples/smoking.tsv
+          python3 hidden-tab/hidden_tab.py simulate hidden-tab/examples/smoking.tsv smoke 1 --price 25
+          python3 hidden-tab/hidden_tab.py validate hidden-tab/examples/smoking.tsv
