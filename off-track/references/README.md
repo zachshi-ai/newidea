@@ -15,12 +15,12 @@
 
 ```bash
 cd references && python3 embed_tables.py
-# 输出写入 /tmp/embedded_tables.py,拼回 off_track.py 文件尾部的 HFA_DATA / BMI_DATA 段
+# 输出写入 /tmp/embedded_tables.py,拼回 ../off_track.py 文件尾部的 HFA_DATA / BMI_DATA 段
 ```
 
 ## 核对内嵌表与原件一致
 
-`off_track.py validate` 与测试套件对每个内嵌节点做 LMS 往返自检;再对回原件:
+`../off_track.py validate` 与测试套件对每个内嵌节点做 LMS 往返自检;再对回原件:
 
 ```python
 import csv, off_track as T

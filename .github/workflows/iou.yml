@@ -1,0 +1,26 @@
+# iou · 欠条
+# 每次推送：跑验收测试（含四态解析体检/FIFO 重放体检/敞口恒等式/P90
+# 标定与通识垫底披露/时效起算与催讨续命/判级恰线语义/as-of 时间机器
+# 等 64 项），逐字节校验账本与示例输出，并输出总账快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (report/nudge exit 4 by design; `|| test $? -eq 4`).
+name: iou
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. FIFO identity + statute gates)
+        run: python3 -m unittest discover -s iou/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 iou/examples/build_examples.py --check
+      - name: iou report snapshot (advisory, exit 4 by design)
+        run: |
+          python3 iou/iou.py report iou/examples/iou.tsv --as-of 2026-05-20 || test $? -eq 4
+          python3 iou/iou.py nudge iou/examples/iou.tsv --as-of 2026-05-20 || test $? -eq 4
+          python3 iou/iou.py book iou/examples/iou.tsv --as-of 2026-05-20
+          python3 iou/iou.py validate iou/examples/iou.tsv --as-of 2026-05-20
