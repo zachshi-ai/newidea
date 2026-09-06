@@ -1,0 +1,36 @@
+== off-track report — xiaoman.tsv (as-of 2026-03-15) ==
+
+ledger: 7 measurement row(s), 1 child(ren)
+"short" is a position; "off-track" is a direction. This report grades direction.
+
+child xiaoman  (F, born 2018-03-15)
+
+LAST MEASUREMENT  2026-03-15  height 129.1 cm  age 96.0 mo  P60.1  band 4 (P50-P75)
+                  weight 26.7 kg  BMI 16.0  P54.9  band 4 (P50-P75)
+
+HEIGHT TRACK (7 gradable measurements age>=24mo)
+  band path:   4 4 4 4 4 4 4
+  drift 0 band(s) over the whole track; steepest single window 0
+
+VELOCITY (age-segment floors in cm/yr)
+  2020-03-15 -> 2021-03-15    8.6 cm/yr  (floor 7.0)  OK
+  2021-03-15 -> 2022-03-15    7.0 cm/yr  (floor 6.0)  OK
+  2022-03-15 -> 2023-03-16    7.0 cm/yr  (floor 5.0)  OK
+  2023-03-16 -> 2024-03-15    7.1 cm/yr  (floor 5.0)  OK
+  2024-03-15 -> 2025-03-15    6.9 cm/yr  (floor 5.0)  OK
+  2025-03-15 -> 2026-03-15    6.2 cm/yr  (floor 5.0)  OK
+  whole-span 7.1 cm/yr over 2191 days (sum of windows, weighted identity)
+
+TARGET HEIGHT (mid-parental)  159.5 cm, range [151.0, 168.0]
+  last height rides P60.1 -> projects to ~165.0 cm at age 20 on the same band
+  projection is inside the range
+
+BMI TRACK (7 gradable rows)
+  band path:   4 4 4 4 4 4 4
+  drift 0 band(s); steepest single window 0
+
+VERDICT
+  GREEN  on-track: no band-crossing or velocity signal
+
+Not medical advice. Thresholds are common priors and every one of them
+is a -- flag; the pediatrician and the booklet win over this tool.

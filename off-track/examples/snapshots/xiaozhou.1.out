@@ -1,0 +1,38 @@
+== off-track report — xiaozhou.tsv (as-of 2020-07-02) ==
+
+ledger: 6 measurement row(s), 1 child(ren)
+"short" is a position; "off-track" is a direction. This report grades direction.
+
+child xiaozhou  (M, born 2011-07-02)
+
+LAST MEASUREMENT  2020-07-02  height 125.7 cm  age 108.0 mo  P9.8  band 1 (P3-P10)
+                  weight 30.8 kg  BMI 19.5  P90.1  band 6 (P90-P97)
+
+HEIGHT TRACK (6 gradable measurements age>=24mo)
+  band path:   5 4 3 3 2 1
+  drift -4 band(s) over the whole track; steepest single window 1
+
+VELOCITY (age-segment floors in cm/yr)
+  2015-07-02 -> 2016-07-02    5.2 cm/yr  (floor 5.0)  OK
+  2016-07-02 -> 2017-07-02    5.0 cm/yr  (floor 5.0)  OK
+  2017-07-02 -> 2018-07-02    4.5 cm/yr  (floor 5.0)  BELOW FLOOR
+  2018-07-02 -> 2019-07-02    3.9 cm/yr  (floor 5.0)  BELOW FLOOR
+  2019-07-02 -> 2020-07-02    2.0 cm/yr  (floor 5.0)  BELOW FLOOR
+  whole-span 4.1 cm/yr over 1827 days (sum of windows, weighted identity)
+
+TARGET HEIGHT  add --mom and --dad to open this page
+
+BMI TRACK (6 gradable rows)
+  band path:   2 3 4 4 5 6
+  drift 4 band(s); steepest single window 1
+  upward BMI drift is the earliest signature of childhood obesity (grades at 2 bands)
+
+VERDICT
+  RED  height track drifted 4 band(s) DOWN (>= 2): growth faltering question
+  RED  BMI track drifted 4 band(s) UP (>= 2)
+  RED  3 velocity window(s) below the age floor
+  A red light is a reason to see a pediatric endocrinologist,
+  not a diagnosis. Bring this ledger and the well-child booklet.
+
+Not medical advice. Thresholds are common priors and every one of them
+is a -- flag; the pediatrician and the booklet win over this tool.

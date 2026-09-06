@@ -1,0 +1,10 @@
+== off-track next — xiaoman.tsv (as-of 2026-03-15) ==
+
+child xiaoman  (F)  next visit 2026-09-15 (age 102.0 mo)
+  stay on band 4 (P50-P75):   height >= 130.4 cm
+  1-band-down watch:     [126.3, 130.4) cm  (crossing one band, not yet an alarm)
+  RED LINE (2 bands down): height <  126.3 cm
+  upward watch line:     height >  138.3 cm
+  if last velocity (6.2 cm/yr) holds: ~132.2 cm
+  bring this line and the booklet to the visit; measuring technique
+  matters — same measurer, shoes off, morning if possible

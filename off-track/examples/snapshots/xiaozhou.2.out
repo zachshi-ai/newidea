@@ -1,0 +1,11 @@
+== off-track track — xiaozhou.tsv (as-of 2020-07-02) ==
+
+child xiaozhou  (M)
+  date        age/mo    height   pct     band
+  2015-07-02  48.0      105.1    P75.2   5 P75-P90
+  2016-07-02  60.0      110.3    P61.8   4 P50-P75
+  2017-07-02  72.0      115.3    P49.2   3 P25-P50
+  2018-07-02  84.0      119.8    P35.7   3 P25-P50
+  2019-07-02  96.0      123.7    P23.2   2 P10-P25
+  2020-07-02  108.0     125.7    P9.8    1 P3-P10
+  drift -4, steepest window 1

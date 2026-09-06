@@ -1,0 +1,9 @@
+== off-track validate — xiaoshu.tsv ==
+  [OK] LMS round-trip at every node (pct(M)==50, value(P50)==M) 0 bad node(s)
+  [OK] value_at_percentile strictly increasing in p 
+  [OK] band_of mapping on both sides of every line 
+  [OK] band edge convention: a percentile on a line belongs to the higher band 
+  [OK] xiaoshu: band drift telescoping (sum windows == whole path) 
+  [OK] xiaoshu: velocity weighted identity (sum w*days == sum cm) (13.600000 vs 13.600000)
+  [OK] xiaoshu: BMI recomputation identity (weight/height^2) 
+validate: all checks OK

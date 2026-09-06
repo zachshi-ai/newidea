@@ -1,0 +1,28 @@
+# off-track · 掉带
+# 每次推送：跑验收测试，并在样例账本上输出各命令快照（红灯命令是演示主体）。
+# DRIFT / WINDOW / VELOCITY / BMI 跨带 (exit 4) 是真实门禁；其余快照为 advisory 演示。
+name: off-track
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s off-track/tests -v
+      - name: snapshot byte-check on the demo ledgers
+        run: python3 off-track/examples/build_examples.py --check
+      - name: snapshots on the demo ledgers (red gates expected to exit 4)
+        run: |
+          python3 off-track/off_track.py report off-track/examples/xiaoman.tsv --mom 160 --dad 172
+          python3 off-track/off_track.py report off-track/examples/xiaozhou.tsv || true
+          python3 off-track/off_track.py track off-track/examples/xiaozhou.tsv || true
+          python3 off-track/off_track.py velocity off-track/examples/xiaozhou.tsv || true
+          python3 off-track/off_track.py next off-track/examples/xiaoman.tsv --next-at 2026-09-15
+          python3 off-track/off_track.py report off-track/examples/xiaoshu.tsv --mom 168 --dad 180 --family-late-bloomer
+          python3 off-track/off_track.py target off-track/examples/xiaoshu.tsv --mom 168 --dad 180
+          python3 off-track/off_track.py report off-track/examples/xiaodou.tsv
+          python3 off-track/off_track.py validate off-track/examples/xiaozhou.tsv

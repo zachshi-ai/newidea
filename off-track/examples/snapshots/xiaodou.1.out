@@ -1,0 +1,27 @@
+== off-track report — xiaodou.tsv (as-of 2026-04-10) ==
+
+ledger: 2 measurement row(s), 1 child(ren)
+"short" is a position; "off-track" is a direction. This report grades direction.
+
+child xiaodou  (F, born 2025-02-10)
+
+LAST MEASUREMENT  2026-04-10  height 78.5 cm  age 13.9 mo  P79.5  band 5 (P75-P90)
+                  weight 10.4 kg  BMI 16.9  (no BMI reference below 24 months)
+
+HEIGHT TRACK (0 gradable measurements age>=24mo)
+  DECLINED  need >=2 measurements aged >=24mo spanning >=120 days
+  position is still printed above; the track needs more book.
+
+VELOCITY (age-segment floors in cm/yr)
+  DECLINED  no gradable window
+
+TARGET HEIGHT  add --mom and --dad to open this page
+
+BMI TRACK (0 gradable rows)
+  DECLINED  need >=2 rows with weight, age>=24mo, spanning >=120 days
+
+VERDICT
+  thin ledger: grading declined (exit 0), position only
+
+Not medical advice. Thresholds are common priors and every one of them
+is a -- flag; the pediatrician and the booklet win over this tool.
