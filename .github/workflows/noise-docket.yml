@@ -1,0 +1,27 @@
+# 声讨 · Noise Docket
+# 每次推送：跑验收测试（含夜间/禁令口径边界、判级线可调、灯与薄账豁免、
+# verify 前后窗恒等式、零锚定与无系统时钟等 66 项），逐字节校验样例账本，
+# 并输出样例账本的判级快照。
+# The SEVERE/UNBEARABLE verdicts (exit 4) are what can actually refuse
+# something; the snapshots are advisory demo artifacts.
+name: noise-docket
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. boundary + honesty gates)
+        run: python3 -m unittest discover -s noise-docket/tests -v
+      - name: examples byte-exact check
+        run: python3 noise-docket/examples/build_examples.py --check
+      - name: noise docket snapshot on the demo ledger (advisory, exit 4 by design)
+        run: |
+          python3 noise-docket/noise_docket.py report noise-docket/examples/events.tsv || test $? -eq 4
+          python3 noise-docket/noise_docket.py pattern noise-docket/examples/events.tsv || test $? -eq 4
+          python3 noise-docket/noise_docket.py verify noise-docket/examples/events.tsv --since 2026-08-01 --label "物业调解+隔音垫"
+          python3 noise-docket/noise_docket.py letter noise-docket/examples/events.tsv || test $? -eq 4
+          python3 noise-docket/noise_docket.py validate noise-docket/examples/events.tsv
