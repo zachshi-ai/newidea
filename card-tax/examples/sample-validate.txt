@@ -1,0 +1,4 @@
+-- Card Tax validate: cards.tsv + visits.tsv
+  as-of : 2026-06-30
+  identities: used+remaining==units · Σtax==paid-redeemed (5,386) · time units==weeks×target · no over-redemption
+  ALL OK

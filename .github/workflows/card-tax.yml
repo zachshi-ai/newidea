@@ -1,0 +1,26 @@
+# card-tax · 卡税
+# 每次推送：跑验收测试，并在样例账本上输出各命令快照。
+# report / offer (exit 4) 是真实门禁（DEAD/BLEED/续充红灯是演示主体）；
+# validate / simulate 恒绿；快照字节校验不过会挂 build。
+name: card-tax
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s card-tax/tests -v
+      - name: snapshot byte-check on the demo ledger
+        run: python3 card-tax/examples/build_examples.py --check
+      - name: snapshots on the demo ledger (red gates expected to exit 4)
+        run: |
+          python3 card-tax/card_tax.py report card-tax/examples/demo-data/cards.tsv card-tax/examples/demo-data/visits.tsv || true
+          python3 card-tax/card_tax.py pace card-tax/examples/demo-data/cards.tsv card-tax/examples/demo-data/visits.tsv || true
+          python3 card-tax/card_tax.py cost card-tax/examples/demo-data/cards.tsv card-tax/examples/demo-data/visits.tsv || true
+          python3 card-tax/card_tax.py offer --pay 3000 --units 50 --list 88 --until 2027-06-30 card-tax/examples/demo-data/cards.tsv card-tax/examples/demo-data/visits.tsv || true
+          python3 card-tax/card_tax.py simulate --weekly 3 card-tax/examples/demo-data/cards.tsv card-tax/examples/demo-data/visits.tsv
+          python3 card-tax/card_tax.py validate card-tax/examples/demo-data/cards.tsv card-tax/examples/demo-data/visits.tsv

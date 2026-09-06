@@ -1,0 +1,12 @@
+-- Card Tax offer court: cards.tsv + visits.tsv
+  as-of : 2026-06-30
+  proposed card: pay 3,000 · 50 units · list 88 · term 52.1 weeks
+
+  · old cards still on the table: 悦动健身年卡 (21.2% used, 41 left), 菁菁英语课包 (45.0% used, 11 left)
+  · at your own pace (0.27/week over 27 visits / 700d) only 14 of 50 units redeem inside the term -> projected tax 1,768 (58.9% of what you'd pay)
+
+  history is the best predictor of the member you are, not the member you
+  were on signing day.
+
+
+[exit 4] 

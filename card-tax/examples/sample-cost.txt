@@ -1,0 +1,15 @@
+-- Card Tax cost: cards.tsv + visits.tsv
+  as-of : 2026-06-30   anchor: the walk-in (list) price you were avoiding
+
+    card          per redeemed         list  breakeven   progress  tax
+    悦动健身年卡       331.82           90       40.6      27.1%       2,660
+    菁菁英语课包       444.44          260       15.4      58.5%       1,660
+    轻醒瑜伽次卡          680           68         10      10.0%         612
+    型格理发卡         142.86           78       12.8      54.6%         454
+
+  per-redeemed > list means every past visit is still paying for the ones
+  you never made. breakeven = paid / list: the visit count where the card stops
+  being a bet and becomes a discount.
+
+
+[exit 4] 

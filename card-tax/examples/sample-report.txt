@@ -1,0 +1,21 @@
+-- Card Tax report: cards.tsv + visits.tsv
+  as-of : 2026-06-30 (ledger-anchored; --as-of pins it)
+  cards : 4   visits: 28   paid: 9,330   redeemed at list: 3,944
+
+  card ledger (tax, worst first):
+    card           used/units    rate   left         tax  verdict
+    悦动健身年卡        11/52   21.2%     41       2,660  DEAD
+    菁菁英语课包         9/20   45.0%     11       1,660  DEAD
+    轻醒瑜伽次卡         1/10   10.0%      9         612  THIN
+    型格理发卡           7/10   70.0%      3         454  ON TRACK
+    TOTAL                                          5,386
+
+  tax identity: paid 9,330 - redeemed 3,944 = tax 5,386
+  a positive tax is what the no-show version of you paid; negative is the
+  discount you only earn by showing up.
+  · 轻醒瑜伽次卡 held 10 days (< 28): light not graded yet
+
+  RED: 悦动健身年卡:DEAD, 悦动健身年卡:BLEED, 菁菁英语课包:DEAD — the fantasy regular is paying dues
+
+
+[exit 4] 

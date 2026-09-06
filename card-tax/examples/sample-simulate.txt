@@ -1,0 +1,12 @@
+-- Card Tax sandbox: cards.tsv + visits.tsv
+  as-of : 2026-06-30   counterfactual: 3 visits/week
+
+  悦动健身年卡
+    8.86 weeks -> 26 feasible, 26 rescued (2,340 back at list), 15 still on the table
+  菁菁英语课包
+    26 weeks -> 78 feasible, 11 rescued (2,860 back at list), 0 still on the table
+  型格理发卡
+    26 weeks -> 78 feasible, 3 rescued (234 back at list), 0 still on the table
+
+  total walk-back: 5,434 — sandboxes don't enforce; calendars do.
+

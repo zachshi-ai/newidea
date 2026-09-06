@@ -1,0 +1,29 @@
+-- Card Tax pace: cards.tsv + visits.tsv
+  as-of : 2026-06-30   pace window: trailing 8 weeks
+
+  悦动健身年卡
+    used 11 of 52 (21.2%) · pace 0.00/week
+    expiry 2026-08-31: 8.9 weeks left -> +0 projected
+    projected rate 21.2% · evaporation 3,690 (at list 90)
+    last visit 2026-02-10 · silence 140d vs cliff line 45d -> CLIFF
+    lights: DEAD, BLEED
+
+  菁菁英语课包
+    used 9 of 20 (45.0%) · pace 0.00/week
+    no expiry on file: the race never ends, only the silence does
+    last visit 2026-03-28 · silence 94d vs cliff line 45d -> CLIFF
+    lights: DEAD
+
+  型格理发卡
+    used 7 of 10 (70.0%) · pace 0.38/week
+    no expiry on file: the race never ends, only the silence does
+    last visit 2026-06-30 · silence 0d vs cliff line 56d -> ok
+    lights: ON TRACK
+
+  轻醒瑜伽次卡
+    held 10 days (< 28): pace not graded yet
+
+  RED: 悦动健身年卡:DEAD, 悦动健身年卡:BLEED, 菁菁英语课包:DEAD
+
+
+[exit 4] 
