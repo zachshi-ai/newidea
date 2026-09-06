@@ -1,0 +1,27 @@
+# fair-exit · 明白账
+# 每次推送：跑验收测试，并在样例账本上输出各命令快照。
+# check (exit 4) 是真实门禁（SHORTFALL 是演示主体）；report --as-of 钉回
+# 解除日之前是设计内 DECLINE (exit 3)；validate / clock / worlds 恒绿；
+# 快照字节校验不过会挂 build。
+name: fair-exit
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s fair-exit/tests -v
+      - name: snapshot byte-check on the demo ledger
+        run: python3 fair-exit/examples/build_examples.py --check
+      - name: snapshots on the demo ledger (signature gate expected to exit 4)
+        run: |
+          python3 fair-exit/fair_exit.py report fair-exit/examples/demo-data/tenure.tsv fair-exit/examples/demo-data/payslips.tsv fair-exit/examples/demo-data/leave.tsv fair-exit/examples/demo-data/overtime.tsv
+          python3 fair-exit/fair_exit.py check fair-exit/examples/demo-data/tenure.tsv fair-exit/examples/demo-data/payslips.tsv fair-exit/examples/demo-data/leave.tsv fair-exit/examples/demo-data/overtime.tsv || true
+          python3 fair-exit/fair_exit.py clock fair-exit/examples/demo-data/tenure.tsv fair-exit/examples/demo-data/payslips.tsv fair-exit/examples/demo-data/leave.tsv fair-exit/examples/demo-data/overtime.tsv
+          python3 fair-exit/fair_exit.py worlds fair-exit/examples/demo-data/tenure.tsv fair-exit/examples/demo-data/payslips.tsv fair-exit/examples/demo-data/leave.tsv fair-exit/examples/demo-data/overtime.tsv
+          python3 fair-exit/fair_exit.py validate fair-exit/examples/demo-data/tenure.tsv fair-exit/examples/demo-data/payslips.tsv fair-exit/examples/demo-data/leave.tsv fair-exit/examples/demo-data/overtime.tsv
+          python3 fair-exit/fair_exit.py report --as-of 2026-06-30 fair-exit/examples/demo-data/tenure.tsv fair-exit/examples/demo-data/payslips.tsv fair-exit/examples/demo-data/leave.tsv fair-exit/examples/demo-data/overtime.tsv || true

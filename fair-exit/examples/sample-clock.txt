@@ -1,0 +1,8 @@
+-- Fair Exit clock: tenure.tsv + payslips.tsv + leave.tsv + overtime.tsv
+  as-of : 2026-08-31   anchor: 应发工资，不是基本工资
+
+  解除日        2026-08-31
+  时效届满      2027-08-31（365 天）
+  距今          365 天
+
+  绿灯 365 天——但「一次性了结」条款签下之时，这扇门就关了
