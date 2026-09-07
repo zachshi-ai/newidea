@@ -1,0 +1,25 @@
+# churn-hotspot · 变更热点
+# 每次推送：跑验收测试（含热点排序/窗口口径/排除 glob/固定 --as-of 可复现等），
+# 逐字节校验 demo-repo 与示例输出，并对本仓库输出 dogfood 快照。
+# The scan never fails the build (no --fail-on): the report is a
+# monitoring artifact, the tests are the gate.
+name: churn-hotspot
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history: churn metrics need it
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood)
+        run: python3 -m unittest discover -s churn-hotspot/tests -v
+      - name: examples byte-check (rebuild demo-repo + compare outputs)
+        run: python3 churn-hotspot/examples/build_examples.py --check
+      - name: churn-hotspot dogfood snapshot (advisory)
+        run: |
+          python3 churn-hotspot/churn_hotspot.py scan --as-of 2026-08-24
+          python3 churn-hotspot/churn_hotspot.py file churn-hotspot/churn_hotspot.py

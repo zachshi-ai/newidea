@@ -1,0 +1,27 @@
+# todo-rot · 待办锈蚀
+# 每次推送：跑验收测试（含账龄/锈蚀分/僵尸判定/半衰期/开票还票账/非 git 目录
+# exit 2 语义等），逐字节校验 demo-repo 与示例输出，并对本仓库输出 dogfood 快照。
+# The snapshot never fails the build (audit thresholds loosened): the report is a
+# monitoring artifact, the tests are the gate (audit exits 1 over budget by design).
+name: todo-rot
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history: ledger/halflife read git blame-ish data
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. zombie + rot budgets)
+        run: python3 -m unittest discover -s todo-rot/tests -v
+      - name: examples byte-check (rebuild demo-repo + compare outputs)
+        run: python3 todo-rot/examples/build_examples.py --check
+      - name: todo-rot dogfood snapshot (advisory)
+        run: |
+          python3 todo-rot/todo_rot.py scan
+          python3 todo-rot/todo_rot.py ledger --as-of 2026-08-18
+          python3 todo-rot/todo_rot.py halflife
+          python3 todo-rot/todo_rot.py audit --max-zombies 999 --max-ancient 999 --max-rot 9999

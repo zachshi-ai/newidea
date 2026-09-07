@@ -1,0 +1,27 @@
+# own-thermometer · 冷暖自知
+# 每次推送：跑验收测试（含温度地形分桶/舒适带不压缩单刻度/断档不插值外推/
+# 换季惯性/近邻投票/连败降档等 74 项），逐字节校验账本与示例输出，并输出体感快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (garments/autopsy exit 4 by design; `|| test $? -eq 4`).
+name: own-thermometer
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. comfort terrain + no-interpolation gates)
+        run: python3 -m unittest discover -s own-thermometer/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 own-thermometer/examples/build_examples.py --check
+      - name: own-thermometer snapshots (advisory, exit 4 by design)
+        run: |
+          python3 own-thermometer/own_thermometer.py report   own-thermometer/examples/ledger.tsv
+          python3 own-thermometer/own_thermometer.py garments own-thermometer/examples/ledger.tsv || test $? -eq 4
+          python3 own-thermometer/own_thermometer.py combos   own-thermometer/examples/ledger.tsv
+          python3 own-thermometer/own_thermometer.py autopsy  own-thermometer/examples/ledger.tsv || test $? -eq 4
+          python3 own-thermometer/own_thermometer.py plan     own-thermometer/examples/ledger.tsv --tmin 7 --tmax 13
+          python3 own-thermometer/own_thermometer.py validate own-thermometer/examples/ledger.tsv

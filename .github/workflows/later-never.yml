@@ -1,0 +1,23 @@
+# later-never · 稍后永不
+# 每次推送：跑验收测试（含消化半衰期 t½/老化曲线/ETA=∞ 结算/幻觉类型点名/
+# --today 逐字节复现等 48 项），并输出示例账本的审计快照。
+# examples 为静态账本（library.tsv + Pocket 导出），无生成器，跳过 byte-check。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: later-never
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. half-life + graveyard gates)
+        run: python3 -m unittest discover -s later-never/tests -v
+      - name: later-never snapshots (advisory)
+        run: |
+          python3 later-never/later_never.py audit  later-never/examples/library.tsv --today 2026-09-04
+          python3 later-never/later_never.py triage later-never/examples/library.tsv --today 2026-09-04
+          python3 later-never/later_never.py budget later-never/examples/library.tsv --months 6 --today 2026-09-04

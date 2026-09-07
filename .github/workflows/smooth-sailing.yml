@@ -1,0 +1,27 @@
+# smooth-sailing · 旱涝保收
+# 每次推送：跑验收测试（含烧钱率 trailing 中位/月俸三重 clamp/反事实重放守恒恒等式/
+# 税罐悬崖/断粮腰斩压测/对账漂移闸等 69 项），逐字节校验账本与示例输出，并输出体检快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (report/simulate 15000/stress exit 4 by design; `|| test $? -eq 4`).
+name: smooth-sailing
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. burn-rate median + replay identities)
+        run: python3 -m unittest discover -s smooth-sailing/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 smooth-sailing/examples/build_examples.py --check
+      - name: smooth-sailing snapshots (advisory, exit 4 by design)
+        run: |
+          python3 smooth-sailing/smooth_sailing.py report   smooth-sailing/examples/ledger.tsv || test $? -eq 4
+          python3 smooth-sailing/smooth_sailing.py paycheck smooth-sailing/examples/ledger.tsv
+          python3 smooth-sailing/smooth_sailing.py simulate smooth-sailing/examples/ledger.tsv --salary 9000
+          python3 smooth-sailing/smooth_sailing.py simulate smooth-sailing/examples/ledger.tsv --salary 15000 || test $? -eq 4
+          python3 smooth-sailing/smooth_sailing.py stress   smooth-sailing/examples/ledger.tsv || test $? -eq 4
+          python3 smooth-sailing/smooth_sailing.py validate smooth-sailing/examples/ledger.tsv

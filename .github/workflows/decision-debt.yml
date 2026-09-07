@@ -1,0 +1,26 @@
+# decision-debt · 决策债
+# 每次推送：跑验收测试（含债务公式确定性/init 幂等保护/权重校验/reopen 抬利率/
+# export 合法 markdown/端到端 smoke 等 47 项），逐字节校验样例台账，并输出台账快照。
+# 注意：--ledger 是全局参数，必须放在子命令之前。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate.
+name: decision-debt
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. accrual determinism + e2e smoke)
+        run: python3 -m unittest discover -s decision-debt/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 decision-debt/examples/build_examples.py --check
+      - name: decision-debt snapshots (advisory)
+        run: |
+          python3 decision-debt/decision_debt.py --ledger decision-debt/examples/sample-ledger.json list
+          python3 decision-debt/decision_debt.py --ledger decision-debt/examples/sample-ledger.json review --top 5
+          python3 decision-debt/decision_debt.py --ledger decision-debt/examples/sample-ledger.json report
+          python3 decision-debt/decision_debt.py --ledger decision-debt/examples/sample-ledger.json export

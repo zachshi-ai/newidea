@@ -1,0 +1,26 @@
+# midnight-oil · 深夜油
+# 每次推送：跑验收测试（含深夜/周末口径/streak 链/匿名画像/预算门禁语义等），
+# 逐字节校验 demo-repo 与示例输出，并对本仓库输出 dogfood 快照。
+# The scan never fails the build (thresholds loosened): the report is a
+# monitoring artifact, the tests are the gate (audit exits 1 over budget by design).
+name: midnight-oil
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history: late-night/streak metrics need it
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood)
+        run: python3 -m unittest discover -s midnight-oil/tests -v
+      - name: examples byte-check (rebuild demo-repo + compare outputs)
+        run: python3 midnight-oil/examples/build_examples.py --check
+      - name: midnight-oil dogfood snapshot (advisory)
+        run: |
+          python3 midnight-oil/midnight_oil.py scan
+          python3 midnight-oil/midnight_oil.py authors --anonymize
+          python3 midnight-oil/midnight_oil.py audit --max-late 999 --max-weekend 999 --max-streak 999
