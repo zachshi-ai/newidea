@@ -1,0 +1,30 @@
+# unvested · 未兑现验收
+# 每次推送:跑验收测试(80 tests:cliff 边界/月末钳制/余数落末节点/双路径对拍网格/
+# 事件校验网格/FIFO 分摊/作废状态机/灯阈值恰线语义/as-of 时间机器/恒等式字面值;
+# 样例数字全部先手算再钉——其中「无悬崖时节点 0 重复计数」是对拍网格当场抓出的引擎 bug),
+# 并输出 report/exit/clock/validate 与时间机器回放的快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate. The sample story's red lamps (exit 4: BLOWN-WINDOW
+# now, WINDOW-CLOSING 18 days before it) are the story itself — expected, not an error.
+name: unvested
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. forward-vs-complement parity grid)
+        run: python3 -m unittest discover -s unvested/tests -v
+      - name: example snapshot (advisory; report exit 4 by design)
+        run: |
+          python3 unvested/unvested.py report  --dir unvested/examples || test $? -eq 4
+          python3 unvested/unvested.py report  --dir unvested/examples --as-of 2024-09-10 || test $? -eq 4
+          python3 unvested/unvested.py exit    --dir unvested/examples
+          python3 unvested/unvested.py exit    --dir unvested/examples --date 2026-12-31
+          python3 unvested/unvested.py clock   --dir unvested/examples
+          python3 unvested/unvested.py validate --dir unvested/examples
+      - name: snapshot byte-check (build reproducibility)
+        run: python3 unvested/examples/build_examples.py --check

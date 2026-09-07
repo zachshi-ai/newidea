@@ -1,0 +1,7 @@
+# 未兑现 · 事件账:一行一次行权/变现(可缺席=无事件)
+# 列: date/company/event/shares/price/note
+# event: exercise 行权(不填 price——行权价是授予条款 strike) | tender 变现落袋(price 必填)
+# 作废不用记——离职/窗口关闭是算出来的,不是你填出来的
+date	company	event	shares	price	note
+2025-12-15	巨潮科技	tender	2000	31.00	年度回购窗口卖了一批
+2026-03-15	青苔智能	exercise	1000		掏了 800 元行权,拿住不动

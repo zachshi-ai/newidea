@@ -1,0 +1,13 @@
+# 未兑现 · 授予账:一行一份授予(同公司多份授予合法,top-up)
+# 列: company/kind/grant_date/shares/strike/vest_years/cliff_months/interval/
+#     status/end_date/window_days/latest_price/price_date/note
+# kind: option 期权(行权价 strike 必填,有行权窗口) | rsu 限制性股票(strike 填 0,无窗口)
+# interval: monthly | quarterly | annual(归属频率)
+# status: active 在职 | left 已离职(end_date=离职日,必填) | dead 已清算/关闭(end_date 必填)
+# window_days: 离职后行权窗口(仅 option,缺省 90 天;rsu 留空)
+# latest_price + price_date: 最新一轮/回购价及其日期——要么都填要么都不填,不填只数股份
+company	kind	grant_date	shares	strike	vest_years	cliff_months	interval	status	end_date	window_days	latest_price	price_date	note
+星尘科技	option	2022-03-01	48000	1.20	4	12	quarterly	left	2024-06-30	90	8.50	2024-07-15	2022 年加入的创业公司;2024 年年中裁员离开,90 天窗口没行权
+巨潮科技	rsu	2023-07-01	24000	0	4	12	quarterly	active			32.00	2026-06-30	现东家;按最近回购价记账
+青苔智能	option	2024-09-20	10000	0.80	4	12	monthly	active					天使轮,没有可参照的价格
+深流科技	option	2025-10-01	16000	2.00	4	12	quarterly	active			6.00	2026-04-01	2025 年跳槽的新东家,pre-A 轮价
