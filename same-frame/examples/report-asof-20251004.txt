@@ -1,0 +1,25 @@
+== Same Frame · together-audit ==
+ledger: family.tsv · 10 gatherings · 7 members · as-of 2025-10-04 (ledger self-anchored)
+
+-- members --  (streak = consecutive gatherings missed at the tail)
+member      attended  rate    last seen   gap(d)  streak
+二哥        8         80.0%   2025-10-04  0       0     
+大姐        8         80.0%   2025-10-04  0       0     
+奶奶        7         70.0%   2025-10-04  0       0     
+妈          9         90.0%   2025-10-04  0       0     
+小妹        7         70.0%   2025-10-04  0       0     
+爷爷        7         70.0%   2024-11-16  322     3     
+爸          9         90.0%   2025-10-04  0       0     
+
+-- full house (every registered member in one frame) --
+4 of 10 gatherings had everyone. last: 2024-10-02 — 367 days ago.
+  #6  2023-01-22  春节全家福
+  #7  2023-05-02  大姐婚礼
+  #9  2024-02-10  春节
+  #11  2024-10-02  国庆
+
+-- gates --
+🔴 DRIFT — everyone in one frame: 4 times, last on 2024-10-02.
+  that was 367 days ago. "next time" is not on any calendar; it
+  only ever happens on a day somebody actually books.
+[exit 4]

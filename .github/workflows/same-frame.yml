@@ -1,0 +1,28 @@
+# same-frame · 同框验收
+# 每次推送:跑验收测试(44 tests:账坏网格/灯恰线语义/never-full/全员锚定/
+# 薄账分层/as-of 回放/恒等式独立重算;dogfood:陈家样例账本的字面值全部
+# 先手算再钉——其中 697 是程序纠正手算的结果,8 月有 31 天),
+# 并输出 report/pairs/validate 与时间机器回放的快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate. The sample ledger's FADED + DRIFT (exit 4) are
+# the story itself — expected, not an error.
+name: same-frame
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dogfood ground-truth)
+        run: python3 -m unittest discover -s same-frame/tests -v
+      - name: example snapshot (advisory; report/pairs exit 4 by design)
+        run: |
+          python3 same-frame/same_frame.py report   --ledger same-frame/examples/family.tsv || test $? -eq 4
+          python3 same-frame/same_frame.py pairs    --ledger same-frame/examples/family.tsv || test $? -eq 4
+          python3 same-frame/same_frame.py validate --ledger same-frame/examples/family.tsv
+          python3 same-frame/same_frame.py report   --ledger same-frame/examples/family.tsv --as-of 2025-10-04 || test $? -eq 4
+      - name: snapshot byte-check (build reproducibility)
+        run: python3 same-frame/examples/build_examples.py --check

@@ -1,0 +1,29 @@
+== Same Frame · together-audit ==
+ledger: family.tsv · 13 gatherings · 7 members · as-of 2026-08-30 (ledger self-anchored)
+
+-- members --  (streak = consecutive gatherings missed at the tail)
+member      attended  rate    last seen   gap(d)  streak
+二哥        9         69.2%   2026-05-31  91      1     
+大姐        11        84.6%   2026-08-30  0       0     
+奶奶        9         69.2%   2026-08-30  0       0     
+妈          12        92.3%   2026-08-30  0       0     
+小妹        10        76.9%   2026-08-30  0       0     
+爷爷        7         53.8%   2024-11-16  652     6     
+爸          11        84.6%   2026-08-30  0       0     
+
+-- full house (every registered member in one frame) --
+4 of 13 gatherings had everyone. last: 2024-10-02 — 697 days ago.
+  #6  2023-01-22  春节全家福
+  #7  2023-05-02  大姐婚礼
+  #9  2024-02-10  春节
+  #11  2024-10-02  国庆
+
+-- gates --
+🔴 FADED — 爷爷 last appeared 652 days ago (2024-11-16).
+  the ledger does not count how many frames are left; it only counts
+  how long the frame has been empty. absence has a thousand reasons and
+  this is none of them — it is just the number nobody was keeping.
+🔴 DRIFT — everyone in one frame: 4 times, last on 2024-10-02.
+  that was 697 days ago. "next time" is not on any calendar; it
+  only ever happens on a day somebody actually books.
+[exit 4]

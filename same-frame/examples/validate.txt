@@ -1,0 +1,6 @@
+== Same Frame · ledger audit ==
+ledger: family.tsv
+rows: 13 gatherings · 7 members · Σattendance 69 = Σwho 69
+pairs: 21 registered · Σco-appearances 162 = ΣC(k,2) 162
+ledger is sound
+[exit 0]

@@ -1,0 +1,35 @@
+== Same Frame · pair matrix ==
+ledger: family.tsv · 13 gatherings · 7 members · as-of 2026-08-30 (ledger self-anchored)
+
+-- pairs --  (sorted by how long it has been; a pair is 'together' only in the same frame)
+小妹–爷爷  4      2024-10-02  697    ← over full-line
+奶奶–爷爷  5      2024-10-02  697    ← over full-line
+二哥–爷爷  6      2024-10-02  697    ← over full-line
+妈–爷爷    6      2024-10-02  697    ← over full-line
+大姐–爷爷  5      2024-11-16  652    ← over full-line
+爷爷–爸    7      2024-11-16  652    ← over full-line
+二哥–奶奶  7      2025-10-04  330   
+二哥–爸    8      2025-10-04  330   
+二哥–大姐  7      2026-05-31  91    
+二哥–小妹  7      2026-05-31  91    
+二哥–妈    9      2026-05-31  91    
+大姐–奶奶  8      2026-08-30  0     
+奶奶–小妹  8      2026-08-30  0     
+小妹–爸    8      2026-08-30  0     
+大姐–爸    9      2026-08-30  0     
+奶奶–妈    9      2026-08-30  0     
+奶奶–爸    9      2026-08-30  0     
+大姐–妈    10     2026-08-30  0     
+大姐–小妹  10     2026-08-30  0     
+妈–小妹    10     2026-08-30  0     
+妈–爸      10     2026-08-30  0     
+
+-- gates --
+🔴 FADED — 爷爷 last appeared 652 days ago (2024-11-16).
+  the ledger does not count how many frames are left; it only counts
+  how long the frame has been empty. absence has a thousand reasons and
+  this is none of them — it is just the number nobody was keeping.
+🔴 DRIFT — everyone in one frame: 4 times, last on 2024-10-02.
+  that was 697 days ago. "next time" is not on any calendar; it
+  only ever happens on a day somebody actually books.
+[exit 4]
