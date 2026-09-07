@@ -1,0 +1,3 @@
+validate:✓ 恒等式全绿
+  总行 ≡ open 5 + did 1 + declined 1 + returned 0 = 7(双路径重放逐行全等)
+  悬着 5 句,已结 2 句,行号可 grep 回账本

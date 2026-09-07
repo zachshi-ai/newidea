@@ -1,0 +1,30 @@
+# owed-word · 应承
+# 每次推送：跑验收测试（含中文状态归一/缺右列与行尾制表符容忍/恰线语义
+# （due 当天 OVERDUE 宽容为零、悬龄第 15 天 AGING 恰线亮、第 14 天不亮、
+# 第 31 天 STALE）/期限与悬龄互不越界/declined 三态不亮灯/open 预写 done
+# 拒绝/时间机器剪后视行并披露/恒等式与双路径重放/同账两跑逐字节一致等
+# 54 项），逐字节校验快照，并运行样例输出（report/next/settled 带灯
+# exit 4 属设计内）。
+name: owed-word
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. exact-line gates + identity + replay)
+        run: python3 -m unittest discover -s owed-word/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 owed-word/examples/build_examples.py --check
+      - name: owed-word snapshots (advisory, exit 4 by design)
+        run: |
+          python3 owed-word/owed_word.py report owed-word/examples/words.tsv --as-of 2026-02-10 || test $? -eq 4
+          python3 owed-word/owed_word.py next owed-word/examples/words.tsv --as-of 2026-02-10 || test $? -eq 4
+          python3 owed-word/owed_word.py settled owed-word/examples/words.tsv --as-of 2026-02-10 || test $? -eq 4
+          python3 owed-word/owed_word.py report owed-word/examples/words.tsv --as-of 2025-12-15 || test $? -eq 4
+          python3 owed-word/owed_word.py report owed-word/examples/clean.tsv --as-of 2026-02-10
+          python3 owed-word/owed_word.py next owed-word/examples/clean.tsv --as-of 2026-02-10
+          python3 owed-word/owed_word.py validate owed-word/examples/words.tsv
