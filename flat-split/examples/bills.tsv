@@ -1,0 +1,27 @@
+# 共同账单:一行一笔。rule = per_head(当月按人日) | by_meter(按表段)。
+# 账本纪律:by_meter 账单的 date 必须恰为该科目抄表日。
+# payer = 垫付人(机器据此算净额,谁垫谁收)。
+date	category	amount	rule	payer
+2025-04-05	water	96	per_head	小王
+2025-05-01	electricity	302.50	by_meter	老张
+2025-05-05	water	88	per_head	小王
+2025-06-01	electricity	290.40	by_meter	老张
+2025-06-05	water	102	per_head	小王
+2025-06-06	property	900	per_head	老张
+2025-07-01	electricity	463.10	by_meter	老张
+2025-07-05	water	118	per_head	老张
+2025-07-10	internet	240	per_head	老张
+2025-08-01	electricity	728.75	by_meter	老张
+2025-08-05	water	132	per_head	老张
+2025-09-01	electricity	387.75	by_meter	小马
+2025-09-05	water	120	per_head	小王
+2025-10-01	electricity	357.50	by_meter	小王
+2025-10-05	water	105	per_head	小王
+2025-11-01	electricity	459.25	by_meter	小王
+2025-11-05	water	110	per_head	小王
+2025-12-01	electricity	583.00	by_meter	小马
+2025-12-05	water	125	per_head	小马
+2026-02-01	electricity	803.00	by_meter	小王
+2026-03-01	electricity	390.50	by_meter	老张
+2026-03-05	water	98	per_head	阿花
+2026-03-10	washing_machine	180	per_head	老张

@@ -1,0 +1,28 @@
+# flat-split · 同檐
+# 每次推送:跑验收测试(含逐月 Σ应付==Σ账单 恒等式/尾差吃序确定性/
+# by_meter 段语义(房间归房间·公区损耗·恰线不亮)/SKEW 三连恰线语义/
+# GAP 走人白住判定(回收账早于退租即滚存结清)/usage 役月未满月不计/
+# as-of 时间机器/零墙钟逐字节等 68 项),逐字节校验示例快照,并输出总账报告。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (report/assets exit 4 by design; `|| test $? -eq 4`).
+name: flat-split
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. per-month identity + exact-line gates)
+        run: python3 -m unittest discover -s flat-split/tests -v
+      - name: examples byte-check (reproducible ledger + snapshots)
+        run: python3 flat-split/examples/build_examples.py --check
+      - name: flat-split snapshots (advisory, exit 4 by design)
+        run: |
+          python3 flat-split/flat_split.py report flat-split/examples --as-of 2026-03-10 || test $? -eq 4
+          python3 flat-split/flat_split.py assets flat-split/examples --as-of 2026-03-10 || test $? -eq 4
+          python3 flat-split/flat_split.py report flat-split/examples --as-of 2025-05-31
+          python3 flat-split/flat_split.py settle flat-split/examples --as-of 2026-03-10
+          python3 flat-split/flat_split.py validate flat-split/examples --as-of 2026-03-10
