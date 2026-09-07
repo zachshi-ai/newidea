@@ -1,0 +1,29 @@
+# shot-chain · 针链
+# 每次推送：跑验收测试（含中英别名归一/物种链矛盾拒绝/恰线语义（恰到期日
+# DUE、宽容末日 DUE、次日 BROKEN、预警窗恰线即亮）/月月钟预警收敛/
+# 狂犬宽容为零/--cycle/--grace/--warn 翻案/多针链只认末针/时间机器剪切与
+# NOT-YET 不抬闸/薄账分层/Σshot≡Σ各链针数与非空+盲区≡链空间两恒等式/
+# 双路径重放逐字段全等/同账两跑逐字节一致等 60 项），逐字节校验快照，
+# 并运行样例输出（report/next/brief 带灯 exit 4 属设计内）。
+name: shot-chain
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. exact-line gates + identities + replay)
+        run: python3 -m unittest discover -s shot-chain/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 shot-chain/examples/build_examples.py --check
+      - name: shot-chain snapshots (advisory, exit 4 by design)
+        run: |
+          python3 shot-chain/shot_chain.py report shot-chain/examples/shots.tsv --as-of 2026-02-10 || test $? -eq 4
+          python3 shot-chain/shot_chain.py next shot-chain/examples/shots.tsv --as-of 2026-02-10 || test $? -eq 4
+          python3 shot-chain/shot_chain.py brief shot-chain/examples/shots.tsv --as-of 2026-02-10 || test $? -eq 4
+          python3 shot-chain/shot_chain.py report shot-chain/examples/shots.tsv --as-of 2025-12-20 || test $? -eq 4
+          python3 shot-chain/shot_chain.py report shot-chain/examples/niangao.tsv --as-of 2026-02-10
+          python3 shot-chain/shot_chain.py validate shot-chain/examples/shots.tsv
