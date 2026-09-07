@@ -1,0 +1,17 @@
+# kin-ring 样例账本 · 老周的家(43 岁生日那天,意识到自己已比哥哥确诊时更老)
+# 一行一人 / 一病一行:person(key/rel/birth/status) dx(key/dx/dxyr)
+# 哥哥 2021 年确诊那天 42 岁;今年老周 43——年轮的指针扫过了这道年纪
+# as-of: 2026-09-07
+type	key	rel	birth	status	dx	dxyr	note
+person	老周	me	1983	alive
+person	父亲	parent	1952	alive			家族里唯一可能记得上一辈病史的人
+person	母亲	parent	1955	alive
+person	哥哥	sibling	1979	alive
+person	姑妈	uncle-aunt	1948	dead:2015		父亲胞姐
+person	爷爷	grandparent	1925	dead:1998
+dx	老周				甲状腺癌	2024	微小癌,术后复查稳定——本人病史,不对齐自己
+dx	父亲				高血压	1998	体检发现,服药至今
+dx	父亲				2型糖尿病	2000
+dx	哥哥				2型糖尿病	2021	42 岁确诊,体检空腹血糖爆表
+dx	姑妈				乳腺癌	1995	55 岁走的;生前说她姑妈当年也是「瘤子」——口传,入不了账
+dx	爷爷				卒中	?	脑溢血走的,哪一年父亲也记不清

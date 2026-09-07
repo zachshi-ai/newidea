@@ -1,0 +1,29 @@
+# kin-ring · 年轮
+# 每次推送:跑验收测试(含判线恰线语义(Δ=0 REACHED、Δ=+5 NEAR 恰线亮、
+# Δ=+6 LATER 不亮)/零墙钟(无 as-of 时间闸跳过并披露、CLUSTER/BROKEN 照判)/
+# 后视不参与对齐与聚集/同病聚集一级门槛/「II型」≠「2型」不发明同义/
+# 子女与配偶通道互不越界/# gone 翻案/账坏 exit 2/空账薄账 exit 3 等 69 项),
+# 逐字节校验账本与示例输出,并输出总账快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (sample report exit 4 by design; `|| test $? -eq 4`).
+name: kin-ring
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. exact-line gates + identities)
+        run: python3 -m unittest discover -s kin-ring/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 kin-ring/examples/build_examples.py --check
+      - name: kin-ring snapshots (advisory, exit 4 by design)
+        run: |
+          python3 kin-ring/kin_ring.py report kin-ring/examples/kin.tsv || test $? -eq 4
+          python3 kin-ring/kin_ring.py report kin-ring/examples/kin.tsv --as-of 2012-06-01
+          python3 kin-ring/kin_ring.py kin kin-ring/examples/kin.tsv
+          python3 kin-ring/kin_ring.py ask kin-ring/examples/kin.tsv
+          python3 kin-ring/kin_ring.py validate kin-ring/examples/kin.tsv
