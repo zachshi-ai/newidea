@@ -1,0 +1,29 @@
+# due-dose · 欠针
+# 每次推送:跑验收测试(词表归一与 --map 教学/抗原翻译/月龄钟月末钳制与恰线/
+# 欠账状态机边界/补种几何闭式==贪心/账坏九类/空账/多孩隔离/--schedule 翻案/
+# 零墙钟字节复现等 64 项),逐字节校验示例快照,并输出样例账本的六段快照。
+# The gate verdicts (exit 4 = 搬家丢的两针超龄 390 天 on the demo ledger) are
+# what the demo is supposed to show — the snapshot is advisory, the tests are
+# the gate.
+name: due-dose
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s due-dose/tests -v
+      - name: examples byte-exact check
+        run: python3 due-dose/examples/build_examples.py --check
+      - name: due-dose snapshot on the demo ledger (advisory)
+        run: |
+          python3 due-dose/due_dose.py report --dir due-dose/examples || true
+          python3 due-dose/due_dose.py gaps --dir due-dose/examples || true
+          python3 due-dose/due_dose.py catchup --dir due-dose/examples --by 2026-08-31 --label 幼儿园入园查验 || true
+          python3 due-dose/due_dose.py paid --dir due-dose/examples || true
+          python3 due-dose/due_dose.py report --dir due-dose/examples --as-of 2024-08-01 || true
+          python3 due-dose/due_dose.py validate --dir due-dose/examples
