@@ -1,0 +1,29 @@
+== Lender's Eye · as the bank reads it ==
+ledger: examples · as-of 2026-06-30 (ledger self-anchored) · 4 accounts
+
+-- accounts --  (settled = paid off but still on file)
+name            type           opened      limit       balance     status    lender 
+招行信用卡      credit_card    2019-03-15  100,000     86,400      active    bank   
+京东白条        online_loan    2024-11-15  8,000       1,200       active    online 
+花呗            online_loan    2022-01-10  30,000      0           settled   online 
+借呗            online_loan    2023-05-01  20,000      0           settled   online 
+Σ outstanding 87,600 · active 2 · settled-on-file 2
+credit cards: 86,400 owed of 100,000 across 1 card = 86.4% utilization
+
+-- hard pulls --  (each one was pressed by your own hand)
+  2026-04-02  某消费金融        loan_approval   in 183d 
+  2026-04-18  某银行            loan_approval   in 183d 
+  2026-05-20  某银行信用卡中心  card_approval   in 183d in 61d
+  2026-06-11  某消费金融        loan_approval   in 183d in 61d
+  (6 rows after as-of excluded — the unwritten future)
+
+-- the bank's read --
+🟢 HOT-QUERY (short) — 2 hard pulls in the last 61 days (line 3)
+🟢 HOT-QUERY (long) — 4 hard pulls in the last 183 days (line 6)
+🔴 ONLINE-DEBT — 1 online loan with money outstanding (line 0) — 京东白条 1,200
+🔴 MAXED — utilization 86.4% of 100,000 across 1 card (line 80%)
+🔴 FRESH-DELINQ — 1 lapse of 30+ days in the last 730 days
+    招行信用卡  30d on 2024-11-20
+🟡 SETTLED-GHOST — 2 online accounts settled but still on file: 花呗, 借呗. settled is not gone; ask the platform to close them
+    on file, outside the window: 60d on 2023-08-05 (借呗) — leaves the archive 2028-08-05
+[exit 4]

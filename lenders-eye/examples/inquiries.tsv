@@ -1,0 +1,16 @@
+# 银行眼 · 查询账:一行一次机构查询(自查不记——个人自查不进任何窗口)
+# 列: date/agency/reason
+# 硬查询(审批敏感): loan_approval 贷款审批 | card_approval 信用卡审批 | guarantee 担保资格审查
+# 软查询(不进窗口): post_loan 贷后管理 | personal 个人自查 | periodic 异议/定期
+# hard 不用你填——reason 决定软硬,报告写了什么就是什么
+date	agency	reason
+2026-04-02	某消费金融	loan_approval
+2026-04-18	某银行	loan_approval
+2026-05-20	某银行信用卡中心	card_approval
+2026-06-11	某消费金融	loan_approval
+2026-07-03	某银行	post_loan
+2026-07-23	某互金平台	loan_approval
+2026-08-08	某消费金融	loan_approval
+2026-09-05	某银行	post_loan
+2026-09-12	某电商平台	card_approval
+2026-09-30	某银行	post_loan

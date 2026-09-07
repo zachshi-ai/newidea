@@ -1,0 +1,17 @@
+== Lender's Eye · healing calendar ==
+ledger: examples · as-of 2026-09-30 (ledger self-anchored) · horizon 730 days
+
+time can heal three of these lamps; money must heal the rest.
+
+🟢 HOT-QUERY (short) — already quiet (line 3)
+⏳ HOT-QUERY (long) — heals on 2026-10-02: the oldest 1 pull ages out of the 183d window
+⏳ FRESH-DELINQ — heals on 2026-11-20: the newest 30+ day lapse leaves the 730d window (older ones left first)
+
+time-only all-clear: 2026-11-20 — after that day, every window is quiet on its own.
+
+-- to-do (money, not time) --
+  - settle & close: 京东白条 (1,200 outstanding)
+  - close on file: 花呗, 借呗 — settled is not gone
+  - pay down 6,400 to reach 80% utilization (now 86.4%); 36,400 for 50%, 56,400 for 30%
+none of the above heals by itself.
+[exit 0]

@@ -1,0 +1,7 @@
+== Lender's Eye · ledger audit ==
+ledger: examples
+accounts: 4 · Σ outstanding 87,600 = Σ by type 87,600
+inquiries: 10 (7 hard / 3 soft)
+delinquencies: 2 (all reference live accounts)
+ledger is sound
+[exit 0]

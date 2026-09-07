@@ -1,0 +1,29 @@
+# lenders-eye · 银行眼验收
+# 每次推送:跑验收测试(54 tests:窗口边界/恰线语义/软硬映射/双路径对拍/
+# 账坏网格/as-of 时间机器/恒等式字面值;样例数字全部先手算再钉——
+# 其中「逾期愈合=最新一笔出窗」是多笔构造对拍抓出的修正),
+# 并输出 report/gate/clock/validate 与时间机器回放的快照。
+# The snapshot never fails the build: it is a monitoring artifact,
+# the tests are the gate. The sample ledger's four red lamps (exit 4)
+# are the story itself — expected, not an error.
+name: lenders-eye
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. closed-form vs scan parity)
+        run: python3 -m unittest discover -s lenders-eye/tests -v
+      - name: example snapshot (advisory; report/gate exit 4 by design)
+        run: |
+          python3 lenders-eye/lenders_eye.py report  --dir lenders-eye/examples || test $? -eq 4
+          python3 lenders-eye/lenders_eye.py gate    --dir lenders-eye/examples --apply-date 2026-12-01 || test $? -eq 4
+          python3 lenders-eye/lenders_eye.py clock   --dir lenders-eye/examples
+          python3 lenders-eye/lenders_eye.py validate --dir lenders-eye/examples
+          python3 lenders-eye/lenders_eye.py report  --dir lenders-eye/examples --as-of 2026-06-30 || test $? -eq 4
+      - name: snapshot byte-check (build reproducibility)
+        run: python3 lenders-eye/examples/build_examples.py --check

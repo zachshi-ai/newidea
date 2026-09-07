@@ -1,0 +1,11 @@
+# 银行眼 · 账户账:一行一个账户(含已结清/已关闭——它们仍在档案上)
+# 列: name/type/opened/limit/balance/status/lender
+# type: mortgage|car_loan|credit_card|online_loan|consumer_loan|other_loan
+# status: active 在贷 | settled 结清未销户(档案上的僵尸) | closed 已销户
+# lender: bank | online(花呗/白条/借呗/月付/消费金融都算 online)
+# 信用卡 balance=当前账单欠额;贷款 balance=剩余本金
+name	type	opened	limit	balance	status	lender
+招行信用卡	credit_card	2019-03-15	100000	86400	active	bank
+花呗	online_loan	2022-01-10	30000	0	settled	online
+借呗	online_loan	2023-05-01	20000	0	settled	online
+京东白条	online_loan	2024-11-15	8000	1200	active	online
