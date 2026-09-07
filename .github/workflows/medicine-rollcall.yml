@@ -1,0 +1,33 @@
+# medicine-rollcall · 药箱点名
+# 每次推送：跑验收测试（含双钟模型可用截止/判决阶梯 EXPIRED>OPENED_OUT>LOW>READY/
+# Σ四状态==总盒数恒等式/剂型开封效期先验（眼药水28天糖浆30天）/blister 无开封钟/
+# open_days 说明书覆盖/场景矩阵 fever/gut/wound/allergy 与创可贴 dressing≠disinfectant/
+# 儿童剂型单独一栏/囤积质证同名≥3盒/存放审计浴室×栓剂/衰减推演 day0==report 恒等式/
+# as-of 钉死逐字节复现等 57 项），逐字节校验账本与示例输出，并输出战备快照。
+# The snapshot never fails the build: the report is a monitoring artifact,
+# the tests are the gate (report/night/coverage/hoard exit 4 by design; `|| test $? -eq 4`).
+name: medicine-rollcall
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests (incl. dual-clock + four-state identity + exact-line gates)
+        run: python3 -m unittest discover -s medicine-rollcall/tests -v
+      - name: examples byte-check (reproducible ledger + outputs)
+        run: python3 medicine-rollcall/examples/build_examples.py --check
+      - name: medicine-rollcall snapshots (advisory, exit 4 by design)
+        run: |
+          python3 medicine-rollcall/medicine_rollcall.py report   medicine-rollcall/examples/medicine_cabinet.tsv --as-of 2026-09-04 || test $? -eq 4
+          python3 medicine-rollcall/medicine_rollcall.py rollcall medicine-rollcall/examples/medicine_cabinet.tsv --as-of 2026-09-04
+          python3 medicine-rollcall/medicine_rollcall.py night    medicine-rollcall/examples/medicine_cabinet.tsv --scene fever --who kid || test $? -eq 4
+          python3 medicine-rollcall/medicine_rollcall.py night    medicine-rollcall/examples/medicine_cabinet.tsv --scene wound || test $? -eq 4
+          python3 medicine-rollcall/medicine_rollcall.py coverage medicine-rollcall/examples/medicine_cabinet.tsv --as-of 2026-09-04 || test $? -eq 4
+          python3 medicine-rollcall/medicine_rollcall.py hoard    medicine-rollcall/examples/medicine_cabinet.tsv --as-of 2026-09-04 || test $? -eq 4
+          python3 medicine-rollcall/medicine_rollcall.py stash    medicine-rollcall/examples/medicine_cabinet.tsv
+          python3 medicine-rollcall/medicine_rollcall.py simulate medicine-rollcall/examples/medicine_cabinet.tsv --days 90 --as-of 2026-09-04
+          python3 medicine-rollcall/medicine_rollcall.py validate medicine-rollcall/examples/medicine_cabinet.tsv
