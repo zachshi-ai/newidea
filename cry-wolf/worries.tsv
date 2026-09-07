@@ -1,0 +1,22 @@
+# cry-wolf 账本 · 小周的灾难想象对账(2026 流感季到 Q3)
+# 列: date/type/topic/fear/due/nights/ref/outcome
+# fear 行: 入账一场担忧。内容写到能检验(谁/会出什么事), due 是你答应自己回来看结果的日期, nights 是为它失眠的夜数(可空)。
+# check 行: 到期结案。outcome: hit=核心灾难真发生 partial=沾边但轻/变形 miss=虚惊一场
+date	type	topic	fear	due	nights	ref	outcome
+2026-03-02	fear	child-health	kindergarten flu season: his cough turns into pneumonia and a hospital stay	2026-03-16	2		
+2026-03-16	check					6	miss
+2026-03-05	fear	job	the project gets cut in the Q2 reorg and the whole team goes with it	2026-06-30	1		
+2026-06-30	check					8	miss
+2026-03-20	fear	health	the thyroid nodule (TI-RADS 3) has already turned malignant	2026-06-01	3		
+2026-06-01	check					10	miss
+2026-04-10	fear	money	the April pullback margin-calls the position	2026-05-10	0		
+2026-05-10	check					12	partial
+2026-05-08	fear	child-health	same cough again — pneumonia this time for sure	2026-05-22	1		
+2026-05-22	check					14	miss
+2026-06-15	fear	job	the key client churns at renewal and my Q3 number is dead	2026-06-30	1		
+2026-06-30	check					16	hit
+2026-07-06	fear	child-health	third cough of the year, the doctor hears wheezing	2026-07-20	2		
+2026-07-20	check					18	miss
+2026-08-14	fear	job	Q3 restructuring: my name is on the list this time	2026-08-31	2		
+2026-09-01	fear	parents	they will need a big sum someday and nobody has a plan				
+2026-09-05	fear	child-health	new semester, flu round two, back in the hospital ward	2026-09-19			

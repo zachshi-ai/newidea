@@ -1,0 +1,22 @@
+== Cry Wolf · repeat-offender chains ==
+ledger: worries.tsv · 10 fears · as-of 2026-09-05 (ledger self-anchored)
+
+a chain is the same topic filing again. the (record at filing) column
+is what this topic already knew when the fear came back — and you
+filed it anyway. that is what a replay is.
+
+🔴 WOLF  child-health   filed 4 · checked 3 · record 0H/0P/3M
+  #10  2026-03-02  checked 2026-03-16 MISS         0H/0P/0M  nights 2
+  #18  2026-05-08  checked 2026-05-22 MISS         0H/0P/1M  nights 1
+  #22  2026-07-06  checked 2026-07-20 MISS         0H/0P/2M  nights 2
+  #26  2026-09-05  on the clock, due 2026-09-19    0H/0P/3M  nights 0
+🔴 WOLF — this alarm has cried 3 times and the wolf never came once.
+  history lowers the prior, it does not close the ward: the next real
+  danger still deserves a real check. what the chain retires is the replay,
+  not the vigilance.
+
+○  job   filed 3 · checked 2 · record 1H/0P/1M
+  #12  2026-03-05  checked 2026-06-30 MISS         0H/0P/0M  nights 1
+  #20  2026-06-15  checked 2026-06-30 HIT          0H/0P/0M  nights 1
+  #24  2026-08-14  OVERDUE since 2026-08-31        1H/0P/1M  nights 2
+[exit 4]

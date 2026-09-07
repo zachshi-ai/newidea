@@ -1,0 +1,15 @@
+== Cry Wolf · check-up docket ==
+ledger: worries.tsv · 10 fears · as-of 2026-09-05 (ledger self-anchored)
+
+3 fears awaiting their verdict. a verdict you keep not writing is a
+loop your brain keeps replaying.
+
+OVERDUE (past the date you promised yourself):
+  #24  due 2026-08-31    5d overdue  job             Q3 restructuring: my name is on the list this…
+
+ON THE CLOCK:
+  #26  due 2026-09-19   14d left    child-health    new semester, flu round two, back in the hosp…
+
+NO DATE AT ALL (give it one — even a generous one):
+  #25  filed 2026-09-01  parents         they will need a big sum someday and nobody h…
+[exit 0]

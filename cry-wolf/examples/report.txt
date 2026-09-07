@@ -1,0 +1,43 @@
+== Cry Wolf · worry-outcome audit ==
+ledger: worries.tsv · 10 fears · as-of 2026-09-05 (ledger self-anchored)
+
+-- outcome ledger --
+checked 7 = hit 1 + partial 1 + miss 5        identity OK
+unchecked 3 = overdue 1 · open-ended 1 · on the clock 1
+
+-- alarm record (checked fears only) --
+false alarms: 5/7 (71.4%) never happened
+counting half-hits as not-fully-true: 6/7 (85.7%)
+nights: 12 total = 9 for wolves that never came · 0 for half-wolves
+        · 1 for real fires · 2 still on unchecked fears
+nights not recorded on 1 fear, counted as 0
+
+-- real fires (the alarm was right) --
+#16  2026-04-10  money           the April pullback margin-calls the position    HALF    nights 0  (chain at filing 0H/0P/0M)
+#20  2026-06-15  job             the key client churns at renewal and my Q3 nu…  HIT     nights 1  (chain at filing 0H/0P/0M)
+
+-- wolves that never came --
+#10  2026-03-02  child-health    kindergarten flu season: his cough turns into…  MISS    nights 2  (chain at filing 0H/0P/0M)
+#12  2026-03-05  job             the project gets cut in the Q2 reorg and the …  MISS    nights 1  (chain at filing 0H/0P/0M)
+#14  2026-03-20  health          the thyroid nodule (TI-RADS 3) has already tu…  MISS    nights 3  (chain at filing 0H/0P/0M)
+#18  2026-05-08  child-health    same cough again — pneumonia this time for su…  MISS    nights 1  (chain at filing 0H/0P/1M)
+#22  2026-07-06  child-health    third cough of the year, the doctor hears whe…  MISS    nights 2  (chain at filing 0H/0P/2M)
+
+-- unchecked: OVERDUE-CHECK (a verdict past due — the loop keeps replaying) --
+#24  2026-08-14  job             Q3 restructuring: my name is on the list this…  due 2026-08-31  5d overdue  nights 2
+
+-- unchecked: OPEN-ENDED (a worry with no test date is a loop with no exit) --
+#25  2026-09-01  parents         they will need a big sum someday and nobody h…  no due date  open 4d  nights 0
+
+-- unchecked: on the clock (not yet due — let it play out) --
+#26  2026-09-05  child-health    new semester, flu round two, back in the hosp…  due 2026-09-19  14d left  nights 0
+
+-- gates --
+🔴 WOLF — this alarm has cried 3 times and the wolf never came once.
+  history lowers the prior, it does not close the ward: the next real
+  danger still deserves a real check. what the chain retires is the replay,
+  not the vigilance.
+  chain: child-health — 3 checked, record 0H/0P/3M
+OVERDUE-CHECK: 1 case, oldest 5d (silent until a verdict is 30d late)
+OPEN-ENDED: 1 case (silent until 5 undated worries)
+[exit 4]

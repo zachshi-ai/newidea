@@ -1,0 +1,37 @@
+== Cry Wolf · worry-outcome audit ==
+ledger: worries.tsv · 5 fears · as-of 2026-05-23 (ledger self-anchored)
+
+-- outcome ledger --
+checked 3 = hit 0 + partial 1 + miss 2        identity OK
+unchecked 2 = overdue 0 · open-ended 0 · on the clock 2
+
+-- alarm record (checked fears only) --
+DECLINE: only 3 fears checked so far — under 5 a verdict would be
+your alarm's mood, not its character. the case lights above still
+stand; come back after 5 verdicts.
+nights: 7 total = 3 for wolves that never came · 0 for half-wolves
+        · 0 for real fires · 4 still on unchecked fears
+
+-- real fires (the alarm was right) --
+#16  2026-04-10  money           the April pullback margin-calls the position    HALF    nights 0  (chain at filing 0H/0P/0M)
+
+-- wolves that never came --
+#10  2026-03-02  child-health    kindergarten flu season: his cough turns into…  MISS    nights 2  (chain at filing 0H/0P/0M)
+#18  2026-05-08  child-health    same cough again — pneumonia this time for su…  MISS    nights 1  (chain at filing 0H/0P/1M)
+
+-- unchecked: OVERDUE-CHECK (a verdict past due — the loop keeps replaying) --
+(none)
+
+-- unchecked: OPEN-ENDED (a worry with no test date is a loop with no exit) --
+(none)
+
+-- unchecked: on the clock (not yet due — let it play out) --
+#14  2026-03-20  health          the thyroid nodule (TI-RADS 3) has already tu…  due 2026-06-01  9d left  nights 3
+#12  2026-03-05  job             the project gets cut in the Q2 reorg and the …  due 2026-06-30  38d left  nights 1
+
+-- gates --
+WOLF: no chain (needs >=3 checked filings, all miss)
+monitor: child-health — 2 checks, no hit yet (quiet until 3)
+OVERDUE-CHECK: none
+OPEN-ENDED: none
+[exit 3]

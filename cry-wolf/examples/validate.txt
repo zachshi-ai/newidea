@@ -1,0 +1,7 @@
+== Cry Wolf · ledger audit ==
+ledger: worries.tsv
+rows: 10 fear + 7 check · refs resolve 7/7 · 3 fear(s) still open
+identity: checked = hit 1 + partial 1 + miss 5 = 7
+nights:   12 total = wolves 9 + half 0 + fires 1 + unchecked 2
+ledger is sound
+[exit 0]
