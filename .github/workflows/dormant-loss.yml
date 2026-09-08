@@ -1,0 +1,29 @@
+# dormant-loss · 躺亏
+# 每次推送:跑验收测试(到期日几何月末钳制与闰日/利率时间线沉默=活期/提前支取
+# 全程活期与时间机器/躺亏双算法与验钞容差/四灯恰线不亮/翻案参数全链/账坏十三类/
+# 薄账/零墙钟跨哈希种子字节复现等 51 项),逐字节校验示例快照,并输出样例账本的
+# 五段快照。The gate verdicts (exit 4 = 躺活期 53 万双闸红灯 on the demo ledger)
+# are what the demo is supposed to show — the snapshot is advisory, the tests
+# are the gate.
+name: dormant-loss
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s dormant-loss/tests -v
+      - name: examples byte-exact check
+        run: python3 dormant-loss/examples/build_examples.py --check
+      - name: dormant-loss snapshot on the demo ledger (advisory)
+        run: |
+          python3 dormant-loss/dormant_loss.py report --dir dormant-loss/examples || true
+          python3 dormant-loss/dormant_loss.py timeline --dir dormant-loss/examples || true
+          python3 dormant-loss/dormant_loss.py calendar --dir dormant-loss/examples --months 18 || true
+          python3 dormant-loss/dormant_loss.py decide --dir dormant-loss/examples --rate 1.25 --term 36 --liquid 50000 || true
+          python3 dormant-loss/dormant_loss.py report --dir dormant-loss/examples --as-of 2024-05-09 || true
+          python3 dormant-loss/dormant_loss.py validate --dir dormant-loss/examples
