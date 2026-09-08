@@ -1,0 +1,16 @@
+# usage.tsv  一行一个参数,同名 profile 构成一份用车事实
+#   profile/key/value/note
+#   必需键: km_year(年里程) gas_price(油价元/L) home_price(家充元/度)
+#           public_price(公充元/度) home_share(家充占比 0..1)
+# 王家: 有桩,通勤长;李家: 无桩,市内短途——同一对车,两个世界
+profile	key	value	note
+wang	km_year	18000	跨城通勤,一年两万上下
+wang	gas_price	7.80	中石化 92#
+wang	home_price	0.32	自有充电桩,谷时电价
+wang	public_price	1.35	商场快充均价
+wang	home_share	0.85	小区装了桩,基本家充
+li	km_year	6000	市内代步,周末遛娃
+li	gas_price	7.80	同王家
+li	home_price	0.32	老小区,物业不让装桩
+li	public_price	1.35	蹭商场充电,顺带逛街
+li	home_share	0	没有桩,全靠公共充电

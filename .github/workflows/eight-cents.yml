@@ -1,0 +1,26 @@
+# eight-cents · 八分钱
+# 每次推送:跑验收测试(每公里双路径/加权电价分段/回本三态闭式==逐月游走/
+# 翻转里程闭式==扫描/TCO 双路径/三盏灯恰线不亮/翻案参数全链/购置税通识默认与
+# 披露/账坏十二类/空账/零墙钟跨哈希种子字节复现等 59 项),逐字节校验示例快照,
+# 并输出样例账本的三段快照。The gate verdicts (exit 4 = li profile 的
+# PENNY-MYTH + BREAKEVEN-NEVER on the demo ledger) are what the demo is
+# supposed to show — the snapshot is advisory, the tests are the gate.
+name: eight-cents
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: acceptance tests
+        run: python3 -m unittest discover -s eight-cents/tests -v
+      - name: examples byte-exact check
+        run: python3 eight-cents/examples/build_examples.py --check
+      - name: eight-cents snapshot on the demo ledger (advisory)
+        run: |
+          python3 eight-cents/eight_cents.py report --dir eight-cents/examples || true
+          python3 eight-cents/eight_cents.py breakeven --dir eight-cents/examples --years 8 || true
+          python3 eight-cents/eight_cents.py validate --dir eight-cents/examples

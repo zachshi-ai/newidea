@@ -1,0 +1,9 @@
+# 八分钱 · Eight Cents 样例账本 —— 同一对车,两家人的桩
+# cars.tsv  一行一辆候选车: 抄配置单与销售报价单
+#   name/type/price/energy100/insurance/maint/road_tax/purchase_tax/note
+#   type=gas(energy100=油耗 L/100km) | ev(energy100=电耗 kWh/100km)
+#   purchase_tax 留空 = 通识默认(油 price/1.13×10% 计税;电免征,2026-2027 减半过渡期以办理日为准)
+# 数字为 2026 年上下的通识量级,演示用——抄你自己的报价单才是你的账
+name	type	price	energy100	insurance	maint	road_tax	purchase_tax	note
+油车·朗逸	gas	129800	6.5	4000	800	350		1.5L 自吸,销售报价单,购置税留空走通识默认
+电车·海豹	ev	159800	13.5	5500	300	0	7080	纯电,购置税 ≈159800/1.13×5%(2026-2027 减半口径,以办理日为准)
